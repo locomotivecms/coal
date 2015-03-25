@@ -16,6 +16,15 @@ end
 require 'rubygems'
 require 'bundler/setup'
 
+require 'webmock/rspec'
+require 'vcr'
+
+# VCR config
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/coal_cassettes'
+  c.hook_into :webmock
+end
+
 require_relative 'support/api_settings'
 require_relative 'support/pry'
 
@@ -29,5 +38,6 @@ RSpec.configure do |config|
 
   # config.before { reset! }
   # config.after  { reset! }
+
   config.order = :random
 end

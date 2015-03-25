@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::Token do
 
+  before { VCR.insert_cassette 'token', record: :new_episodes }
+  after  { VCR.eject_cassette }
+
   let(:uri)         { nil }
   let(:credentials) { nil }
   let(:token)       { described_class.new(uri, credentials) }

@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::MyAccount do
 
+  before { VCR.insert_cassette 'my_account', record: :new_episodes }
+  after  { VCR.eject_cassette }
+
   let(:uri)         { nil }
   let(:token)       { nil }
   let(:my_account)  { described_class.new(uri, token) }

@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sample.lvh.me:4000/locomotive/api/tokens.json
+    body:
+      encoding: US-ASCII
+      string: email=john%40doe.net&password=easyone
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 23:32:02 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Location:
+      - http://sample.lvh.me:4000/locomotive/
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"557f8d72cf11ab5399621eddec942c29"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=uLCbLU828H2CBvFfM2PLgKHkumg; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - ae9565bb05aa4998b177c97b5cd5c9e4
+      X-Runtime:
+      - '0.040398'
+    body:
+      encoding: UTF-8
+      string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 23:32:02 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/my_account.json?auth_token=9GLRWwc2MGTCF7SHiZSg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 Mar 2015 23:32:02 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"40f01973492a15852b951206bae25738"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=-6Wkhu9LIBBtA3tO7izimEMz20U; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 0bd819f39fbedfadb2909c4fe7649fb7
+      X-Runtime:
+      - '0.036006'
+    body:
+      encoding: UTF-8
+      string: '{"id":"54eb49b22475804b2b000001","_id":"54eb49b22475804b2b000001","created_at":"2015-02-23T15:39:30Z","updated_at":"2015-03-25T23:32:02Z","name":"John","email":"john@doe.net","locale":"en","encrypted_password":"fc2fa5bc736ba0f4ab04c4e427660f7a4fd7a360","password_salt":"ccEcFveptwhvSoRoExkX","api_key":"a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7","admin":true}'
+    http_version: 
+  recorded_at: Wed, 25 Mar 2015 23:32:02 GMT
+recorded_with: VCR 2.9.3
