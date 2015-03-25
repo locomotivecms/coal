@@ -15,7 +15,12 @@ describe Locomotive::Coal::Client do
   end
 
   describe '#my_account' do
-    subject { client.my_account.name }
+    subject { client.my_account.get.name }
+    it { is_expected.not_to eq nil }
+  end
+
+  describe '#sites' do
+    subject { client.sites.all.first }
     it { is_expected.not_to eq nil }
   end
 

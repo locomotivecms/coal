@@ -13,7 +13,16 @@ The Ruby API Client for LocomotiveCMS.
     client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api', { email: <EMAIL>, api_key: <API KEY> })
 
     # Get the name of the logged in account
-    client.my_account.name
+    my_account = client.my_account.get
+    puts my_account.name + " / " + my_account.email
+
+    # Get all my sites
+    my_sites = client.sites.all
+    puts "I've got #{my_sites.size}"
+
+    # Get all the articles (if there is a "Articles" content type)
+
+
 
 ## TODO
 

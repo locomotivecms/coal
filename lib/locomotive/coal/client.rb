@@ -17,7 +17,11 @@ module Locomotive::Coal
     end
 
     def my_account
-      @my_account ||= Resources::MyAccount.new(uri, token).get
+      @my_account ||= Resources::MyAccount.new(uri, token)
+    end
+
+    def sites
+      @sites ||= Resources::Sites.new(uri, token)
     end
 
   end

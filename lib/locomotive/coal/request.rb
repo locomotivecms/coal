@@ -22,6 +22,17 @@ module Locomotive::Coal
       end
     end
 
+    def put(endpoint, parameters = {})
+      parameters = parameters.merge(auth_token: token) if respond_to?(:token)
+
+      safe_request_call do
+        Unirest.put   "#{uri.to_s}/#{endpoint}.json",
+          auth:       uri.userinfo,
+          headers:    { 'Accept' => 'application/json' },
+          parameters: parameters
+      end
+    end
+
     private
 
     def safe_request_call(&block)
