@@ -1,5 +1,7 @@
 # Coal
 
+[![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal)
+
 The Ruby API Client for LocomotiveCMS.
 
 ## Installation [WIP]
