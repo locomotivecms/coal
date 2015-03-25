@@ -8,11 +8,18 @@ The Ruby API Client for LocomotiveCMS.
 
 ## Usage
 
+    client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api', { email: <EMAIL>, api_key: <API KEY> })
 
+    # Get the name of the logged in account
+    client.my_account.name
 
 ## TODO
 
 see the list in the issues section.
+
+## Credits ##
+
+[Christian](https://github.com/cblavier), [Greg](https://github.com/gregKawet) and [Ben](https://github.com/stiiig) from the Cogip/Insert International LTD who brainstormed with me (a very long time) to find this awesome name.
 
 ## Contributing
 

@@ -1,4 +1,12 @@
-module Locomotive
-  module Coal
-  end
-end
+require 'active_support'
+require 'active_support/concern'
+require 'active_support/deprecation'
+require 'active_support/core_ext'
+require 'unirest'
+
+require_relative 'coal/error'
+require_relative 'coal/request'
+require_relative 'coal/resource'
+require_relative 'coal/resources/token'
+require_relative 'coal/resources/my_account'
+require_relative 'coal/client'

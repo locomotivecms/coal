@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake',       '~> 10.4.2'
 
   spec.add_dependency 'unirest',                '~> 1.1.2'
+  spec.add_dependency 'activesupport',          '~> 4.2.0'
 
   spec.required_ruby_version = '>= 2.0'
 end
