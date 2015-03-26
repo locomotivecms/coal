@@ -10,28 +10,61 @@ The Ruby API Client for LocomotiveCMS.
 
 ## Usage
 
+### Authentication
+
     client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api', { email: <EMAIL>, api_key: <API KEY> })
 
-    # Get the name of the logged in account
+### Resources
+
+#### MyAccount
+
+**Get the name of the logged in account**
+
     my_account = client.my_account.get
     puts my_account.name + " / " + my_account.email
 
-    # Get all my sites
+#### Sites
+
+**Get all my sites**
+
     my_sites = client.sites.all
     puts "I've got #{my_sites.size}"
 
-    # Create a new site
+**Create a new site**
+
     my_site = client.sites.create(name: 'Acme', subdomain: 'acme', locales: ['en'], timezone: 'UTC')
 
-    # Get all the articles in English (if there is a localized "Articles" content type) from the Acme site
+**Destroy a site**
+
+    my_site = client.sites.destroy(my_site._id)
+
+#### Content Types
+
+**Get a content type by its slug**
+
+Note: We first need to log in to the site the content type belongs to. It can be done by calling the scope_by method of the client instance.
+
     site = client.sites.by_subdomain('acme')
-    articles = client.scope(site, :en).contents.articles.all
+    site_client = client.scope_by(site)
 
+    content_type = site_client.contents.projects
 
+#### Content Entries
+
+**Get all the entries filtered by a property (published) + pagination enabled**
+
+    articles = site_client.contents.articles.all({ published: true }, page: 2, per_page: 5)
+
+**Update a content entry**
+
+    article = site_client.contents.articles.all.first
+    site_client.contents.articles.update(article._id, { title: 'Hello world'})
 
 ## TODO
 
-see the list in the issues section.
+We only implemented a few resources (my_account, sites, content types and content entries) and for some of them, not all the actions have been implemented.
+
+Check the issues section of the repository to see what is missing.
 
 ## Credits ##
 

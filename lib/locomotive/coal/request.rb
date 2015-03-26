@@ -2,8 +2,8 @@ module Locomotive::Coal
 
   module Request
 
-    def get(endpoint, parameters = {})
-      safe_request_call do
+    def get(endpoint, parameters = {}, raw = false)
+      safe_request_call(raw) do
         Unirest.get   "#{uri.to_s}/#{endpoint}.json",
           headers:    { 'Accept' => 'application/json' },
           auth:       uri.userinfo,
@@ -44,7 +44,7 @@ module Locomotive::Coal
 
     private
 
-    def safe_request_call(&block)
+    def safe_request_call(raw = false, &block)
       response = begin
         yield
       rescue Exception => e
@@ -52,7 +52,7 @@ module Locomotive::Coal
       end
 
       if response.code == 200
-        response.body
+        raw ? response : response.body
       else
         raise Locomotive::Coal::Error.from_response(response)
       end

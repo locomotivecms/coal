@@ -5,7 +5,6 @@ describe Locomotive::Coal::Resources::Sites do
   before { VCR.insert_cassette 'sites', record: :new_episodes }
   after  { VCR.eject_cassette }
 
-
   let(:uri)     { TEST_API_URI }
   let(:token)   { api_token }
   let(:sites)   { described_class.new(uri, token) }

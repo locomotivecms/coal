@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 01:15:05 GMT
+      - Thu, 26 Mar 2015 12:13:39 GMT
       Status:
       - 200 OK
       Connection:
@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=uqyEqm6OXvPTEygLX3tTO3XXzn4; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=zUUHIKNc-a1-wegiBJYzxJOIcRE; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 276de4d68b50ceaed879756230b9d0cd
+      - 061a5e57ccbb534f01f7042ad71bf80b
       X-Runtime:
-      - '0.026316'
+      - '0.030627'
     body:
       encoding: UTF-8
       string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 01:15:05 GMT
+  recorded_at: Thu, 26 Mar 2015 12:13:39 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/my_account.json?auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -69,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 01:15:05 GMT
+      - Thu, 26 Mar 2015 12:13:40 GMT
       Status:
       - 200 OK
       Connection:
@@ -79,19 +79,19 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"a92de87519c76eb87c2fd747c69b59a0"'
+      - '"5286c0fcb45b4f01085a8ad3b0271bca"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=ONfoAtUkT-mW9fzOpUAg5X5Mpw4; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=foIjGgvG1z2IMoxADAVRxAVoqnI; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 943c255d884d22926a25d920d7927041
+      - e1a73f86678857cf095ff20bf64bb298
       X-Runtime:
-      - '0.030784'
+      - '0.031958'
     body:
       encoding: UTF-8
-      string: '{"id":"54eb49b22475804b2b000001","_id":"54eb49b22475804b2b000001","created_at":"2015-02-23T15:39:30Z","updated_at":"2015-03-26T01:15:05Z","name":"John","email":"john@doe.net","locale":"en","encrypted_password":"fc2fa5bc736ba0f4ab04c4e427660f7a4fd7a360","password_salt":"ccEcFveptwhvSoRoExkX","api_key":"a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7","admin":true}'
+      string: '{"id":"54eb49b22475804b2b000001","_id":"54eb49b22475804b2b000001","created_at":"2015-02-23T15:39:30Z","updated_at":"2015-03-26T12:13:39Z","name":"John","email":"john@doe.net","locale":"en","encrypted_password":"fc2fa5bc736ba0f4ab04c4e427660f7a4fd7a360","password_salt":"ccEcFveptwhvSoRoExkX","api_key":"a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7","admin":true}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 01:15:05 GMT
+  recorded_at: Thu, 26 Mar 2015 12:13:40 GMT
 recorded_with: VCR 2.9.3

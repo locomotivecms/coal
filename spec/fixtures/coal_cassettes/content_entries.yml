@@ -1,0 +1,386 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://sample.lvh.me:4000/locomotive/api/tokens.json
+    body:
+      encoding: US-ASCII
+      string: email=john%40doe.net&password=easyone
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:42:07 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Location:
+      - http://sample.lvh.me:4000/locomotive/
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"557f8d72cf11ab5399621eddec942c29"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=Mr3RL9aUNxSU2N6ew4hRngyeMyo; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - c148b081fc84bae8af1fc2dc4f415a5a
+      X-Runtime:
+      - '0.705651'
+    body:
+      encoding: UTF-8
+      string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types.json?auth_token=9GLRWwc2MGTCF7SHiZSg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:42:07 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"7dbb8592219d2f208083b29864ef8522"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=pxKxImEpxvFPudAIdRaje5_KXg0; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - f947cf728c3abd3969b4be4996a0c928
+      X-Runtime:
+      - '0.134199'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"54eb4b662475804b2b00000a","_id":"54eb4b662475804b2b00000a","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:47Z","name":"Bands","slug":"bands","entries_custom_fields":[{"id":"54eb4b662475804b2b00000b","_id":"54eb4b662475804b2b00000b","name":"name","label":"Name","type":"string","required":true,"localized":false,"unique":false,"hint":"Name
+        of the band","position":0},{"id":"54eb4b662475804b2b00000c","_id":"54eb4b662475804b2b00000c","name":"leader","label":"Fullname
+        of the leader","type":"string","required":false,"localized":false,"unique":false,"position":1},{"id":"54eb4b662475804b2b00000d","_id":"54eb4b662475804b2b00000d","name":"kind","label":"Music
+        kind (grunge, rock, pop, country)","type":"select","required":false,"localized":false,"unique":false,"position":2,"select_options":[{"_id":"54eb4b662475804b2b00000f","name":"grunge","position":0,"id":"54eb4b662475804b2b00000f"},{"_id":"54eb4b662475804b2b000010","name":"rock","position":1,"id":"54eb4b662475804b2b000010"},{"_id":"54eb4b662475804b2b000011","name":"country","position":2,"id":"54eb4b662475804b2b000011"}],"raw_select_options":[{"id":"54eb4b662475804b2b00000f","name":{"en":"grunge"},"position":2},{"id":"54eb4b662475804b2b000010","name":{"en":"rock"},"position":2},{"id":"54eb4b662475804b2b000011","name":{"en":"country"},"position":2}]},{"id":"54eb4b662475804b2b00002d","_id":"54eb4b662475804b2b00002d","name":"songs","label":"Songs","type":"has_many","required":false,"localized":false,"unique":false,"position":3,"class_name":"Locomotive::ContentEntry54eb4b662475804b2b00001e","inverse_of":"band","ui_enabled":true,"class_slug":"songs"},{"id":"54eb4b662475804b2b00000e","_id":"54eb4b662475804b2b00000e","name":"featured","label":"Featured","type":"boolean","required":false,"localized":false,"unique":false,"position":4}],"description":"List
+        of bands","label_field_name":"name","order_by":"54eb4b662475804b2b00000b","order_direction":"asc","order_by_field_name":"name","public_submission_enabled":false,"public_submission_account_emails":[]},{"id":"54eb4bb52475804b2b000037","_id":"54eb4bb52475804b2b000037","created_at":"2015-02-23T15:48:05Z","updated_at":"2015-02-23T15:48:05Z","name":"Events","slug":"events","entries_custom_fields":[{"id":"54eb4bb52475804b2b000038","_id":"54eb4bb52475804b2b000038","name":"place","label":"Place","type":"string","required":true,"localized":false,"unique":false,"hint":"Name
+        of the place","position":0},{"id":"54eb4bb52475804b2b000039","_id":"54eb4bb52475804b2b000039","name":"date","label":"Date","type":"date","required":false,"localized":false,"unique":false,"hint":"Date
+        of the event","position":1},{"id":"54eb4bb52475804b2b00003a","_id":"54eb4bb52475804b2b00003a","name":"city","label":"City
+        of the event","type":"string","required":false,"localized":false,"unique":false,"position":2},{"id":"54eb4bb52475804b2b00003b","_id":"54eb4bb52475804b2b00003b","name":"state","label":"State
+        of the event","type":"string","required":false,"localized":false,"unique":false,"position":3},{"id":"54eb4bb52475804b2b00003c","_id":"54eb4bb52475804b2b00003c","name":"notes","label":"Notes","type":"text","required":false,"localized":false,"unique":false,"position":4,"text_formatting":""},{"id":"54eb4bb52475804b2b00003d","_id":"54eb4bb52475804b2b00003d","name":"tags","label":"List
+        of tags","type":"tags","required":false,"localized":false,"unique":false,"position":5},{"id":"54eb4bb52475804b2b00003e","_id":"54eb4bb52475804b2b00003e","name":"price","label":"Price
+        of the event","type":"float","required":false,"localized":false,"unique":false,"position":6}],"description":"List
+        of upcoming events","label_field_name":"place","order_by":"created_at","order_direction":"asc","order_by_field_name":"created_at","public_submission_enabled":false,"public_submission_account_emails":[]},{"id":"54eb4b662475804b2b00001a","_id":"54eb4b662475804b2b00001a","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:46Z","name":"Messages","slug":"messages","entries_custom_fields":[{"id":"54eb4b662475804b2b00001b","_id":"54eb4b662475804b2b00001b","name":"name","label":"Name","type":"string","required":true,"localized":false,"unique":false,"hint":"Full
+        name","position":0},{"id":"54eb4b662475804b2b00001c","_id":"54eb4b662475804b2b00001c","name":"email","label":"Email","type":"string","required":true,"localized":false,"unique":false,"hint":"Email","position":1},{"id":"54eb4b662475804b2b00001d","_id":"54eb4b662475804b2b00001d","name":"message","label":"Message","type":"text","required":true,"localized":false,"unique":false,"hint":"Customer
+        message","position":2,"text_formatting":""}],"description":"Messages posted
+        by new potential customers","label_field_name":"name","order_by":"created_at","order_direction":"asc","order_by_field_name":"created_at","public_submission_enabled":true,"public_submission_account_emails":[]},{"id":"54eb4b662475804b2b00001e","_id":"54eb4b662475804b2b00001e","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:47Z","name":"Songs","slug":"songs","entries_custom_fields":[{"id":"54eb4b662475804b2b00001f","_id":"54eb4b662475804b2b00001f","name":"title","label":"Title","type":"string","required":true,"localized":false,"unique":false,"hint":"Title
+        of your song","position":0},{"id":"54eb4b672475804b2b00002e","_id":"54eb4b672475804b2b00002e","name":"band","label":"Band","type":"belongs_to","required":false,"localized":false,"unique":false,"position":1,"class_name":"Locomotive::ContentEntry54eb4b662475804b2b00000a","ui_enabled":true,"class_slug":"bands"},{"id":"54eb4b662475804b2b000020","_id":"54eb4b662475804b2b000020","name":"cover","label":"Cover","type":"file","required":true,"localized":false,"unique":false,"position":2},{"id":"54eb4b662475804b2b000021","_id":"54eb4b662475804b2b000021","name":"short_description","label":"Short
+        description","type":"text","required":false,"localized":false,"unique":false,"position":3,"text_formatting":"html"},{"id":"54eb4b662475804b2b000022","_id":"54eb4b662475804b2b000022","name":"audio_url","label":"Audio
+        url","type":"string","required":false,"localized":false,"unique":false,"hint":"Url
+        to a service like Blip for instance","position":4},{"id":"54eb4b662475804b2b000023","_id":"54eb4b662475804b2b000023","name":"duration","label":"Duration","type":"string","required":false,"localized":false,"unique":false,"hint":"format
+        like: mm:ss","position":5}],"label_field_name":"title","order_by":"_position","order_direction":"asc","order_by_field_name":"_position","public_submission_enabled":false,"public_submission_account_emails":[]},{"id":"54eb4b662475804b2b000024","_id":"54eb4b662475804b2b000024","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:46Z","name":"Updates","slug":"updates","entries_custom_fields":[{"id":"54eb4b662475804b2b000025","_id":"54eb4b662475804b2b000025","name":"title","label":"Title","type":"string","required":true,"localized":true,"unique":false,"hint":"Not
+        displayed in the website","position":0},{"id":"54eb4b662475804b2b000026","_id":"54eb4b662475804b2b000026","name":"text","label":"Text","type":"text","required":false,"localized":true,"unique":false,"hint":"Text
+        displayed in the home page","position":1,"text_formatting":"html"},{"id":"54eb4b662475804b2b000027","_id":"54eb4b662475804b2b000027","name":"category","label":"Category","type":"select","required":false,"localized":true,"unique":false,"hint":"Pick
+        a category","position":2,"select_options":[{"_id":"54eb4b662475804b2b000029","name":"General","position":0,"id":"54eb4b662475804b2b000029"},{"_id":"54eb4b662475804b2b00002a","name":"Gigs","position":1,"id":"54eb4b662475804b2b00002a"},{"_id":"54eb4b662475804b2b00002b","name":"Bands","position":2,"id":"54eb4b662475804b2b00002b"},{"_id":"54eb4b662475804b2b00002c","name":"Albums","position":3,"id":"54eb4b662475804b2b00002c"}],"raw_select_options":[{"id":"54eb4b662475804b2b000029","name":{"en":"General","fr":"G\u00e9n\u00e9ral"},"position":2},{"id":"54eb4b662475804b2b00002a","name":{"en":"Gigs","fr":"Concerts"},"position":2},{"id":"54eb4b662475804b2b00002b","name":{"en":"Bands","fr":"Groupes"},"position":2},{"id":"54eb4b662475804b2b00002c","name":{"en":"Albums"},"position":2}]},{"id":"54eb4b662475804b2b000028","_id":"54eb4b662475804b2b000028","name":"date","label":"Date","type":"date","required":false,"localized":false,"unique":false,"hint":"Date
+        of the update","position":3}],"description":"List of updates","label_field_name":"title","order_by":"54eb4b662475804b2b000028","order_direction":"asc","order_by_field_name":"date","public_submission_enabled":false,"public_submission_account_emails":[]}]'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&where=%7B%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:42:07 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Total-Pages:
+      - '1'
+      X-Per-Page:
+      - '10'
+      X-Total-Entries:
+      - '3'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"91c1194717bc84d6d2704913a58b5d0b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=uFUrpZan-EA2AzmSsY-9cFje0sA; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 8033ea5edff41d69d608268af677821b
+      X-Runtime:
+      - '0.088316'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"54eb4bbc2475804b2b000040","_id":"54eb4bbc2475804b2b000040","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Alice
+        in Chains","_slug":"alice-in-chains","_position":1,"_visible":true,"content_type_slug":"bands","name":"Alice
+        in Chains","leader":"Layne","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":[]},{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
+        Jam","_slug":"pearl-jam","_position":0,"_visible":true,"content_type_slug":"bands","name":"Pearl
+        Jam","leader":"Eddie","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":["song-number-1","song-number-2","song-number-3","song-number-4"]},{"id":"54eb4bbc2475804b2b000041","_id":"54eb4bbc2475804b2b000041","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"The
+        who","_slug":"the-who","_position":2,"_visible":true,"content_type_slug":"bands","name":"The
+        who","leader":"Peter","kind":"rock","kind_id":"54eb4b662475804b2b000010","featured":true,"songs":["song-number-5","song-number-6"]}]'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&page=2&where=%7B%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:42:47 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Total-Pages:
+      - '1'
+      X-Per-Page:
+      - '10'
+      X-Total-Entries:
+      - '3'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=MCwnvao2L1V4f6_hrHaj8EG6Xnk; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - b6c46c8e51af9298038b5039e964cc07
+      X-Runtime:
+      - '0.038975'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:42:47 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&page=2&per_page=2&where=%7B%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:43:54 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Total-Pages:
+      - '2'
+      X-Per-Page:
+      - '2'
+      X-Total-Entries:
+      - '3'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"77cec12cfd3fa8312a6ebfe37146b5b3"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=MrAzKiNGfNlKnrgF1ZUdLEcJpm8; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 133e08d818134e7ed3771af680a81a36
+      X-Runtime:
+      - '0.046230'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"54eb4bbc2475804b2b000041","_id":"54eb4bbc2475804b2b000041","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"The
+        who","_slug":"the-who","_position":2,"_visible":true,"content_type_slug":"bands","name":"The
+        who","leader":"Peter","kind":"rock","kind_id":"54eb4b662475804b2b000010","featured":true,"songs":["song-number-5","song-number-6"]}]'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:43:54 GMT
+- request:
+    method: get
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&where=%7B%22_visible%22:true,%22name%22:%22Pearl%20Jam%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:46:05 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Total-Pages:
+      - '1'
+      X-Per-Page:
+      - '10'
+      X-Total-Entries:
+      - '1'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"f8ee5f52f06bb626aa8998c399bdd303"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=JEUQBJGbGbEkga1EmhwA4en9kbo; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 152e785ab085c083f15a8b5e9b8652da
+      X-Runtime:
+      - '0.043661'
+    body:
+      encoding: UTF-8
+      string: '[{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
+        Jam","_slug":"pearl-jam","_position":0,"_visible":true,"content_type_slug":"bands","name":"Pearl
+        Jam","leader":"Eddie","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":["song-number-1","song-number-2","song-number-3","song-number-4"]}]'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:46:05 GMT
+- request:
+    method: put
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries/54eb4bbc2475804b2b000040.json
+    body:
+      encoding: US-ASCII
+      string: content_entry[name]=Pearl%20Jam&auth_token=9GLRWwc2MGTCF7SHiZSg
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '63'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 11:55:30 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Message:
+      - '"Content%20entry%20was%20successfully%20updated."'
+      X-Message-Type:
+      - notice
+      Location:
+      - http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"84c5c68cba09d1589e78a8827644a958"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=0Nu-IUIFMFrUHygtzzQCMPzNa6k; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 6650fc80d6ae5f691cc38a1cc868d8c2
+      X-Runtime:
+      - '0.060579'
+    body:
+      encoding: UTF-8
+      string: '{"id":"54eb4bbc2475804b2b000040","_id":"54eb4bbc2475804b2b000040","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-03-26T11:55:30Z","_label":"Pearl
+        Jam","_slug":"alice-in-chains","_position":1,"_visible":true,"content_type_slug":"bands","name":"Pearl
+        Jam","leader":"Layne","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":[]}'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 11:55:30 GMT
+recorded_with: VCR 2.9.3

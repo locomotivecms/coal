@@ -24,4 +24,10 @@ describe Locomotive::Coal::Client do
     it { is_expected.not_to eq nil }
   end
 
+  describe '#scope_by' do
+    let(:site) { client.sites.all.first }
+    subject { client.scope_by(site) }
+    it { is_expected.to eq client }
+  end
+
 end
