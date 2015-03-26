@@ -4,6 +4,11 @@ require 'active_support/deprecation'
 require 'active_support/core_ext'
 require 'unirest'
 
+module Locomotive
+  module Coal
+  end
+end
+
 require_relative 'coal/error'
 require_relative 'coal/request'
 require_relative 'coal/paginated_resources'
