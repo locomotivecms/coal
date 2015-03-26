@@ -23,6 +23,7 @@ require 'vcr'
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/coal_cassettes'
   c.hook_into :webmock
+  config.ignore_hosts 'codeclimate.com'
 end
 
 require_relative 'support/api_settings'
