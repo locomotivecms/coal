@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Mar 2015 23:56:38 GMT
+      - Thu, 26 Mar 2015 01:14:59 GMT
       Status:
       - 200 OK
       Connection:
@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=oMmVnmejUPEGXlGBGjX6WuqHjLc; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=g86lgnPFBeVNLSoXm3RmbZPTXws; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 1b3bad032bda000bb01049e3d439c2e0
+      - c5cdbefbee4d9c40a7bc857e26692d80
       X-Runtime:
-      - '0.106768'
+      - '0.041794'
     body:
       encoding: UTF-8
       string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
     http_version: 
-  recorded_at: Wed, 25 Mar 2015 23:56:38 GMT
+  recorded_at: Thu, 26 Mar 2015 01:14:59 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/sites.json?auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -69,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Mar 2015 23:56:38 GMT
+      - Thu, 26 Mar 2015 01:14:59 GMT
       Status:
       - 200 OK
       Connection:
@@ -83,12 +83,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=CSYT0_4Zyii0BlMhZEWId59Cvqk; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=2dsNSUl0YoCmoeOTkcuZ1TRxtzM; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 2d82dbafa92bfcb594ac0ffa33a0d44b
+      - ceb9eeb56f7d8bffe236a81d8ca60aa2
       X-Runtime:
-      - '0.075917'
+      - '0.035699'
     body:
       encoding: UTF-8
       string: '[{"id":"54eb49c12475804b2b000002","_id":"54eb49c12475804b2b000002","created_at":"2015-02-23T15:39:45Z","updated_at":"2015-02-23T15:46:46Z","name":"Sample
@@ -96,5 +96,109 @@ http_interactions:
         simple LocomotiveCMS website","meta_keywords":"some meta keywords","meta_description":"some
         meta description"}]'
     http_version: 
-  recorded_at: Wed, 25 Mar 2015 23:56:38 GMT
+  recorded_at: Thu, 26 Mar 2015 01:14:59 GMT
+- request:
+    method: post
+    uri: http://sample.lvh.me:4000/locomotive/api/sites.json
+    body:
+      encoding: US-ASCII
+      string: site[name]=Acme&site[subdomain]=acme&site[locales][]=en&auth_token=9GLRWwc2MGTCF7SHiZSg
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '87'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 01:14:59 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Location:
+      - http://sample.lvh.me:4000/locomotive/sites/55135d93c365116a24000005
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"f8533cbe7cee12ea382de989b38d1c91"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=dZS8cjmvMxbgALsx-fBbDfpuJnk; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - cca6718b58e5bf35b08401b245f0c2ce
+      X-Runtime:
+      - '0.051935'
+    body:
+      encoding: UTF-8
+      string: '{"id":"55135d93c365116a24000005","_id":"55135d93c365116a24000005","created_at":"2015-03-26T01:14:59Z","updated_at":"2015-03-26T01:14:59Z","name":"Acme","locales":["en"],"timezone":"UTC","subdomain":"acme","domains":["acme.lvh.me"],"domains_without_subdomain":[],"domain_name":"lvh.me","memberships":[{"id":"55135d93c365116a24000006","_id":"55135d93c365116a24000006","role":"admin","role_name":"Administrator","can_update":false,"grant_admin":true,"account_id":"54eb49b22475804b2b000001","name":"John","email":"john@doe.net"}]}'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 01:14:59 GMT
+- request:
+    method: delete
+    uri: http://sample.lvh.me:4000/locomotive/api/sites/55135d93c365116a24000005.json
+    body:
+      encoding: US-ASCII
+      string: auth_token=9GLRWwc2MGTCF7SHiZSg
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '31'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 26 Mar 2015 01:14:59 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      X-Message:
+      - '"Site%20was%20successfully%20destroyed."'
+      X-Message-Type:
+      - notice
+      Location:
+      - http://sample.lvh.me:4000/locomotive/sites
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"2b84b3c4ddc0e72e926de157056c9a8a"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=ZQxCSTwJbdRc7nUa8ZuH3Jsv0As; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 1ca75b07c1dc734ec59283b026db8d49
+      X-Runtime:
+      - '0.045563'
+    body:
+      encoding: UTF-8
+      string: '{"id":null,"_id":null,"created_at":"2015-03-26T01:14:59Z","updated_at":"2015-03-26T01:14:59Z","name":"Acme","locales":["en"],"timezone":"UTC","subdomain":"acme","domains":["acme.lvh.me"],"domains_without_subdomain":[],"domain_name":"lvh.me","memberships":[{"id":"55135d93c365116a24000006","_id":"55135d93c365116a24000006","role":"admin","role_name":"Administrator","can_update":false,"grant_admin":true,"account_id":"54eb49b22475804b2b000001","name":"John","email":"john@doe.net"}]}'
+    http_version: 
+  recorded_at: Thu, 26 Mar 2015 01:14:59 GMT
 recorded_with: VCR 2.9.3

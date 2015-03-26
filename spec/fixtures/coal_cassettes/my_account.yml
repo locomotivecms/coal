@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Mar 2015 23:32:02 GMT
+      - Thu, 26 Mar 2015 01:15:05 GMT
       Status:
       - 200 OK
       Connection:
@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=uLCbLU828H2CBvFfM2PLgKHkumg; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=uqyEqm6OXvPTEygLX3tTO3XXzn4; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - ae9565bb05aa4998b177c97b5cd5c9e4
+      - 276de4d68b50ceaed879756230b9d0cd
       X-Runtime:
-      - '0.040398'
+      - '0.026316'
     body:
       encoding: UTF-8
       string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
     http_version: 
-  recorded_at: Wed, 25 Mar 2015 23:32:02 GMT
+  recorded_at: Thu, 26 Mar 2015 01:15:05 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/my_account.json?auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -69,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 Mar 2015 23:32:02 GMT
+      - Thu, 26 Mar 2015 01:15:05 GMT
       Status:
       - 200 OK
       Connection:
@@ -79,120 +79,19 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"40f01973492a15852b951206bae25738"'
+      - '"a92de87519c76eb87c2fd747c69b59a0"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=-6Wkhu9LIBBtA3tO7izimEMz20U; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=ONfoAtUkT-mW9fzOpUAg5X5Mpw4; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 0bd819f39fbedfadb2909c4fe7649fb7
+      - 943c255d884d22926a25d920d7927041
       X-Runtime:
-      - '0.036006'
+      - '0.030784'
     body:
       encoding: UTF-8
-      string: '{"id":"54eb49b22475804b2b000001","_id":"54eb49b22475804b2b000001","created_at":"2015-02-23T15:39:30Z","updated_at":"2015-03-25T23:32:02Z","name":"John","email":"john@doe.net","locale":"en","encrypted_password":"fc2fa5bc736ba0f4ab04c4e427660f7a4fd7a360","password_salt":"ccEcFveptwhvSoRoExkX","api_key":"a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7","admin":true}'
+      string: '{"id":"54eb49b22475804b2b000001","_id":"54eb49b22475804b2b000001","created_at":"2015-02-23T15:39:30Z","updated_at":"2015-03-26T01:15:05Z","name":"John","email":"john@doe.net","locale":"en","encrypted_password":"fc2fa5bc736ba0f4ab04c4e427660f7a4fd7a360","password_salt":"ccEcFveptwhvSoRoExkX","api_key":"a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7","admin":true}'
     http_version: 
-  recorded_at: Wed, 25 Mar 2015 23:32:02 GMT
-- request:
-    method: put
-    uri: http://sample.lvh.me:4000/locomotive/api/my_account.json
-    body:
-      encoding: US-ASCII
-      string: my_account[name]=John%20Doe&auth_token=9GLRWwc2MGTCF7SHiZSg
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip
-      User-Agent:
-      - unirest-ruby/1.1
-      Content-Length:
-      - '59'
-      Content-Type:
-      - application/x-www-form-urlencoded
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Wed, 25 Mar 2015 23:46:36 GMT
-      Status:
-      - 404 Not Found
-      Connection:
-      - close
-      Content-Type:
-      - text/html; charset=utf-8
-      Editable:
-      - 'true'
-      X-Ua-Compatible:
-      - IE=Edge
-      Cache-Control:
-      - no-cache
-      Set-Cookie:
-      - _locomotive_session=Yis5l0gQbQsNMV6XjHpMdH1GBCo; domain=.sample.lvh.me; path=/;
-        HttpOnly
-      X-Request-Id:
-      - 1061b95381058d8a01faaa7eef45ce8f
-      X-Runtime:
-      - '0.874005'
-    body:
-      encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html lang='en'>\n  <head>\n    <meta charset='utf-8'>\n
-        \   <title>Sample website</title>\n    <meta content='some meta description'
-        name='description'>\n    <meta content='some meta keywords' name='keywords'>\n
-        \   <link rel=\"alternate\" type=\"application/atom+xml\" title=\"A title\"
-        href=\"/foo/bar\">\n    <!-- Le HTML5 shim, for IE6-8 support of HTML elements
-        -->\n    <!--[if lt IE 9]>\n      <script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>\n
-        \   <![endif]-->\n    <link href=\"/fonts/chunkfive.css\" media=\"screen\"
-        rel=\"stylesheet\" type=\"text/css\" />\n    <!-- Le styles -->\n    <link
-        href=\"http://fonts.googleapis.com/css.css?family=Open+Sans:400,700\" media=\"screen\"
-        rel=\"stylesheet\" type=\"text/css\">\n    <link href=\"/sites/54eb49c12475804b2b000002/theme/stylesheets/reboot.css\"
-        media=\"screen\" rel=\"stylesheet\" type=\"text/css\">\n    <link href=\"/sites/54eb49c12475804b2b000002/theme/stylesheets/application.css\"
-        media=\"screen\" rel=\"stylesheet\" type=\"text/css\">\n    <script src=\"/sites/54eb49c12475804b2b000002/theme/javascripts/application.js\"
-        type='text/javascript'></script>\n    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'
-        type='text/javascript'></script>\n    \n  </head>\n  <body>\n    <div class='container'>\n
-        \     <div id='menu'>\n        <ul id='nav'>\n          <li class=\" link\"
-        id='home'>\n            <a href='/'>Home</a>\n          </li>\n          <li
-        id=\"about-us-link\" class=\"link first\"><a href=\"/about-us\">About Us</a></li>\n<li
-        id=\"music-link\" class=\"link \"><a href=\"/music\">Music</a></li>\n<li id=\"store-link\"
-        class=\"link \"><a href=\"/store\">Store</a></li>\n<li id=\"contact-link\"
-        class=\"link last\"><a href=\"/contact\">Contact Us</a></li>\n        </ul>\n
-        \       <div class='clear'></div>\n      </div>\n      <div id='banner'>\n
-        \       \n        <div class='photo'>\n          <img src=\"/sites/54eb49c12475804b2b000002/assets/54eb4bc82475804b2b00005c/photo.jpg?1424706507\">\n
-        \       </div>\n        <div class='text'>\n          \n          <h2>About
-        Us</h2>\n          <p>\n            Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Suspendisse vitae egestas neque. Proin ac ante ante, sit
-        amet egestas purus. Fusce tincidunt mattis sapien eget sodales. Cras aliquet
-        odio eu nisl dapibus placerat.\n            <br>\n            <a href='/about_us'>read
-        more...</a>\n          </p>\n          \n        </div>\n        \n        <div
-        class='clear'></div>\n      </div>\n      <div id='content'>\n        \n<p
-        class='error'>page not found</p>\n\n        <div class='clear'></div>\n      </div>\n
-        \     <div id='footer'>\n        <div id='is_templatized' templatized='false'></div>\n
-        \       <div id='scoped_translation' scoped_translation=\"French\"></div>\n
-        \       <p><div id=\"locale-switcher\"><a href=\"/404\" class=\"en current\">en</a>
-        | <a href=\"/fr/404\" class=\"fr\">fr</a> | <a href=\"/nb/404\" class=\"nb\">nb</a></div></p>\n<p>\n
-        \ Powered by <a href=\"http://www.locomotivecms.com\">LocomotiveCMS</a>. Designed
-        by <a href=\"http://www.sachagreif.com\">Sacha Greif</a>.\n</p>\n<p>\n  All
-        photos are licensed under Creative Commons. (see original ones <a href='http://www.flickr.com/photos/38687875@N00/3391588262/'>here</a>
-        or <a href='http://www.flickr.com/photos/cool_dry_place/55454498/'>here</a>).\n</p>\n\n
-        \       <p>A complicated one name indeed.</p>\n\n      </div>\n    </div>\n
-        \   \n          <script type=\"text/javascript\">\n\n            var _gaq
-        = _gaq || [];\n            _gaq.push(['_setAccount', 'UA-20661758-1']);\n
-        \           _gaq.push(['_trackPageview']);\n\n            (function() {\n
-        \             var ga = document.createElement('script'); ga.type = 'text/javascript';
-        ga.async = true;\n              ga.src = ('https:' == document.location.protocol
-        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n              var
-        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
-        s);\n            })();\n\n          </script>\n  \n             <a  href=\"/locomotive/api/my_account.json/_admin\"\n
-        \                onmouseout=\"this.style.backgroundPosition='0px 0px'\"\n
-        \                onmouseover=\"this.style.backgroundPosition='0px -45px'\"\n
-        \                onmousedown=\"this.style.backgroundPosition='0px -90px'\"\n
-        \                onmouseup=\"this.style.backgroundPosition='0px 0px'\"\n                 style=\"display:
-        block;z-index: 1031;position: fixed;top: 10px; right: 10px;width: 48px; height:
-        45px;text-indent:-9999px;text-decoration:none;background: transparent url('/assets/locomotive/icons/start.png')
-        no-repeat 0 0;\">\n             Admin</a>\n             </body>\n             \n</html>\n"
-    http_version: 
-  recorded_at: Wed, 25 Mar 2015 23:46:36 GMT
+  recorded_at: Thu, 26 Mar 2015 01:15:05 GMT
 recorded_with: VCR 2.9.3

@@ -33,6 +33,15 @@ module Locomotive::Coal
       end
     end
 
+    def delete(endpoint, id)
+      safe_request_call do
+        Unirest.delete    "#{uri.to_s}/#{endpoint}/#{id}.json",
+          auth:           uri.userinfo,
+          headers:        { 'Accept' => 'application/json' },
+          parameters:     { auth_token: token }
+      end
+    end
+
     private
 
     def safe_request_call(&block)

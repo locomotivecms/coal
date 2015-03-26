@@ -20,7 +20,12 @@ The Ruby API Client for LocomotiveCMS.
     my_sites = client.sites.all
     puts "I've got #{my_sites.size}"
 
-    # Get all the articles (if there is a "Articles" content type)
+    # Create a new site
+    my_site = client.sites.create(name: 'Acme', subdomain: 'acme', locales: ['en'], timezone: 'UTC')
+
+    # Get all the articles in English (if there is a localized "Articles" content type) from the Acme site
+    site = client.sites.by_subdomain('acme')
+    articles = client.scope(site, :en).contents.articles.all
 
 
 
