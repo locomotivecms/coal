@@ -42,7 +42,7 @@ The Ruby API Client for LocomotiveCMS.
 
 **Get a content type by its slug**
 
-Note: We first need to log in to the site the content type belongs to. It can be done by calling the scope_by method of the client instance.
+*Note:* We first need to log in to the site the content type belongs to. It can be done by calling the scope_by method of the client instance.
 
     site = client.sites.by_subdomain('acme')
     site_client = client.scope_by(site)
@@ -51,9 +51,18 @@ Note: We first need to log in to the site the content type belongs to. It can be
 
 #### Content Entries
 
-**Get all the entries filtered by a property (published) + pagination enabled**
+**Get all the first 10 entries filtered by a property (published)**
 
-    articles = site_client.contents.articles.all({ published: true }, page: 2, per_page: 5)
+    articles = site_client.contents.articles.all({ published: true })
+
+**Loop over all the content entries**
+
+    page = 1
+    while page do
+      articles = site_client.contents.articles.all({ published: true }, page: page)
+      articles.each { |article| puts article.title }
+      page = articles._next_page
+    end
 
 **Update a content entry**
 

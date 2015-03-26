@@ -13,6 +13,7 @@ module Locomotive::Coal
         list = response.body.map { |attributes| Resource.new(attributes) }
 
         PaginatedResources.new(list,
+          options[:page] || 1,
           response.headers[:x_total_pages].to_i,
           response.headers[:x_total_entries].to_i)
       end
