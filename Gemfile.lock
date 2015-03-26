@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.0.0.pre.alpha)
+    locomotivecms_coal (1.0.0.pre.alpha.1)
       activesupport (~> 4.2.1)
       unirest (~> 1.1.2)
 
