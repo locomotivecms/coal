@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 12:13:40 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=KiLaEKykMgXNNfD6itS7bVfmjss; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=ImpEWGYg0pDWA5N82W8vUCpUVVg; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 8a693be630caf70d8a7ecfbebc0b4c9e
+      - f65a02b079edae54a406ae88b9b2b842
       X-Runtime:
-      - '0.023604'
+      - '0.031291'
     body:
       encoding: UTF-8
       string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 12:13:40 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/content_types.json?auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -69,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 12:13:40 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -83,12 +83,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=F8r7t2KiM9Y_08jfTgR3-2_uWeg; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=HUiExanterTtrjPRh5RaJubVYlI; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - c5995e9d19527d56c352a1894b74baf7
+      - de5770a64aff3cabb1310aa2afaa33b7
       X-Runtime:
-      - '0.069300'
+      - '0.071627'
     body:
       encoding: UTF-8
       string: '[{"id":"54eb4b662475804b2b00000a","_id":"54eb4b662475804b2b00000a","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:47Z","name":"Bands","slug":"bands","entries_custom_fields":[{"id":"54eb4b662475804b2b00000b","_id":"54eb4b662475804b2b00000b","name":"name","label":"Name","type":"string","required":true,"localized":false,"unique":false,"hint":"Name
@@ -116,5 +116,5 @@ http_interactions:
         a category","position":2,"select_options":[{"_id":"54eb4b662475804b2b000029","name":"General","position":0,"id":"54eb4b662475804b2b000029"},{"_id":"54eb4b662475804b2b00002a","name":"Gigs","position":1,"id":"54eb4b662475804b2b00002a"},{"_id":"54eb4b662475804b2b00002b","name":"Bands","position":2,"id":"54eb4b662475804b2b00002b"},{"_id":"54eb4b662475804b2b00002c","name":"Albums","position":3,"id":"54eb4b662475804b2b00002c"}],"raw_select_options":[{"id":"54eb4b662475804b2b000029","name":{"en":"General","fr":"G\u00e9n\u00e9ral"},"position":2},{"id":"54eb4b662475804b2b00002a","name":{"en":"Gigs","fr":"Concerts"},"position":2},{"id":"54eb4b662475804b2b00002b","name":{"en":"Bands","fr":"Groupes"},"position":2},{"id":"54eb4b662475804b2b00002c","name":{"en":"Albums"},"position":2}]},{"id":"54eb4b662475804b2b000028","_id":"54eb4b662475804b2b000028","name":"date","label":"Date","type":"date","required":false,"localized":false,"unique":false,"hint":"Date
         of the update","position":3}],"description":"List of updates","label_field_name":"title","order_by":"54eb4b662475804b2b000028","order_direction":"asc","order_by_field_name":"date","public_submission_enabled":false,"public_submission_account_emails":[]}]'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 12:13:40 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 recorded_with: VCR 2.9.3

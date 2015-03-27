@@ -23,6 +23,15 @@ The Ruby API Client for LocomotiveCMS.
     my_account = client.my_account.get
     puts my_account.name + " / " + my_account.email
 
+**If not logged in, then it's possible to create your account**
+
+    client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api')
+    client.my_account.create(name: 'John Doe', email: 'john@doe.net', password: 'easyone', password_confirmation: 'easyone')
+
+**Update my account**
+
+    client.my_account.update(name: 'Jane Doe')
+
 #### Sites
 
 **Get all my sites**

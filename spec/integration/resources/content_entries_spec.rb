@@ -42,7 +42,7 @@ describe Locomotive::Coal::Resources::ContentEntries do
 
   describe '#update' do
 
-    let(:entry) { entries.all.first }
+    let(:entry) { entries.all[1] }
     subject { entries.update(entry._id, { name: 'Pearl Jam' }) }
 
     it { expect(subject._id).to eq entry._id }

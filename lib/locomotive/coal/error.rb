@@ -5,19 +5,33 @@ module Locomotive::Coal
   #
   class Error < StandardError
 
+    attr_reader :response
+
+    def initialize(response)
+      @response = response
+      super
+    end
+
+    def errors
+      @response.body
+    end
+
     def self.from_response(response)
       status = response.code
       if klass = case status
                   when 401      then Locomotive::Coal::UnauthorizedError
                   when 404      then Locomotive::Coal::UnknownResourceError
+                  when 422      then Locomotive::Coal::InvalidResourceError
                   when 429      then Locomotive::Coal::TooManyRequestsError
                   when 400..499 then Error
                   end
         klass.new(response)
       end
     end
+
   end
 
+  class InvalidResourceError < Error; end
   class MissingURIOrCredentialsError < Error; end
   class UnknownResourceError < Error; end
   class TooManyRequestsError < Error; end

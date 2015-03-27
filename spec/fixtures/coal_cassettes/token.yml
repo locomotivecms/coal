@@ -2,56 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://sample.lvh.me:4000/locomotive/api/tokens.json
-    body:
-      encoding: US-ASCII
-      string: email=john%40doe.net&api_key=a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip
-      User-Agent:
-      - unirest-ruby/1.1
-      Content-Length:
-      - '69'
-      Content-Type:
-      - application/x-www-form-urlencoded
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 26 Mar 2015 12:13:40 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      Location:
-      - http://sample.lvh.me:4000/locomotive/
-      Content-Type:
-      - application/json; charset=utf-8
-      X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"557f8d72cf11ab5399621eddec942c29"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _locomotive_session=ZfTEg0ye8LoQiqsY_foUHZgeq-Y; domain=.sample.lvh.me; path=/;
-        HttpOnly
-      X-Request-Id:
-      - aa8e451806483825688c95a101e8c297
-      X-Runtime:
-      - '0.025094'
-    body:
-      encoding: UTF-8
-      string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
-    http_version: 
-  recorded_at: Thu, 26 Mar 2015 12:13:40 GMT
-- request:
-    method: post
     uri: http://www.example.com:4000/tokens.json
     body:
       encoding: US-ASCII
@@ -73,7 +23,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 26 Mar 2015 12:13:40 GMT
+      - Fri, 27 Mar 2015 01:01:46 GMT
       Status:
       - 404 Not Found
       Connection:
@@ -85,15 +35,65 @@ http_interactions:
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - _locomotive_session=Bo_23Fg-epuS-CvNzKWRcQkKkFY; domain=.example.com; path=/;
+      - _locomotive_session=meJT6AuUkz68s1Fii-xlZnsosp4; domain=.example.com; path=/;
         HttpOnly
       X-Request-Id:
-      - 5b9886b71e43a1a2691b92681b4101d5
+      - f8e73986c8de8cb0a3170761fe27af94
       X-Runtime:
-      - '0.046065'
+      - '0.054127'
     body:
       encoding: UTF-8
       string: '{"error":"No site found"}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 12:13:40 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:46 GMT
+- request:
+    method: post
+    uri: http://sample.lvh.me:4000/locomotive/api/tokens.json
+    body:
+      encoding: US-ASCII
+      string: email=john%40doe.net&password=easyone
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 27 Mar 2015 01:01:46 GMT
+      Status:
+      - 200 OK
+      Connection:
+      - close
+      Location:
+      - http://sample.lvh.me:4000/locomotive/
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"557f8d72cf11ab5399621eddec942c29"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _locomotive_session=QVl4VFsQ2_TUvMZLWlAxB0-_WxU; domain=.sample.lvh.me; path=/;
+        HttpOnly
+      X-Request-Id:
+      - 0e5c59ec8ba481d9309878e350dc4b1b
+      X-Runtime:
+      - '0.024858'
+    body:
+      encoding: UTF-8
+      string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
+    http_version: 
+  recorded_at: Fri, 27 Mar 2015 01:01:46 GMT
 recorded_with: VCR 2.9.3

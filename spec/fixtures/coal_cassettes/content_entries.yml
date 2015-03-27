@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:42:07 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -39,17 +39,17 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=Mr3RL9aUNxSU2N6ew4hRngyeMyo; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=iCKSVv_rjr8_jgMT6Vuj5PW9Eas; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - c148b081fc84bae8af1fc2dc4f415a5a
+      - 941ac0408d98b8011f4c23e02766bafe
       X-Runtime:
-      - '0.705651'
+      - '0.027448'
     body:
       encoding: UTF-8
       string: '{"token":"9GLRWwc2MGTCF7SHiZSg"}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/content_types.json?auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -69,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:42:07 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -83,12 +83,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=pxKxImEpxvFPudAIdRaje5_KXg0; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=cC9M-SbaHTJWXHzTC-2bqQHKEIM; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - f947cf728c3abd3969b4be4996a0c928
+      - fabada69feff26c3b0d2d7f33e64ea37
       X-Runtime:
-      - '0.134199'
+      - '0.184095'
     body:
       encoding: UTF-8
       string: '[{"id":"54eb4b662475804b2b00000a","_id":"54eb4b662475804b2b00000a","created_at":"2015-02-23T15:46:46Z","updated_at":"2015-02-23T15:46:47Z","name":"Bands","slug":"bands","entries_custom_fields":[{"id":"54eb4b662475804b2b00000b","_id":"54eb4b662475804b2b00000b","name":"name","label":"Name","type":"string","required":true,"localized":false,"unique":false,"hint":"Name
@@ -116,7 +116,7 @@ http_interactions:
         a category","position":2,"select_options":[{"_id":"54eb4b662475804b2b000029","name":"General","position":0,"id":"54eb4b662475804b2b000029"},{"_id":"54eb4b662475804b2b00002a","name":"Gigs","position":1,"id":"54eb4b662475804b2b00002a"},{"_id":"54eb4b662475804b2b00002b","name":"Bands","position":2,"id":"54eb4b662475804b2b00002b"},{"_id":"54eb4b662475804b2b00002c","name":"Albums","position":3,"id":"54eb4b662475804b2b00002c"}],"raw_select_options":[{"id":"54eb4b662475804b2b000029","name":{"en":"General","fr":"G\u00e9n\u00e9ral"},"position":2},{"id":"54eb4b662475804b2b00002a","name":{"en":"Gigs","fr":"Concerts"},"position":2},{"id":"54eb4b662475804b2b00002b","name":{"en":"Bands","fr":"Groupes"},"position":2},{"id":"54eb4b662475804b2b00002c","name":{"en":"Albums"},"position":2}]},{"id":"54eb4b662475804b2b000028","_id":"54eb4b662475804b2b000028","name":"date","label":"Date","type":"date","required":false,"localized":false,"unique":false,"hint":"Date
         of the update","position":3}],"description":"List of updates","label_field_name":"title","order_by":"54eb4b662475804b2b000028","order_direction":"asc","order_by_field_name":"date","public_submission_enabled":false,"public_submission_account_emails":[]}]'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&where=%7B%7D
@@ -136,7 +136,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:42:07 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -152,77 +152,27 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"91c1194717bc84d6d2704913a58b5d0b"'
+      - '"acdca437af0d80bdce84271e269afe92"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=uFUrpZan-EA2AzmSsY-9cFje0sA; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=h9LV4WHgoT2qZPKwsJ6LVveX-D8; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 8033ea5edff41d69d608268af677821b
+      - e084fdfa510e517a83eee20767f6d216
       X-Runtime:
-      - '0.088316'
+      - '0.078911'
     body:
       encoding: UTF-8
-      string: '[{"id":"54eb4bbc2475804b2b000040","_id":"54eb4bbc2475804b2b000040","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Alice
-        in Chains","_slug":"alice-in-chains","_position":1,"_visible":true,"content_type_slug":"bands","name":"Alice
-        in Chains","leader":"Layne","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":[]},{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
+      string: '[{"id":"54eb4bbc2475804b2b000040","_id":"54eb4bbc2475804b2b000040","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-03-26T14:11:05Z","_label":"Alice
+        in chains","_slug":"alice-in-chains","_position":1,"_visible":true,"content_type_slug":"bands","name":"Alice
+        in chains","leader":"Layne","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":[]},{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
         Jam","_slug":"pearl-jam","_position":0,"_visible":true,"content_type_slug":"bands","name":"Pearl
         Jam","leader":"Eddie","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":["song-number-1","song-number-2","song-number-3","song-number-4"]},{"id":"54eb4bbc2475804b2b000041","_id":"54eb4bbc2475804b2b000041","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"The
         who","_slug":"the-who","_position":2,"_visible":true,"content_type_slug":"bands","name":"The
         who","leader":"Peter","kind":"rock","kind_id":"54eb4b662475804b2b000010","featured":true,"songs":["song-number-5","song-number-6"]}]'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:42:07 GMT
-- request:
-    method: get
-    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&page=2&where=%7B%7D
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip
-      User-Agent:
-      - unirest-ruby/1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 26 Mar 2015 11:42:47 GMT
-      Status:
-      - 200 OK
-      Connection:
-      - close
-      X-Total-Pages:
-      - '1'
-      X-Per-Page:
-      - '10'
-      X-Total-Entries:
-      - '3'
-      Content-Type:
-      - application/json; charset=utf-8
-      X-Ua-Compatible:
-      - IE=Edge
-      Etag:
-      - '"d751713988987e9331980363e24189ce"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _locomotive_session=MCwnvao2L1V4f6_hrHaj8EG6Xnk; domain=.sample.lvh.me; path=/;
-        HttpOnly
-      X-Request-Id:
-      - b6c46c8e51af9298038b5039e964cc07
-      X-Runtime:
-      - '0.038975'
-    body:
-      encoding: UTF-8
-      string: "[]"
-    http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:42:47 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&page=2&per_page=2&where=%7B%7D
@@ -242,7 +192,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:43:54 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -262,19 +212,19 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=MrAzKiNGfNlKnrgF1ZUdLEcJpm8; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=XVKkrsJyBRu-ApywJQINmh2cETI; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 133e08d818134e7ed3771af680a81a36
+      - 71b9c7098dffd60ea1514be1bbc92574
       X-Runtime:
-      - '0.046230'
+      - '0.056795'
     body:
       encoding: UTF-8
       string: '[{"id":"54eb4bbc2475804b2b000041","_id":"54eb4bbc2475804b2b000041","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"The
         who","_slug":"the-who","_position":2,"_visible":true,"content_type_slug":"bands","name":"The
         who","leader":"Peter","kind":"rock","kind_id":"54eb4b662475804b2b000010","featured":true,"songs":["song-number-5","song-number-6"]}]'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:43:54 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: get
     uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries.json?auth_token=9GLRWwc2MGTCF7SHiZSg&where=%7B%22_visible%22:true,%22name%22:%22Pearl%20Jam%22%7D
@@ -294,7 +244,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:46:05 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -314,22 +264,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=JEUQBJGbGbEkga1EmhwA4en9kbo; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=lOczH_w8ZwdoHCVWwp1phnMLz_A; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 152e785ab085c083f15a8b5e9b8652da
+      - 18265815214fd12a26273a4f5e473874
       X-Runtime:
-      - '0.043661'
+      - '0.047215'
     body:
       encoding: UTF-8
       string: '[{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
         Jam","_slug":"pearl-jam","_position":0,"_visible":true,"content_type_slug":"bands","name":"Pearl
         Jam","leader":"Eddie","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":["song-number-1","song-number-2","song-number-3","song-number-4"]}]'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:46:05 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 - request:
     method: put
-    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries/54eb4bbc2475804b2b000040.json
+    uri: http://sample.lvh.me:4000/locomotive/api/content_types/bands/entries/54eb4bbc2475804b2b00003f.json
     body:
       encoding: US-ASCII
       string: content_entry[name]=Pearl%20Jam&auth_token=9GLRWwc2MGTCF7SHiZSg
@@ -350,7 +300,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Mar 2015 11:55:30 GMT
+      - Fri, 27 Mar 2015 01:01:45 GMT
       Status:
       - 200 OK
       Connection:
@@ -366,21 +316,21 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"84c5c68cba09d1589e78a8827644a958"'
+      - '"292926cc6fdf765e8a753a14912c51e2"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _locomotive_session=0Nu-IUIFMFrUHygtzzQCMPzNa6k; domain=.sample.lvh.me; path=/;
+      - _locomotive_session=Os_oxuRQJxMVaSRCLPLZvek4N3A; domain=.sample.lvh.me; path=/;
         HttpOnly
       X-Request-Id:
-      - 6650fc80d6ae5f691cc38a1cc868d8c2
+      - 9e3852ac476acc2bac9976ff10b15df4
       X-Runtime:
-      - '0.060579'
+      - '0.056833'
     body:
       encoding: UTF-8
-      string: '{"id":"54eb4bbc2475804b2b000040","_id":"54eb4bbc2475804b2b000040","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-03-26T11:55:30Z","_label":"Pearl
-        Jam","_slug":"alice-in-chains","_position":1,"_visible":true,"content_type_slug":"bands","name":"Pearl
-        Jam","leader":"Layne","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":[]}'
+      string: '{"id":"54eb4bbc2475804b2b00003f","_id":"54eb4bbc2475804b2b00003f","created_at":"2015-02-23T15:48:12Z","updated_at":"2015-02-23T15:48:12Z","_label":"Pearl
+        Jam","_slug":"pearl-jam","_position":0,"_visible":true,"content_type_slug":"bands","name":"Pearl
+        Jam","leader":"Eddie","kind":"grunge","kind_id":"54eb4b662475804b2b00000f","featured":false,"songs":["song-number-1","song-number-2","song-number-3","song-number-4"]}'
     http_version: 
-  recorded_at: Thu, 26 Mar 2015 11:55:30 GMT
+  recorded_at: Fri, 27 Mar 2015 01:01:45 GMT
 recorded_with: VCR 2.9.3
