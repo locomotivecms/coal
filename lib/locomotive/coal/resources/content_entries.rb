@@ -25,8 +25,8 @@ module Locomotive::Coal
 
       private
 
-      def endpoint(name = 'entries')
-        "content_types/#{content_type.slug}/#{name}"
+      def endpoint
+        "content_types/#{content_type.slug}/entries"
       end
 
     end

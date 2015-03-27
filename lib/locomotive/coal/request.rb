@@ -3,50 +3,24 @@ module Locomotive::Coal
   module Request
 
     def get(endpoint, parameters = {}, raw = false)
-      safe_request_call(raw) do
-        Unirest.get   "#{uri.to_s}/#{endpoint}.json",
-          headers:    { 'Accept' => 'application/json' },
-          auth:       uri.userinfo,
-          parameters: parameters.merge(auth_token: token)
-      end
+      do_request :get, endpoint, parameters, raw
     end
 
-    def post(endpoint, parameters = {})
-      parameters = parameters.merge(auth_token: token) if respond_to?(:token)
-
-      safe_request_call do
-        Unirest.post  "#{uri.to_s}/#{endpoint}.json",
-          auth:       uri.userinfo,
-          headers:    { 'Accept' => 'application/json' },
-          parameters: parameters
-      end
+    def post(endpoint, parameters = {}, raw = false)
+      do_request :post, endpoint, parameters, raw
     end
 
-    def put(endpoint, parameters = {})
-      parameters = parameters.merge(auth_token: token) if respond_to?(:token)
-
-      safe_request_call do
-        Unirest.put   "#{uri.to_s}/#{endpoint}.json",
-          auth:       uri.userinfo,
-          headers:    { 'Accept' => 'application/json' },
-          parameters: parameters
-      end
+    def put(endpoint, parameters = {}, raw = false)
+      do_request :put, endpoint, parameters, raw
     end
 
-    def delete(endpoint, id)
-      safe_request_call do
-        Unirest.delete    "#{uri.to_s}/#{endpoint}/#{id}.json",
-          auth:           uri.userinfo,
-          headers:        { 'Accept' => 'application/json' },
-          parameters:     { auth_token: token }
-      end
+    def delete(endpoint, parameters = {}, raw = false)
+      do_request :delete, endpoint, parameters, raw
     end
 
-    private
-
-    def safe_request_call(raw = false, &block)
+    def do_request(action, endpoint, parameters = {}, raw = false)
       response = begin
-        yield
+        _do_request(action, "#{uri.to_s}/#{endpoint}.json", parameters)
       rescue Exception => e
         raise Locomotive::Coal::BadRequestError.new(e)
       end
@@ -56,6 +30,17 @@ module Locomotive::Coal
       else
         raise Locomotive::Coal::Error.from_response(response)
       end
+    end
+
+    private
+
+    def _do_request(action, url, parameters)
+      parameters = parameters.merge(auth_token: token) if respond_to?(:token)
+
+      Unirest.send(action,  url,
+        auth:               uri.userinfo,
+        headers:            { 'Accept' => 'application/json' },
+        parameters:         parameters)
     end
 
   end

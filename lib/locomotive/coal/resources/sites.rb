@@ -21,7 +21,7 @@ module Locomotive::Coal
       end
 
       def destroy(id)
-        data = delete('sites', id)
+        data = delete("sites/#{id}")
         Resource.new(data)
       end
 
