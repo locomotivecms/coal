@@ -1,7 +1,7 @@
 module Locomotive::Coal
   module Resources
 
-    class MyAccount < Struct.new(:uri, :token)
+    class MyAccount < Struct.new(:uri, :credentials)
 
       include Locomotive::Coal::Request
 

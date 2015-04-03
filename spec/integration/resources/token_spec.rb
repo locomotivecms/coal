@@ -14,7 +14,7 @@ describe Locomotive::Coal::Resources::Token do
     subject { token.get }
 
     context 'uri not pointing to a Locomotive engine' do
-        let(:uri) { URI('http://www.example.com:4000') }
+        let(:uri) { URI('http://www.example.com:3000') }
         let(:credentials) { { email: 'john@doe.net', password: 'easyone' } }
         it { expect { subject }.to raise_error Locomotive::Coal::UnknownResourceError }
       end

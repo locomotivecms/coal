@@ -19,15 +19,15 @@ module Locomotive::Coal
     end
 
     def my_account
-      @my_account ||= Resources::MyAccount.new(uri, token)
+      @my_account ||= Resources::MyAccount.new(uri, credentials_with_token)
     end
 
     def sites
-      @sites ||= Resources::Sites.new(uri, token)
+      @sites ||= Resources::Sites.new(uri, credentials_with_token)
     end
 
     def contents
-      @contents ||= Resources::Contents.new(uri, token)
+      @contents ||= Resources::Contents.new(uri, credentials_with_token)
     end
 
     def scope_by(site)
@@ -35,7 +35,7 @@ module Locomotive::Coal
         self
       else
         new_uri = site.domains.first
-        self.class.new(new_uri, self.credentials).tap do |_client|
+        self.class.new(new_uri, credentials).tap do |_client|
           _client.scoped_by_site = true
         end
       end
@@ -43,7 +43,12 @@ module Locomotive::Coal
 
     private
 
+    def credentials_with_token
+      credentials.merge(token: token)
+    end
+
     def domain
+      # TODO: use self.uri.host instead
       self.uri.to_s =~ /^https?:\/\/([^\/:]+)*/
       $1
     end

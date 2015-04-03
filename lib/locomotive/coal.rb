@@ -2,7 +2,9 @@ require 'active_support'
 require 'active_support/concern'
 require 'active_support/deprecation'
 require 'active_support/core_ext'
-require 'unirest'
+# require 'unirest'
+require 'faraday'
+require 'faraday_middleware'
 
 module Locomotive
   module Coal

@@ -6,7 +6,7 @@ module Locomotive::Coal
       include Locomotive::Coal::Request
 
       def get
-        post('tokens', self.credentials)['token']
+        post('tokens', credentials)['token']
       end
 
     end

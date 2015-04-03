@@ -17,13 +17,15 @@ module Locomotive::Coal
     end
 
     def self.from_response(response)
-      status = response.code
+      status = response.status
+      puts response.body
       if klass = case status
                   when 401      then Locomotive::Coal::UnauthorizedError
                   when 404      then Locomotive::Coal::UnknownResourceError
                   when 422      then Locomotive::Coal::InvalidResourceError
                   when 429      then Locomotive::Coal::TooManyRequestsError
                   when 400..499 then Error
+                  when 500      then Locomotive::Coal::ServerSideError
                   end
         klass.new(response)
       end
@@ -37,5 +39,6 @@ module Locomotive::Coal
   class TooManyRequestsError < Error; end
   class UnauthorizedError < Error; end
   class BadRequestError < Error; end
+  class ServerSideError < Error; end
 
 end

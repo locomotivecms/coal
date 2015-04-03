@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::MyAccount do
 
-  before { VCR.insert_cassette 'my_account', record: :new_episodes, match_requests_on: [:method, :body] }
-  after  { VCR.eject_cassette }
+  # before { VCR.insert_cassette 'my_account', record: :new_episodes, match_requests_on: [:method, :body] }
+  # after  { VCR.eject_cassette }
 
   let(:uri)         { TEST_API_URI }
-  let(:token)       { api_token }
-  let(:resource)    { described_class.new(uri, token) }
+  let(:credentials) { { email: 'john@doe.net', token: api_token } }
+  let(:resource)    { described_class.new(uri, credentials) }
 
   describe '#get' do
     subject { resource.get }
@@ -15,12 +15,13 @@ describe Locomotive::Coal::Resources::MyAccount do
   end
 
   describe '#create' do
-    let(:attributes) { { name: 'Jane Doe', email: 'jane@doe.net', password: 'easyone', password_confirmation: 'easyone' } }
+    let(:credentials) { nil }
+    let(:attributes)  { { name: 'Jack Doe', email: 'jack@doe.net', password: 'easyone', password_confirmation: 'easyone' } }
     subject { resource.create(attributes) }
     it { expect(subject._id).not_to eq nil }
 
     describe 'missing attributes' do
-      let(:attributes) { {} }
+      let(:attributes) { { name: 'Wrong account' } }
       it { expect { subject }.to raise_error(Locomotive::Coal::InvalidResourceError) }
     end
   end

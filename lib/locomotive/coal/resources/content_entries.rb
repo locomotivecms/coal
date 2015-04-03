@@ -2,7 +2,7 @@ module Locomotive::Coal
 
   module Resources
 
-    class ContentEntries < Struct.new(:uri, :token, :content_type)
+    class ContentEntries < Struct.new(:uri, :credentials, :content_type)
 
       include Locomotive::Coal::Request
 

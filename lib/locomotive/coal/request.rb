@@ -19,13 +19,13 @@ module Locomotive::Coal
     end
 
     def do_request(action, endpoint, parameters = {}, raw = false)
-      response = begin
-        _do_request(action, "#{uri.to_s}/#{endpoint}.json", parameters)
-      rescue Exception => e
-        raise Locomotive::Coal::BadRequestError.new(e)
-      end
+      response = # begin
+        _do_request(action, "#{uri.path}/#{endpoint}.json", parameters)
+      # rescue Exception => e
+        # raise Locomotive::Coal::BadRequestError.new(e)
+      # end
 
-      if response.code == 200
+      if response.success?
         raw ? response : response.body
       else
         raise Locomotive::Coal::Error.from_response(response)
@@ -34,13 +34,40 @@ module Locomotive::Coal
 
     private
 
-    def _do_request(action, url, parameters)
-      parameters = parameters.merge(auth_token: token) if respond_to?(:token)
+    def _do_request(action, endpoint, parameters)
+      # compatibility with v2.5.x
+      parameters = parameters.merge(auth_token: credentials[:token]) if _token
 
-      Unirest.send(action,  url,
-        auth:               uri.userinfo,
-        headers:            { 'Accept' => 'application/json' },
-        parameters:         parameters)
+      _connection.send(action, endpoint) do |request|
+        request.headers = _request_headers
+        request.params  = parameters
+      end
+    end
+
+    def _request_headers
+      { 'Accept' => 'application/json' }.tap do |headers|
+        if _token
+          headers['X-Locomotive-Account-Email'] = credentials[:email]
+          headers['X-Locomotive-Account-Token'] = credentials[:token]
+        end
+      end
+    end
+
+    def _connection
+      @_connection ||= Faraday.new(url: "#{uri.scheme}://#{uri.host}:#{uri.port}") do |faraday|
+        faraday.request     :url_encoded             # form-encode POST params
+        faraday.basic_auth  uri.userinfo.values if uri.userinfo
+
+        faraday.use         FaradayMiddleware::ParseJson, :content_type => /\bjson$/
+
+        faraday.adapter     Faraday.default_adapter  # make requests with Net::HTTP
+      end
+    end
+
+    def _token
+      if respond_to?(:credentials)
+        (credentials || {})[:token]
+      end
     end
 
   end

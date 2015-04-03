@@ -1,7 +1,7 @@
 module Locomotive::Coal
   module Resources
 
-    class Contents < Struct.new(:uri, :token)
+    class Contents < Struct.new(:uri, :credentials)
 
       include Locomotive::Coal::Request
 
@@ -13,7 +13,7 @@ module Locomotive::Coal
 
       def method_missing(meth, *args)
         if content_type = by_slug(meth)
-          Locomotive::Coal::Resources::ContentEntries.new(uri, token, content_type)
+          Locomotive::Coal::Resources::ContentEntries.new(uri, credentials, content_type)
         else
           super
         end

@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Client do
 
-  before { VCR.insert_cassette 'client', record: :new_episodes }
-  after  { VCR.eject_cassette }
+  # before { VCR.insert_cassette 'client', record: :new_episodes }
+  # after  { VCR.eject_cassette }
 
-  let(:uri)         { 'http://sample.lvh.me:4000/locomotive/api' }
+  let(:uri)         { 'http://localhost:3000/locomotive/api/v3' }
   let(:credentials) { { email: 'john@doe.net', password: 'easyone' } }
   let(:client)      { described_class.new(uri, credentials) }
 
@@ -25,6 +25,7 @@ describe Locomotive::Coal::Client do
   end
 
   describe '#scope_by' do
+    let(:uri) { 'http://acme.lvh.me:3000/locomotive/api/v3' }
     let(:site) { client.sites.all.first }
     subject { client.scope_by(site) }
     it { is_expected.to eq client }

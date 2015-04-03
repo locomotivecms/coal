@@ -1,4 +1,4 @@
-TEST_API_URI          = URI('http://sample.lvh.me:4000/locomotive/api').freeze
+TEST_API_URI          = URI('http://localhost:3000/locomotive/api/v3').freeze
 TEST_API_CREDENTIALS  = { email: 'john@doe.net', password: 'easyone' }.freeze
 
 def api_token(uri = nil, credentials = nil)
