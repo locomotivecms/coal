@@ -24,12 +24,12 @@ describe Locomotive::Coal::Resources::Token do
 
       context 'email + password as credentials' do
         let(:credentials) { TEST_API_CREDENTIALS }
-        it { is_expected.to match(/^[a-zA-Z0-9_]{,20}$/) }
+        it { is_expected.to match(/^[a-zA-Z0-9_-]{,20}$/) }
       end
 
       context 'api key as credentials' do
         let(:credentials) { TEST_API_CREDENTIALS_WITH_KEY }
-        it { is_expected.to match(/^[a-zA-Z0-9_]{,20}$/) }
+        it { is_expected.to match(/^[a-zA-Z0-9_-]{,20}$/) }
       end
     end
 
