@@ -19,11 +19,13 @@ module Locomotive::Coal
     end
 
     def do_request(action, endpoint, parameters = {}, raw = false)
-      response = # begin
+      response = begin
         _do_request(action, "#{uri.path}/#{endpoint}.json", parameters)
-      # rescue Exception => e
-        # raise Locomotive::Coal::BadRequestError.new(e)
-      # end
+      rescue ::Timeout::Error, ::Errno::ETIMEDOUT, Faraday::Error::TimeoutError => e
+        raise Locomotive::Coal::TimeoutError.new(e)
+      rescue Exception => e
+        raise Locomotive::Coal::BadRequestError.new(e)
+      end
 
       if response.success?
         raw ? response : response.body

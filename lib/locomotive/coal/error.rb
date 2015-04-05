@@ -40,5 +40,6 @@ module Locomotive::Coal
   class UnauthorizedError < Error; end
   class BadRequestError < Error; end
   class ServerSideError < Error; end
+  class TimeoutError < Error; end
 
 end

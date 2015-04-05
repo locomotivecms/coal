@@ -84,10 +84,6 @@ We only implemented a few resources (my_account, sites, content types and conten
 
 Check the issues section of the repository to see what is missing.
 
-## Credits ##
-
-[Christian](https://github.com/cblavier), [Greg](https://github.com/gregKawet) and [Ben](https://github.com/stiiig) from the Cogip/Insert International LTD who brainstormed with me (a very long time) to find this awesome name.
-
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/locomotivecms/coal )
@@ -95,6 +91,24 @@ Check the issues section of the repository to see what is missing.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## HOW-TO WRITE SPECS
+
+**Engine configuration:**
+
+1. You need to run the last version (master branch) of the [Locomotive engine](https://github.com/locomotivecms/engine).
+2. Pick a different database name to run your Coal specs against.
+3. Run ````bundle exec rake development:bootstrap````
+4. Run the Locomotive server ````bundle exec rails server````
+
+**System configuration:**
+
+- edit your /etc/hosts file (*NIX systems) and add 2 lines
+      127.0.0.0     www.example.com acme.example.com
+
+## Credits
+
+[Christian](https://github.com/cblavier), [Greg](https://github.com/gregKawet) and [Ben](https://github.com/stiiig) from the Cogip/Insert International LTD who brainstormed with me (a very long time) to find this awesome name.
 
 ## License
 

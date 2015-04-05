@@ -14,8 +14,8 @@ describe Locomotive::Coal::Resources::Token do
     subject { token.get }
 
     context 'uri not pointing to a Locomotive engine' do
-        let(:uri) { URI('http://www.example.com:3000') }
-        let(:credentials) { { email: 'john@doe.net', password: 'easyone' } }
+        let(:uri) { URI('http://acme.example.com:3000') }
+        let(:credentials) { TEST_API_CREDENTIALS }
         it { expect { subject }.to raise_error Locomotive::Coal::UnknownResourceError }
       end
 
@@ -23,13 +23,13 @@ describe Locomotive::Coal::Resources::Token do
       let(:uri) { TEST_API_URI }
 
       context 'email + password as credentials' do
-        let(:credentials) { { email: 'john@doe.net', password: 'easyone' } }
-        it { is_expected.to match(/^[a-zA-Z0-9]{,20}$/) }
+        let(:credentials) { TEST_API_CREDENTIALS }
+        it { is_expected.to match(/^[a-zA-Z0-9_]{,20}$/) }
       end
 
       context 'api key as credentials' do
-        let(:credentials) { { email: 'john@doe.net', api_key: 'a9ac1e08c2c22c1b6f3da6db77a70cac4a615bd7' } }
-        it { is_expected.to match(/^[a-zA-Z0-9]{,20}$/) }
+        let(:credentials) { TEST_API_CREDENTIALS_WITH_KEY }
+        it { is_expected.to match(/^[a-zA-Z0-9_]{,20}$/) }
       end
     end
 

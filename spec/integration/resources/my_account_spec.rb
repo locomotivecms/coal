@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::MyAccount do
 
-  # before { VCR.insert_cassette 'my_account', record: :new_episodes, match_requests_on: [:method, :body] }
-  # after  { VCR.eject_cassette }
+  before { VCR.insert_cassette 'my_account', record: :new_episodes, match_requests_on: [:method, :query, :body] }
+  after  { VCR.eject_cassette }
 
   let(:uri)         { TEST_API_URI }
-  let(:credentials) { { email: 'john@doe.net', token: api_token } }
+  let(:credentials) { { email: TEST_API_EMAIL, token: api_token } }
   let(:resource)    { described_class.new(uri, credentials) }
 
   describe '#get' do
