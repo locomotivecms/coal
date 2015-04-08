@@ -23,6 +23,8 @@ module Locomotive::Coal
         _do_request(action, "#{uri.path}/#{endpoint}.json", parameters)
       rescue ::Timeout::Error, ::Errno::ETIMEDOUT, Faraday::Error::TimeoutError => e
         raise Locomotive::Coal::TimeoutError.new(e)
+      rescue Locomotive::Coal::Error
+        raise
       rescue Exception => e
         raise Locomotive::Coal::BadRequestError.new(e)
       end
@@ -31,6 +33,13 @@ module Locomotive::Coal
         raw ? response : response.body
       else
         raise Locomotive::Coal::Error.from_response(response)
+      end
+    end
+
+    def without_authentication(&block)
+      @without_token = true
+      yield.tap do
+        @without_token = false
       end
     end
 
@@ -67,9 +76,13 @@ module Locomotive::Coal
     end
 
     def _token
-      if respond_to?(:credentials)
-        (credentials || {})[:token]
+      return if !!@without_token
+
+      if credentials[:token].respond_to?(:call)
+        credentials[:token] = credentials[:token].call
       end
+
+      credentials[:token]
     end
 
   end

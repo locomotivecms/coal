@@ -22,7 +22,7 @@ describe Locomotive::Coal::Resources::MyAccount do
 
     describe 'missing attributes' do
       let(:attributes) { { name: 'Wrong account' } }
-      it { expect { subject }.to raise_error(Locomotive::Coal::InvalidResourceError) }
+      it { expect { subject }.to raise_error(Locomotive::Coal::InvalidResourceError, 'Resource invalid: email is missing, password is missing') }
     end
   end
 

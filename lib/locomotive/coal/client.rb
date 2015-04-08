@@ -11,6 +11,7 @@ module Locomotive::Coal
         raise MissingURIOrCredentialsError.new('URI and/or credentials are missing')
       else
         @uri, @credentials = URI(uri), credentials
+
       end
     end
 
@@ -41,10 +42,14 @@ module Locomotive::Coal
       end
     end
 
+    def reset
+      @token = nil
+    end
+
     private
 
     def credentials_with_token
-      credentials.merge(token: token)
+      credentials.merge(token: -> { token })
     end
 
     def domain

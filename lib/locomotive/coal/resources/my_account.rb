@@ -10,8 +10,10 @@ module Locomotive::Coal
       end
 
       def create(attributes = {})
-        data = post('my_account', account: attributes)
-        Resource.new(data)
+        without_authentication do
+          data = post('my_account', account: attributes)
+          Resource.new(data)
+        end
       end
 
       def update(attributes = {})

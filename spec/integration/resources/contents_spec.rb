@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::Contents do
 
-  before { VCR.insert_cassette 'contents', record: :new_episodes }
-  after  { VCR.eject_cassette }
+  # before { VCR.insert_cassette 'contents', record: :new_episodes }
+  # after  { VCR.eject_cassette }
 
-  let(:uri)       { TEST_API_URI }
-  let(:token)     { api_token }
-  let(:contents)  { described_class.new(uri, token) }
+  let(:uri)         { TEST_API_URI }
+  let(:credentials) { { email: TEST_API_EMAIL, token: api_token } }
+  let(:contents)    { described_class.new(uri, credentials) }
 
   describe '#by_slug' do
     subject { contents.by_slug(:bands) }
