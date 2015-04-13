@@ -20,7 +20,7 @@ describe Locomotive::Coal::Resources::Token do
       end
 
     context 'valid uri' do
-      let(:uri) { TEST_API_URI }
+      let(:uri) { TEST_API_V3_URI }
 
       context 'email + password as credentials' do
         let(:credentials) { TEST_API_CREDENTIALS }

@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal) [![Dependency Status](https://gemnasium.com/locomotivecms/coal.svg)](https://gemnasium.com/locomotivecms/coal) [![Build Status](https://travis-ci.org/locomotivecms/coal.svg?branch=master)](https://travis-ci.org/locomotivecms/coal) [![Coverage Status](https://coveralls.io/repos/locomotivecms/coal/badge.svg?branch=master)](https://coveralls.io/r/locomotivecms/coal?branch=master)
 
-The Ruby API Client for LocomotiveCMS.
+The Ruby API Client for LocomotiveCMS V3.
 
 ## Installation [WIP]
 
@@ -12,7 +12,7 @@ The Ruby API Client for LocomotiveCMS.
 
 ### Authentication
 
-    client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api', { email: <EMAIL>, api_key: <API KEY> })
+    client = Locomotive::Coal::Client.new('http://www.myengine.dev', { email: <EMAIL>, api_key: <API KEY> })
 
 ### Resources
 
@@ -25,7 +25,7 @@ The Ruby API Client for LocomotiveCMS.
 
 **If not logged in, then it's possible to create your account**
 
-    client = Locomotive::Coal::Client.new('http://www.myengine.dev/locomotive/api')
+    client = Locomotive::Coal::Client.new('http://www.myengine.dev')
     client.my_account.create(name: 'John Doe', email: 'john@doe.net', password: 'easyone', password_confirmation: 'easyone')
 
 **Update my account**

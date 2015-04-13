@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::Sites do
 
-  # before { VCR.insert_cassette 'sites', record: :new_episodes }
-  # after  { VCR.eject_cassette }
+  before { VCR.insert_cassette 'sites', record: :new_episodes }
+  after  { VCR.eject_cassette }
 
-  let(:uri)         { TEST_API_URI }
+  let(:uri)         { TEST_API_V3_URI }
   let(:credentials) { { email: TEST_API_EMAIL, token: api_token } }
   let(:sites)       { described_class.new(uri, credentials) }
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://acme.example.com:3000/tokens.json?email=admin@locomotivecms.com&password=locomotive
+    uri: http://localhost:3000/tokens.json?email=admin@locomotivecms.com&password=locomotive
     body:
       encoding: UTF-8
       string: ''
@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 5a650bc7-2254-4458-b95e-1f58a25d1440
+      - 89819fde-6a33-4f6b-841d-d27f39986615
       X-Runtime:
-      - '0.024491'
+      - '0.033635'
       Connection:
       - close
       Server:
@@ -36,7 +36,7 @@ http_interactions:
       encoding: UTF-8
       string: Hi, we are sorry but no site was found.
     http_version: 
-  recorded_at: Sun, 05 Apr 2015 21:46:36 GMT
+  recorded_at: Mon, 13 Apr 2015 17:32:17 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json?email=admin@locomotivecms.com&password=locomotive
@@ -62,22 +62,22 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"213ab9c8b2b1fba7480175c12d7260e5"
+      - W/"bdefdde2373e65196266f3d112255186"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 660ccded-1d54-41cb-a946-89b9b5f29782
+      - 2bbff37b-5d49-4bf3-9bbd-3b62abf6e1b4
       X-Runtime:
-      - '0.013838'
+      - '0.021723'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"PPyGiynasvsnShhJuM6d"}'
+      string: '{"token":"F89xEJ9HGEUWFAz1DFcQ"}'
     http_version: 
-  recorded_at: Sun, 05 Apr 2015 21:46:36 GMT
+  recorded_at: Mon, 13 Apr 2015 17:32:41 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json?api_key=d49cd50f6f0d2b163f48fc73cb249f0244c37074&email=admin@locomotivecms.com
@@ -103,20 +103,57 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"213ab9c8b2b1fba7480175c12d7260e5"
+      - W/"bdefdde2373e65196266f3d112255186"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0e9cfeb3-d5a1-4e50-b3cb-b332bca72495
+      - 66612aec-c7cd-40cc-a1d9-f4a5ffd5963f
       X-Runtime:
-      - '0.015172'
+      - '0.019648'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"PPyGiynasvsnShhJuM6d"}'
+      string: '{"token":"F89xEJ9HGEUWFAz1DFcQ"}'
     http_version: 
-  recorded_at: Sun, 05 Apr 2015 21:46:36 GMT
+  recorded_at: Mon, 13 Apr 2015 17:32:48 GMT
+- request:
+    method: post
+    uri: http://acme.example.com:3000/tokens.json?email=admin@locomotivecms.com&password=locomotive
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b35bd3c7-eced-4ee4-af32-b385821660a6
+      X-Runtime:
+      - '0.036100'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: Hi, we are sorry but no site was found.
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 17:32:48 GMT
 recorded_with: VCR 2.9.3

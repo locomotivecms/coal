@@ -69,7 +69,7 @@ module Locomotive::Coal
         faraday.request     :url_encoded             # form-encode POST params
         faraday.basic_auth  uri.userinfo.values if uri.userinfo
 
-        faraday.use         FaradayMiddleware::ParseJson, :content_type => /\bjson$/
+        faraday.use         FaradayMiddleware::ParseJson, content_type: /\bjson$/
 
         faraday.adapter     Faraday.default_adapter  # make requests with Net::HTTP
       end

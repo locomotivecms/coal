@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Client do
 
-  # before { VCR.insert_cassette 'client', record: :new_episodes }
-  # after  { VCR.eject_cassette }
+  before { VCR.insert_cassette 'client', record: :new_episodes }
+  after  { VCR.eject_cassette }
 
-  let(:uri)         { TEST_API_URI }
+  let(:uri)         { TEST_API_URI.dup }
   let(:credentials) { TEST_API_CREDENTIALS }
   let(:client)      { described_class.new(uri, credentials) }
 

@@ -38,7 +38,7 @@ module Locomotive::Coal
 
   end
 
-  class MissingURIOrCredentialsError < Error; end
+  class MissingURIOrCredentialsError < StandardError; end
   class UnknownResourceError < Error; end
   class TooManyRequestsError < Error; end
   class UnauthorizedError < Error; end
