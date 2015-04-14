@@ -6,8 +6,9 @@ describe Locomotive::Coal::Client do
   after  { VCR.eject_cassette }
 
   let(:uri)         { TEST_API_URI.dup }
-  let(:credentials) { TEST_API_CREDENTIALS }
-  let(:client)      { described_class.new(uri, credentials) }
+  let(:credentials) { TEST_API_CREDENTIALS.dup }
+  let(:options)     { {} }
+  let(:client)      { described_class.new(uri, credentials, options) }
 
   describe '#my_token' do
     subject { client.token }
@@ -24,11 +25,18 @@ describe Locomotive::Coal::Client do
     it { is_expected.not_to eq nil }
   end
 
+  describe '#snippets' do
+    let(:options)     { { handle: 'sample' } }
+    subject { client.snippets.all }
+    it { is_expected.to eq [] }
+  end
+
   describe '#scope_by' do
     let(:uri) { 'http://www.example.com:3000/locomotive/api/v3' }
     let(:site) { client.sites.all.first }
     subject { client.scope_by(site) }
     it { is_expected.to eq client }
+    it { expect(subject.options[:handle]).to eq 'www' }
   end
 
 end

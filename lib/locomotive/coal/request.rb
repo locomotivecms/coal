@@ -60,6 +60,7 @@ module Locomotive::Coal
         if _token
           headers['X-Locomotive-Account-Email'] = credentials[:email]
           headers['X-Locomotive-Account-Token'] = credentials[:token]
+          headers['X-Locomotive-Site-Handle']   = credentials[:handle] if credentials[:handle].present?
         end
       end
     end

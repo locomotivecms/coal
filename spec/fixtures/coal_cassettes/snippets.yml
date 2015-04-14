@@ -25,25 +25,25 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"be0b8d7f05e79aff6707f3fc1be1a4ae"
+      - W/"1250d95971b28667ad818fd54f050909"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ee860f5c-e2b1-4b32-ad9b-5736b1b616f8
+      - 14bf3a45-4a54-4177-928e-7c6e6de49781
       X-Runtime:
-      - '0.446541'
+      - '0.014194'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"H9LVwNwyVsPJxaVVbfp9"}'
+      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
     http_version: 
-  recorded_at: Tue, 14 Apr 2015 21:57:54 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=H9LVwNwyVsPJxaVVbfp9
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=4hh1Unsf9EgGpsTSo96k
     body:
       encoding: US-ASCII
       string: ''
@@ -53,7 +53,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - H9LVwNwyVsPJxaVVbfp9
+      - 4hh1Unsf9EgGpsTSo96k
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -72,9 +72,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 669da84d-768d-4847-bb67-1d6ab08bf32e
+      - 107eaa5b-90b1-49d7-a00c-bc4dea405c32
       X-Runtime:
-      - '0.085361'
+      - '0.033085'
       Connection:
       - keep-alive
       Server:
@@ -83,10 +83,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 14 Apr 2015 21:57:54 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:39 GMT
 - request:
     method: post
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=H9LVwNwyVsPJxaVVbfp9&snippet%5Bname%5D=Footer&snippet%5Btemplate%5D=Locomotive%20rocks!
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=4hh1Unsf9EgGpsTSo96k&snippet%5Bname%5D=Footer&snippet%5Bslug%5D=footer&snippet%5Btemplate%5D=Locomotive%20rocks!
     body:
       encoding: UTF-8
       string: ''
@@ -96,50 +96,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - H9LVwNwyVsPJxaVVbfp9
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 422
-      message: Unprocessable Entity
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '65'
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 1723dc52-6669-46b1-b4c8-f9a4ea4775ea
-      X-Runtime:
-      - '0.033791'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"error":"Resource invalid","attributes":{"slug":["is missing"]}}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 22:03:14 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=H9LVwNwyVsPJxaVVbfp9&snippet%5Bname%5D=Footer&snippet%5Bslug%5D=footer&snippet%5Btemplate%5D=Locomotive%20rocks!
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - H9LVwNwyVsPJxaVVbfp9
+      - 4hh1Unsf9EgGpsTSo96k
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -156,26 +113,70 @@ http_interactions:
       Content-Length:
       - '169'
       Etag:
-      - W/"25d4f83ed8fa6921249718a1ec537cf4"
+      - W/"bac4fc4d77b5dca15c75173f9040c6ae"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c068c2f3-fbb2-480d-9437-f268f6c1bc77
+      - 4256f03c-9e38-4bc9-bdbe-6d034dfe8a1d
       X-Runtime:
-      - '0.058721'
+      - '0.029745'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"_id":"552d8ead64696406eb250000","created_at":"2015-04-14T22:03:25Z","updated_at":"2015-04-14T22:03:25Z","name":"Footer","slug":"footer","template":"Locomotive
+      string: '{"_id":"552da08b64696406eb420000","created_at":"2015-04-14T23:19:39Z","updated_at":"2015-04-14T23:19:39Z","name":"Footer","slug":"footer","template":"Locomotive
         rocks!"}'
     http_version: 
-  recorded_at: Tue, 14 Apr 2015 22:03:26 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:39 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/552da08b64696406eb420000.json?auth_token=4hh1Unsf9EgGpsTSo96k
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 4hh1Unsf9EgGpsTSo96k
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Etag:
+      - W/"bac4fc4d77b5dca15c75173f9040c6ae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 20384723-06c2-4cb5-82c9-2650982bb8c8
+      X-Runtime:
+      - '0.023208'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"552da08b64696406eb420000","created_at":"2015-04-14T23:19:39Z","updated_at":"2015-04-14T23:19:39Z","name":"Footer","slug":"footer","template":"Locomotive
+        rocks!"}'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 23:19:39 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/552d8ead64696406eb250000.json?auth_token=H9LVwNwyVsPJxaVVbfp9&snippet%5Btemplate%5D=Locomotive%20rocks.%20period
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/552da08b64696406eb420000.json?auth_token=4hh1Unsf9EgGpsTSo96k&snippet%5Btemplate%5D=Locomotive%20rocks.%20period
     body:
       encoding: UTF-8
       string: ''
@@ -185,7 +186,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - H9LVwNwyVsPJxaVVbfp9
+      - 4hh1Unsf9EgGpsTSo96k
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -200,67 +201,23 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '176'
+      - '132'
       Etag:
-      - W/"8d09fd6d7a405f181e60766ead90cdbf"
+      - W/"8753dbe02be90b87a9df69d2acd3311b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4f82ead0-10ab-4f55-8c16-9a38e26caef3
+      - a2ae881e-aaad-4e3f-a85c-e4001f33d2f9
       X-Runtime:
-      - '0.059717'
+      - '0.028957'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"_id":"552d8ead64696406eb250000","created_at":"2015-04-14T22:03:25Z","updated_at":"2015-04-14T22:06:36Z","name":"Footer","slug":"footer","template":"Locomotive
+      string: '{"_id":"552da08d64696406eb430000","created_at":null,"updated_at":null,"name":null,"slug":null,"template":"Locomotive
         rocks. period"}'
     http_version: 
-  recorded_at: Tue, 14 Apr 2015 22:06:36 GMT
-- request:
-    method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/552d8ead64696406eb250000.json?auth_token=H9LVwNwyVsPJxaVVbfp9
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - H9LVwNwyVsPJxaVVbfp9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '176'
-      Etag:
-      - W/"8d09fd6d7a405f181e60766ead90cdbf"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 671db467-7ca0-4dde-a4e0-955f5ad22293
-      X-Runtime:
-      - '0.042490'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"_id":"552d8ead64696406eb250000","created_at":"2015-04-14T22:03:25Z","updated_at":"2015-04-14T22:06:36Z","name":"Footer","slug":"footer","template":"Locomotive
-        rocks. period"}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 22:07:54 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:41 GMT
 recorded_with: VCR 2.9.3

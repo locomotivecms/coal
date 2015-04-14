@@ -39,10 +39,10 @@ module Locomotive::Coal
   end
 
   class MissingURIOrCredentialsError < StandardError; end
+  class BadRequestError < StandardError; end
   class UnknownResourceError < Error; end
   class TooManyRequestsError < Error; end
   class UnauthorizedError < Error; end
-  class BadRequestError < Error; end
   class ServerSideError < Error; end
   class TimeoutError < Error; end
 

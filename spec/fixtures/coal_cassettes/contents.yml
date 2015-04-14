@@ -25,25 +25,25 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"be56203b01cfe345a3dca807ad9cefe2"
+      - W/"1250d95971b28667ad818fd54f050909"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f3edcfb2-c589-4a2c-9b64-5a6e2513da07
+      - 92ff5be5-168d-47c6-af95-bc471c31c403
       X-Runtime:
-      - '0.015124'
+      - '0.023049'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"a9n5tEE6tmDovPvzcfQN"}'
+      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:37:01 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/api/v3/content_types.json?auth_token=a9n5tEE6tmDovPvzcfQN
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=4hh1Unsf9EgGpsTSo96k
     body:
       encoding: US-ASCII
       string: ''
@@ -53,7 +53,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - a9n5tEE6tmDovPvzcfQN
+      - 4hh1Unsf9EgGpsTSo96k
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -70,9 +70,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d7ce4fa4-5b96-4103-baef-2a4401281018
+      - ce42787a-9858-4049-b212-1524c7b79f79
       X-Runtime:
-      - '0.013600'
+      - '0.013227'
       Connection:
       - keep-alive
       Server:
@@ -81,46 +81,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"Unrecognized request path: content_types.json"}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:37:01 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=a9n5tEE6tmDovPvzcfQN
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - a9n5tEE6tmDovPvzcfQN
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '57'
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 2172ad0f-27c2-4173-a5ab-e804e322fc60
-      X-Runtime:
-      - '0.015680'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"error":"Unrecognized request path: content_types.json"}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 22:08:09 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 recorded_with: VCR 2.9.3

@@ -25,27 +25,27 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"be56203b01cfe345a3dca807ad9cefe2"
+      - W/"1250d95971b28667ad818fd54f050909"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7cc384d9-7f78-4089-b2cd-8c7a17894fd2
+      - 833af563-1e70-4108-ab0c-38f19ab87fd3
       X-Runtime:
-      - '0.014280'
+      - '0.019950'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"a9n5tEE6tmDovPvzcfQN"}'
+      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:36:08 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 - request:
-    method: get
-    uri: http://localhost:3000/locomotive/api/v3/my_account.json?auth_token=a9n5tEE6tmDovPvzcfQN
+    method: put
+    uri: http://localhost:3000/locomotive/api/v3/my_account.json?account%5Bname%5D=John%20Doe&auth_token=4hh1Unsf9EgGpsTSo96k
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       Accept:
@@ -53,7 +53,9 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - a9n5tEE6tmDovPvzcfQN
+      - 4hh1Unsf9EgGpsTSo96k
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -66,24 +68,69 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '409'
+      - '412'
       Etag:
-      - W/"e87573f7a6813286f7d881f8be1c6a19"
+      - W/"2522bcb418fe85634b676fe732660cfe"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6b8e4c02-dcdc-4a95-b16b-2f118c654408
+      - 1cedf7bf-4c01-4688-92fe-d01bac6028e1
       X-Runtime:
-      - '0.019429'
+      - '0.028988'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"_id":"552bfe846469642132000000","created_at":"2015-04-13T17:36:04Z","updated_at":"2015-04-13T17:36:04Z","name":"Admin","email":"admin@locomotivecms.com","locale":"en","encrypted_password":"e3b26eb30858337be76b87fe9e8fd26783d06f83","password_salt":"WEgW9pG92QesYYs6crpr","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"password":null,"password_confirmation":null,"local_admin":true}'
+      string: '{"_id":"552d9e936469644df4000000","created_at":"2015-04-14T23:11:15Z","updated_at":"2015-04-14T23:19:38Z","name":"John
+        Doe","email":"admin@locomotivecms.com","locale":"en","encrypted_password":"3eeeeb10f3b1d71e608e5cfecc0c561a9e7a8ed2","password_salt":"mWAzYCjSA68ZHYWRsV2y","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"password":null,"password_confirmation":null,"local_admin":true}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:36:08 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/api/v3/my_account.json?auth_token=4hh1Unsf9EgGpsTSo96k
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 4hh1Unsf9EgGpsTSo96k
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '412'
+      Etag:
+      - W/"2522bcb418fe85634b676fe732660cfe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3cc3c777-9228-44f4-8571-22da3c0dc2d7
+      X-Runtime:
+      - '0.021271'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"552d9e936469644df4000000","created_at":"2015-04-14T23:11:15Z","updated_at":"2015-04-14T23:19:38Z","name":"John
+        Doe","email":"admin@locomotivecms.com","locale":"en","encrypted_password":"3eeeeb10f3b1d71e608e5cfecc0c561a9e7a8ed2","password_salt":"mWAzYCjSA68ZHYWRsV2y","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"password":null,"password_confirmation":null,"local_admin":true}'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/my_account.json?account%5Bemail%5D=jack@doe.net&account%5Bname%5D=Jack%20Doe&account%5Bpassword%5D=easyone&account%5Bpassword_confirmation%5D=easyone
@@ -109,23 +156,23 @@ http_interactions:
       Content-Length:
       - '412'
       Etag:
-      - W/"4f5aa8f8ae4d81459daf87a992c6a225"
+      - W/"09b8790a8a61bfd7a6a74b68e6d25b5f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 86ff29ce-611d-43de-9235-7c7d97cabbce
+      - b75889a3-55fd-48d3-98dc-458c23556f74
       X-Runtime:
-      - '0.030865'
+      - '0.052642'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"_id":"552bfe8864696406eb170000","created_at":"2015-04-13T17:36:08Z","updated_at":"2015-04-13T17:36:08Z","name":"Jack
-        Doe","email":"jack@doe.net","locale":"en","encrypted_password":"705566c12c8203e79b346c569de23d293030a2eb","password_salt":"q9KJByAbKyvWgGK7fwHy","api_key":"713fa5129a2ad25ab1afa2b7189d17e2f407ff1d","super_admin":false,"password":"easyone","password_confirmation":"easyone","local_admin":false}'
+      string: '{"_id":"552da08a64696406eb410000","created_at":"2015-04-14T23:19:38Z","updated_at":"2015-04-14T23:19:38Z","name":"Jack
+        Doe","email":"jack@doe.net","locale":"en","encrypted_password":"945ad570cc8acfd00d80c3e1d6a6678521b7ea62","password_salt":"xwRQFZRVDhPAbcusztsP","api_key":"24eb6fac7e32369ffb761473ec243a72bf34d7d3","super_admin":false,"password":"easyone","password_confirmation":"easyone","local_admin":false}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:36:08 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/my_account.json?account%5Bname%5D=Wrong%20account
@@ -153,9 +200,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 483d7de1-e727-46fe-8290-f8e7a94e9642
+      - 50efbc25-8a65-4f46-9220-5981e0c8c1b8
       X-Runtime:
-      - '0.019257'
+      - '0.012764'
       Connection:
       - keep-alive
       Server:
@@ -165,51 +212,5 @@ http_interactions:
       string: '{"error":"Resource invalid","attributes":{"email":["is missing"],"password":["is
         missing"]}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:36:08 GMT
-- request:
-    method: put
-    uri: http://localhost:3000/locomotive/api/v3/my_account.json?account%5Bname%5D=John%20Doe&auth_token=a9n5tEE6tmDovPvzcfQN
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - a9n5tEE6tmDovPvzcfQN
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '412'
-      Etag:
-      - W/"e2740d748a62a70983189ba6ef1a2a57"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 5ce9aa64-b553-42ec-9d53-7b59f0ed7e05
-      X-Runtime:
-      - '0.022303'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"_id":"552bfe846469642132000000","created_at":"2015-04-13T17:36:04Z","updated_at":"2015-04-13T17:36:08Z","name":"John
-        Doe","email":"admin@locomotivecms.com","locale":"en","encrypted_password":"e3b26eb30858337be76b87fe9e8fd26783d06f83","password_salt":"WEgW9pG92QesYYs6crpr","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"password":null,"password_confirmation":null,"local_admin":true}'
-    http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:36:08 GMT
+  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
 recorded_with: VCR 2.9.3
