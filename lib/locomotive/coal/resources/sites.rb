@@ -27,7 +27,7 @@ module Locomotive::Coal
       end
 
       def update(id, attributes = {})
-        data = update("sites/#{id}", { site: attributes })
+        data = put("sites/#{id}", { site: attributes })
         Resource.new(data)
       end
 
