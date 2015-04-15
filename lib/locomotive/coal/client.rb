@@ -33,6 +33,10 @@ module Locomotive::Coal
       @snippets ||= Resources::Snippets.new(uri, connection)
     end
 
+    def translations
+      @translations ||= Resources::Translations.new(uri, connection)
+    end
+
     def scope_by(site)
       options[:handle] = site.handle
       self

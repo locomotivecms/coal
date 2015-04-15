@@ -31,6 +31,12 @@ describe Locomotive::Coal::Client do
     it { is_expected.to eq [] }
   end
 
+  describe '#translations' do
+    let(:options)     { { handle: 'sample' } }
+    subject { client.translations.all }
+    it { is_expected.to eq [] }
+  end
+
   describe '#scope_by' do
     let(:uri) { 'http://www.example.com:3000/locomotive/api/v3' }
     let(:site) { client.sites.all.first }
