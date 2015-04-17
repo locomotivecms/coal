@@ -3,7 +3,7 @@ module Locomotive::Coal
 
     class Contents < Struct.new(:uri, :credentials)
 
-      include Locomotive::Coal::Request
+      include Concerns::Request
 
       def by_slug(slug)
         get('content_types').each do |attributes|

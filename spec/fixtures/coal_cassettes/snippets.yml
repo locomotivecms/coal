@@ -220,4 +220,88 @@ http_interactions:
         rocks. period"}'
     http_version: 
   recorded_at: Tue, 14 Apr 2015 23:19:41 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/Locomotive::Coal::Resources::Snippets.json?auth_token=4hh1Unsf9EgGpsTSo96k
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 4hh1Unsf9EgGpsTSo96k
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '81'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 65b84341-7182-4202-a122-49b337f491f9
+      X-Runtime:
+      - '0.425332'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"error":"Unrecognized request path: Locomotive::Coal::Resources::Snippets.json"}'
+    http_version: 
+  recorded_at: Fri, 17 Apr 2015 12:26:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/Locomotive::Coal::Resources::Snippets.json?auth_token=4hh1Unsf9EgGpsTSo96k&snippet%5Bname%5D=Footer&snippet%5Bslug%5D=footer&snippet%5Btemplate%5D=Locomotive%20rocks!
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 4hh1Unsf9EgGpsTSo96k
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '81'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 71ef5a78-421c-4cc8-8ddf-c4e88c186535
+      X-Runtime:
+      - '0.016441'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"error":"Unrecognized request path: Locomotive::Coal::Resources::Snippets.json"}'
+    http_version: 
+  recorded_at: Fri, 17 Apr 2015 12:26:37 GMT
 recorded_with: VCR 2.9.3

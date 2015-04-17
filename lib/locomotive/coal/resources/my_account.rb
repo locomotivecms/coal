@@ -3,7 +3,7 @@ module Locomotive::Coal
 
     class MyAccount < Struct.new(:uri, :credentials)
 
-      include Locomotive::Coal::Request
+      include Concerns::Request
 
       def get
         Resource.new(super('my_account'))

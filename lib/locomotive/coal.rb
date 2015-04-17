@@ -12,9 +12,9 @@ module Locomotive
 end
 
 require_relative 'coal/error'
-require_relative 'coal/request'
 require_relative 'coal/paginated_resources'
 require_relative 'coal/resource'
+require_relative 'coal/resources/base'
 require_relative 'coal/resources/token'
 require_relative 'coal/resources/my_account'
 require_relative 'coal/resources/sites'

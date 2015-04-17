@@ -3,7 +3,7 @@ module Locomotive::Coal
 
     class Token < Struct.new(:uri, :credentials)
 
-      include Locomotive::Coal::Request
+      include Concerns::Request
 
       def get
         post('tokens', credentials)['token']

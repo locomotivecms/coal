@@ -4,7 +4,7 @@ module Locomotive::Coal
 
     class ContentEntries < Struct.new(:uri, :credentials, :content_type)
 
-      include Locomotive::Coal::Request
+      include Concerns::Request
 
       def all(query = {}, options = {})
         parameters  = { where: query.to_json }.merge(options)
