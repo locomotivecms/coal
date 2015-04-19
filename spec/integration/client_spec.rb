@@ -25,16 +25,25 @@ describe Locomotive::Coal::Client do
     it { is_expected.not_to eq nil }
   end
 
-  describe '#snippets' do
-    let(:options)     { { handle: 'sample' } }
-    subject { client.snippets.all }
-    it { is_expected.to eq [] }
-  end
+  context 'scoped by a site' do
 
-  describe '#translations' do
-    let(:options)     { { handle: 'sample' } }
-    subject { client.translations.all }
-    it { is_expected.to eq [] }
+    let(:options) { { handle: 'sample' } }
+
+    describe '#snippets' do
+      subject { client.snippets.all }
+      it { is_expected.to eq [] }
+    end
+
+    describe '#translations' do
+      subject { client.translations.all }
+      it { is_expected.to eq [] }
+    end
+
+    describe '#theme_assets' do
+      subject { client.theme_assets.all }
+      it { is_expected.to eq [] }
+    end
+
   end
 
   describe '#scope_by' do

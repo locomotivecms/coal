@@ -52,7 +52,12 @@ module Locomotive::Coal::Resources
 
         _connection.send(action, endpoint) do |request|
           request.headers = _request_headers
-          request.params  = parameters
+
+          if %i(create update).include?(action)
+            request.params = parameters
+          else
+            request.body = parameters
+          end
         end
       end
 
@@ -68,6 +73,7 @@ module Locomotive::Coal::Resources
 
       def _connection
         @_connection ||= Faraday.new(url: "#{uri.scheme}://#{uri.host}:#{uri.port}") do |faraday|
+          faraday.request     :multipart
           faraday.request     :url_encoded             # form-encode POST params
           faraday.basic_auth  uri.userinfo.values if uri.userinfo
 

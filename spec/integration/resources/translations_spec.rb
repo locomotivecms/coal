@@ -11,7 +11,7 @@ describe Locomotive::Coal::Resources::Translations do
 
   describe '#all' do
     subject { translations.all }
-    it { expect(subject).to eq [] }
+    it { expect(subject).not_to eq nil }
   end
 
   describe '#create' do

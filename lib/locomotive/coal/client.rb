@@ -25,13 +25,6 @@ module Locomotive::Coal
       @sites ||= Resources::Sites.new(uri, connection)
     end
 
-    # def my_sites
-    #   # client.my_sites.all
-    #   # client.my_sites.update
-    #   # client.my_sites.destroy
-    #   raise 'TODO'
-    # end
-
     def contents
       @contents ||= Resources::Contents.new(uri, connection)
     end
@@ -41,7 +34,7 @@ module Locomotive::Coal
     end
 
     def theme_assets
-      raise 'TODO'
+      @theme_assets ||= Resources::ThemeAssets.new(uri, connection)
     end
 
     def snippets

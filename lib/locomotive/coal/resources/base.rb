@@ -43,7 +43,7 @@ module Locomotive::Coal
       end
 
       def resource_name
-        self.class.name.demodulize.downcase.singularize
+        self.class.name.demodulize.underscore.singularize
       end
 
     end

@@ -11,7 +11,7 @@ describe Locomotive::Coal::Resources::Snippets do
 
   describe '#all' do
     subject { snippets.all }
-    it { expect(subject).to eq [] }
+    it { expect(subject).not_to eq nil }
   end
 
   describe '#create' do

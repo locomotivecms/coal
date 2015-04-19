@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler',    '~> 1.9.1'
   spec.add_development_dependency 'rake',       '~> 10.4.2'
 
-  # spec.add_dependency 'unirest',                '~> 1.1.2'
   spec.add_dependency 'faraday',                '~> 0.9.1'
   spec.add_dependency 'faraday_middleware',     '~> 0.9.1'
   spec.add_dependency 'activesupport',          '~> 4.2.1'
