@@ -2,47 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json?email=admin@locomotivecms.com&password=locomotive
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '32'
-      Etag:
-      - W/"1250d95971b28667ad818fd54f050909"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6092384a-61ea-42f5-b753-16d765921f03
-      X-Runtime:
-      - '0.015963'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
-- request:
-    method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
     body:
       encoding: UTF-8
@@ -66,20 +25,20 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"c04471e9ec7f172a768e661ff1af20a9"
+      - W/"d1f7b30db41123dbdfabce85ebf9a043"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4301bfef-615e-4612-b3d2-96a545249430
+      - c4bae80e-f77f-4758-9559-57971845b208
       X-Runtime:
-      - '0.016475'
+      - '0.014415'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"bn45z8oMzXDV7LWa3XcL"}'
+      string: '{"token":"B1UseoZ1BSQUr86t5-Kz"}'
     http_version: 
-  recorded_at: Sat, 18 Apr 2015 14:31:54 GMT
+  recorded_at: Sat, 25 Apr 2015 21:33:35 GMT
 recorded_with: VCR 2.9.3

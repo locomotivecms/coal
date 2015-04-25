@@ -25,9 +25,11 @@ module Locomotive::Coal
       @sites ||= Resources::Sites.new(uri, connection)
     end
 
-    def contents
-      @contents ||= Resources::Contents.new(uri, connection)
+    def content_types
+      @content_types ||= Resources::ContentTypes.new(uri, connection)
     end
+
+    alias :contents :content_types
 
     def pages
       raise 'TODO'

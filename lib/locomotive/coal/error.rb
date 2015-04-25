@@ -52,10 +52,17 @@ module Locomotive::Coal
 
     def build_message
       attributes = body['attributes'].map do |name, errors|
-        "#{name} #{errors.join(' ')}"
+        if errors.is_a?(Hash)
+          errors.map do |k, _errors|
+            "#{name}.#{k}: #{_errors.join(' + ')}"
+          end
+        else
+          "#{name} #{errors.join(' ')}"
+        end
       end
       "#{body['error']}: #{attributes.join(', ')}"
     end
+
   end
 
 end
