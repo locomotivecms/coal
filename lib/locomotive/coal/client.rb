@@ -35,6 +35,10 @@ module Locomotive::Coal
       raise 'TODO'
     end
 
+    def content_assets
+      @content_assets ||= Resources::ContentAssets.new(uri, connection)
+    end
+
     def theme_assets
       @theme_assets ||= Resources::ThemeAssets.new(uri, connection)
     end
