@@ -7,6 +7,7 @@ module Locomotive::Coal
         get('content_types').each do |attributes|
           return Resource.new(attributes) if attributes['slug'] == slug.to_s
         end
+        nil
       end
 
       def method_missing(meth, *args)

@@ -2,9 +2,14 @@ module Locomotive::Coal
 
   module Resources
 
-    class ContentEntries < Struct.new(:uri, :credentials, :content_type)
+    class ContentEntries < Base
 
-      include Concerns::Request
+      attr_accessor :content_type
+
+      def initialize(uri, credentials, content_type)
+        @content_type = content_type
+        super(uri, credentials)
+      end
 
       def all(query = {}, options = {})
         parameters  = { where: query.to_json }.merge(options)
@@ -18,10 +23,10 @@ module Locomotive::Coal
           response.headers[:x_total_entries].to_i)
       end
 
-      def update(id, attributes)
-        data = put(endpoint + "/#{id}", { content_entry: attributes })
-        Resource.new(data)
-      end
+      # def update(id, attributes)
+      #   data = put(endpoint + "/#{id}", { content_entry: attributes })
+      #   Resource.new(data)
+      # end
 
       private
 
