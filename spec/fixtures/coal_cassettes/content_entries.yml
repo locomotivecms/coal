@@ -1,0 +1,1160 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c7c9adc2-ff58-4a6a-8b6d-f927b49d38b5
+      X-Runtime:
+      - '0.959733'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_type%5Bfields%5D%5B%5D%5Blabel%5D=Title&content_type%5Bfields%5D%5B%5D%5Bname%5D=title&content_type%5Bfields%5D%5B%5D%5Btype%5D=string&content_type%5Bname%5D=Article&content_type%5Bslug%5D=articles
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '551'
+      Etag:
+      - W/"9d022849bd82897df4c3d843b647ca4d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c3fa3ed5-9bca-48df-a550-5eb83892743b
+      X-Runtime:
+      - '0.180965'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b464696432511f0100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","name":"Article","slug":"articles","description":null,"label_field_name":"title","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"fields":[{"_id":"554403b46469643251200100","created_at":null,"updated_at":null,"name":"title","type":"string","label":"Title","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - df0e2c23-2b2a-440b-9bbf-4706f907a386
+      X-Runtime:
+      - '0.015000'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Random+title
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '299'
+      Etag:
+      - W/"9a0289911849ffd8e46d5e381562c2d5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a910048-84c1-403f-9ceb-19ba8049b54f
+      X-Runtime:
+      - '0.056573'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251220100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"random-title","content_type_slug":"articles","_label":"Random
+        title","_position":0,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Random
+        title"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/random-title.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Random+title%21
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '301'
+      Etag:
+      - W/"94d7cecbf6e00782eaf772382bc3f0d6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 551bfb31-4c1d-4912-99a8-f616919c8165
+      X-Runtime:
+      - '0.043990'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251220100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"random-title","content_type_slug":"articles","_label":"Random
+        title!","_position":0,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Random
+        title!"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b3a4499f-0144-4465-bcb7-5ef32c03ec01
+      X-Runtime:
+      - '0.015028'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Hello+world
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"76dfecb18e8f5bef5e3f735f99ab6511"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 192bffd1-66a5-431c-a7ae-3f453eb1ead6
+      X-Runtime:
+      - '0.071469'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251250100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Lorem+ipsum
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"5cb5cd8dafbce1e2a1a11a841f8fb8cb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a1707a0e-4647-416e-9cb0-cfa1c0ff8689
+      X-Runtime:
+      - '0.038992'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251270100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&where=%7B%7D
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total-Pages:
+      - '1'
+      X-Per-Page:
+      - '10'
+      X-Total-Entries:
+      - '3'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '897'
+      Etag:
+      - W/"edab7a0cbb030861244b1678c969b8e9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f8317f3d-6988-4d94-b68c-134925eef605
+      X-Runtime:
+      - '0.042358'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"554403b46469643251220100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"random-title","content_type_slug":"articles","_label":"Random
+        title!","_position":0,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Random
+        title!"},{"_id":"554403b46469643251250100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"},{"_id":"554403b46469643251270100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}]'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/hello-world.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"76dfecb18e8f5bef5e3f735f99ab6511"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 99e66cc9-a226-473c-bf9e-7bf2fda9c328
+      X-Runtime:
+      - '0.032701'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251250100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/lorem-ipsum.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"5cb5cd8dafbce1e2a1a11a841f8fb8cb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4aba687-9393-4640-b7cd-e732382d7d15
+      X-Runtime:
+      - '0.032268'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251270100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 47b7eb10-14da-4b01-87d5-1c1132514f3d
+      X-Runtime:
+      - '0.015942'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Hello+world
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"f18139dc52500978b871e96a9006e355"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ac2c8079-2528-4b37-8239-f69d6c04cb3b
+      X-Runtime:
+      - '0.038186'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251290100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Lorem+ipsum
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"974c6d36a43faf5f563f979ff25d101e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2510d8da-c1a1-42d8-8700-bd4c65c04331
+      X-Runtime:
+      - '0.039116'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512b0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&where=%7B%22_visible%22%3Atrue%2C%22title%22%3A%22Hello+world%22%7D
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total-Pages:
+      - '1'
+      X-Per-Page:
+      - '10'
+      X-Total-Entries:
+      - '1'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '298'
+      Etag:
+      - W/"83f98dd3f7c7d6fdac9e211bc88a6421"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d4efebf6-84b8-4823-8496-f21fa5e361c3
+      X-Runtime:
+      - '0.034782'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"554403b46469643251290100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}]'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/hello-world.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"f18139dc52500978b871e96a9006e355"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f72a822f-cfeb-4835-9b1f-623e5bf21420
+      X-Runtime:
+      - '0.029862'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b46469643251290100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/lorem-ipsum.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"974c6d36a43faf5f563f979ff25d101e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d354c8bb-2cbc-47a6-9ebf-e61f67ae0bcc
+      X-Runtime:
+      - '0.031555'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512b0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6fe86835-c8c2-4fa9-9283-32c5c5fd4248
+      X-Runtime:
+      - '0.016168'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Hello+world
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"c0421928ba2354f41b97a4945d22e756"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 83f13ae6-711f-45d4-b7be-7c7c57669666
+      X-Runtime:
+      - '0.060581'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512d0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&content_entry%5Btitle%5D=Lorem+ipsum
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"6863714cab01dbd3a2ea0dfefe09c855"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 684550a1-9c77-405b-9444-71ac273c1099
+      X-Runtime:
+      - '0.036044'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512f0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT&page=2&per_page=1&where=%7B%7D
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Total-Pages:
+      - '3'
+      X-Per-Page:
+      - '1'
+      X-Total-Entries:
+      - '3'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '298'
+      Etag:
+      - W/"4965eaaf6419758311bf69bacde6eb7f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf5ca531-0845-4732-9156-86566f3b454f
+      X-Runtime:
+      - '0.027336'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"554403b564696432512d0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}]'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/hello-world.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"c0421928ba2354f41b97a4945d22e756"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0cdbdff6-4918-4aab-b6f1-8c23eb50156b
+      X-Runtime:
+      - '0.028225'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512d0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"hello-world","content_type_slug":"articles","_label":"Hello
+        world","_position":1,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Hello
+        world"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/articles/entries/lorem-ipsum.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '296'
+      Etag:
+      - W/"6863714cab01dbd3a2ea0dfefe09c855"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8daa6b75-e0cc-4e57-9861-36c96a653e30
+      X-Runtime:
+      - '0.029259'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b564696432512f0100","created_at":"2015-05-01T22:52:37Z","updated_at":"2015-05-01T22:52:37Z","_slug":"lorem-ipsum","content_type_slug":"articles","_label":"Lorem
+        ipsum","_position":2,"_visible":true,"seo_title":null,"meta_keywords":null,"meta_description":null,"title":"Lorem
+        ipsum"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"06ee1fc9e22f36241a68334d7779cbae"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 97a7aa5e-612f-4482-badf-ac8e1babc6db
+      X-Runtime:
+      - '0.014664'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"VUeG8Whs58E-6sUZyyrT"}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/554403b464696432511f0100.json
+    body:
+      encoding: UTF-8
+      string: auth_token=VUeG8Whs58E-6sUZyyrT
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - VUeG8Whs58E-6sUZyyrT
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '551'
+      Etag:
+      - W/"9d022849bd82897df4c3d843b647ca4d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4502038-82d6-4ea9-af27-bda40c7e1f5d
+      X-Runtime:
+      - '0.057913'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554403b464696432511f0100","created_at":"2015-05-01T22:52:36Z","updated_at":"2015-05-01T22:52:36Z","name":"Article","slug":"articles","description":null,"label_field_name":"title","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"fields":[{"_id":"554403b46469643251200100","created_at":null,"updated_at":null,"name":"title","type":"string","label":"Title","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+    http_version: 
+  recorded_at: Fri, 01 May 2015 22:52:37 GMT
+recorded_with: VCR 2.9.3

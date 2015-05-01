@@ -13,7 +13,7 @@ module Locomotive::Coal
 
       def all(query = {}, options = {})
         parameters  = { where: query.to_json }.merge(options)
-        response    = get(endpoint, parameters, true)
+        response    = get(resources_name, parameters, true)
 
         list = response.body.map { |attributes| Resource.new(attributes) }
 
@@ -30,7 +30,7 @@ module Locomotive::Coal
 
       private
 
-      def endpoint
+      def resources_name
         "content_types/#{content_type.slug}/entries"
       end
 

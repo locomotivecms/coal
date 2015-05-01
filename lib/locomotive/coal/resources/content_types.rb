@@ -5,7 +5,7 @@ module Locomotive::Coal
 
       def by_slug(slug)
         get('content_types').each do |attributes|
-          return Resource.new(attributes) if attributes['slug'] == slug.to_s
+          return Resource.new(attributes) if attributes['slug'].to_s == slug.to_s
         end
         nil
       end

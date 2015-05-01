@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Locomotive::Coal::Resources::ContentTypes do
 
-  before { VCR.insert_cassette 'content_types', record: :new_episodes }
-  after  { VCR.eject_cassette }
+  before(:all) { VCR.insert_cassette 'content_types', record: :new_episodes, match_requests_on: [:method, :query, :body] }
+  after(:all)  { VCR.eject_cassette }
 
   let(:uri)           { TEST_SITE_API_V3_URI }
   let(:credentials)   { { email: TEST_API_EMAIL, token: api_token } }
