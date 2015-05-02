@@ -51,7 +51,7 @@ module Locomotive::Coal::Resources
         parameters = parameters.merge(auth_token: credentials[:token]) if _token
 
         _connection.send(action, endpoint) do |request|
-          request.headers = _request_headers
+          request.headers = _request_headers(parameters)
 
           if %i(create update).include?(action)
             request.params = parameters
@@ -61,13 +61,15 @@ module Locomotive::Coal::Resources
         end
       end
 
-      def _request_headers
+      def _request_headers(parameters)
         { 'Accept' => 'application/json' }.tap do |headers|
           if _token
             headers['X-Locomotive-Account-Email'] = credentials[:email]
             headers['X-Locomotive-Account-Token'] = credentials[:token]
             headers['X-Locomotive-Site-Handle']   = credentials[:handle] if credentials[:handle].present?
           end
+
+          headers['X-Locomotive-Locale'] = parameters.delete(:_locale).to_s if parameters.try(:has_key?, :_locale)
         end
       end
 

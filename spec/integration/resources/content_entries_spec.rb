@@ -4,7 +4,7 @@ describe Locomotive::Coal::Resources::ContentEntries do
 
   before(:all) do
     VCR.insert_cassette 'content_entries', record: :new_episodes, match_requests_on: [:method, :query, :body]
-    @content_type = build_content_types.create(name: 'Article', slug: 'articles', fields: [{ label: 'Title', name: 'title', type: 'string' }])
+    @content_type = build_content_types.create(name: 'Article', slug: 'articles', fields: [{ label: 'Title', name: 'title', type: 'string', localized: true }])
   end
 
   after(:all) do
@@ -61,6 +61,14 @@ describe Locomotive::Coal::Resources::ContentEntries do
     subject { entries.update(entry._slug, { title: 'Random title!' }) }
 
     it { expect(subject.title).to eq 'Random title!' }
+
+    describe 'with a localized content entry' do
+
+      subject { entries.update(entry._id, { title: 'Titre au hasard' }, :fr) }
+
+      it { expect(subject.title).to eq 'Titre au hasard' }
+
+    end
 
   end
 

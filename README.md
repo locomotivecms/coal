@@ -60,7 +60,7 @@ The Ruby API Client for LocomotiveCMS V3.
 
 #### Content Entries
 
-**Get all the first 10 entries filtered by a property (published)**
+**Get the first 10 entries filtered by a property (published)**
 
     articles = site_client.contents.articles.all({ published: true })
 
@@ -73,10 +73,22 @@ The Ruby API Client for LocomotiveCMS V3.
       page = articles._next_page
     end
 
+**Create a content entry**
+
+    first_article = site_client.contents.articles.create(title: 'Hello world')
+
 **Update a content entry**
 
     article = site_client.contents.articles.all.first
     site_client.contents.articles.update(article._id, { title: 'Hello world'})
+
+**Update a content entry in a different locale**
+
+    # create the article in the default locale
+    article = site_client.contents.articles.create(title: 'Hello world')
+
+    # then update the title in another locale
+    site_client.contents.articles.update(article._id, { title: 'Bonjour le monde'}, :fr)
 
 ## TODO
 
