@@ -90,6 +90,51 @@ The Ruby API Client for LocomotiveCMS V3.
     # then update the title in another locale
     site_client.contents.articles.update(article._id, { title: 'Bonjour le monde'}, :fr)
 
+**Destroy a content entry**
+
+    site_client.contents.articles.destroy(article._id)
+
+#### Snippets
+
+**Get the list of snippets**
+
+    snippets = site_client.snippets.all
+
+**Create a snippet**
+
+    snippet = site_client.snippets.create(name: 'Header', slug: 'header', template: template: 'Locomotive rocks!')
+
+    # create a snippet in different locales
+
+    snippet = site_client.snippets.create(name: 'Header', slug: 'header', template: { en: 'Locomotive rocks!', fr: 'Locomotive déchire !' })
+
+**Update a snippet**
+
+    site_client.snippets.update('header', template: 'Locomotive rocks!!!')
+
+**Destroy a snippet**
+
+    site_client.snippets.destroy('header')
+
+#### Theme assets
+
+**Get the list of theme assets**
+
+    assets = site_client.theme_assets.all
+
+**Create a theme asset**
+
+    asset = site_client.theme_assets.create(source: Locomotive::Coal::UploadIO.new('<local path of my image>'), folder: 'images/header')
+
+**Update a theme asset**
+
+    site_client.theme_assets.update(asset._id, source: Locomotive::Coal::UploadIO.new('<local path of my new image>'))
+
+**Destroy a theme asset**
+
+    site_client.theme_assets.destroy(asset._id)
+
+
 ## TODO
 
 We only implemented a few resources (my_account, sites, content types and content entries) and for some of them, not all the actions have been implemented.
