@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Locomotive::Coal::Resources::ThemeAssets do
+describe Locomotive::Coal::Resources::ThemeAssets, order: :defined do
 
   before { VCR.insert_cassette 'theme_assets', record: :new_episodes }
   after  { VCR.eject_cassette }

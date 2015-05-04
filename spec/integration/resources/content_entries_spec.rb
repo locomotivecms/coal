@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Locomotive::Coal::Resources::ContentEntries do
+describe Locomotive::Coal::Resources::ContentEntries, order: :defined do
 
   before(:all) do
     VCR.insert_cassette 'content_entries', record: :new_episodes, match_requests_on: [:method, :query, :body]

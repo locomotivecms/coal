@@ -2,125 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://acme.example.com:3000/tokens.json?email=admin@locomotivecms.com&password=locomotive
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - text/html
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 522a6a83-4441-4b9b-9356-62cdcb2f15c8
-      X-Runtime:
-      - '0.024123'
-      Connection:
-      - close
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: Hi, we are sorry but no site was found.
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json?email=admin@locomotivecms.com&password=locomotive
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '32'
-      Etag:
-      - W/"1250d95971b28667ad818fd54f050909"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e549d6c8-9f7e-4345-9f93-bbeed89965bf
-      X-Runtime:
-      - '0.018061'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json?api_key=d49cd50f6f0d2b163f48fc73cb249f0244c37074&email=admin@locomotivecms.com
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Content-Length:
-      - '0'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '32'
-      Etag:
-      - W/"1250d95971b28667ad818fd54f050909"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c76ebc68-30fd-426c-82d9-10b38b1f820b
-      X-Runtime:
-      - '0.015059'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"token":"4hh1Unsf9EgGpsTSo96k"}'
-    http_version: 
-  recorded_at: Tue, 14 Apr 2015 23:19:38 GMT
-- request:
-    method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
     body:
       encoding: UTF-8
@@ -144,22 +25,22 @@ http_interactions:
       Content-Length:
       - '32'
       Etag:
-      - W/"c04471e9ec7f172a768e661ff1af20a9"
+      - W/"6ba0e226b40adfde2d656d9027a1335f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 722a6b9d-aad5-44b4-b3cc-79a9b3fce1be
+      - 8820e872-e6d5-4a29-a182-60b176f4d0e8
       X-Runtime:
-      - '0.023388'
+      - '0.015979'
       Connection:
       - keep-alive
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"token":"bn45z8oMzXDV7LWa3XcL"}'
+      string: '{"token":"Z9s7W_-BXyGQsDPFsorr"}'
     http_version: 
-  recorded_at: Sat, 18 Apr 2015 14:31:53 GMT
+  recorded_at: Mon, 04 May 2015 13:51:30 GMT
 - request:
     method: post
     uri: http://acme.example.com:3000/tokens.json
@@ -185,9 +66,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 0e87d178-d360-40df-987e-1dc235de45f3
+      - 4df79c9f-6d22-493d-8373-11fabc659d04
       X-Runtime:
-      - '0.030186'
+      - '0.019628'
       Connection:
       - close
       Server:
@@ -196,5 +77,5 @@ http_interactions:
       encoding: UTF-8
       string: Hi, we are sorry but no site was found.
     http_version: 
-  recorded_at: Sat, 18 Apr 2015 14:31:53 GMT
+  recorded_at: Mon, 04 May 2015 13:51:30 GMT
 recorded_with: VCR 2.9.3

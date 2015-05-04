@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Locomotive::Coal::Resources::Translations do
+describe Locomotive::Coal::Resources::Translations, order: :defined do
 
   before { VCR.insert_cassette 'translations', record: :new_episodes }
   after  { VCR.eject_cassette }
