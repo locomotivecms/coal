@@ -73,6 +73,11 @@ The Ruby API Client for LocomotiveCMS V3.
       page = articles._next_page
     end
 
+*Note:* You can also use the following syntax
+
+    content_type = site_client.contents.projects
+    articles = site_client.content_entries(content_type).all
+
 **Create a content entry**
 
     first_article = site_client.contents.articles.create(title: 'Hello world')

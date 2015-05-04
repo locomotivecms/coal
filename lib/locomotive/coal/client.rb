@@ -31,6 +31,11 @@ module Locomotive::Coal
 
     alias :contents :content_types
 
+    def content_entries(content_type)
+      @content_entries ||= {}
+      @content_entries[content_type.slug] ||= Resources::ContentEntries.new(uri, connection, content_type)
+    end
+
     def pages
       raise 'TODO'
     end
@@ -61,7 +66,7 @@ module Locomotive::Coal
     end
 
     def reset
-      @token = nil
+      @token = @my_account = @sites = @content_types = @theme_assets = @content_assets = @translations = nil
     end
 
     def ssl?
