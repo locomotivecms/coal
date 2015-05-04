@@ -2,9 +2,28 @@
 
 [![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal) [![Dependency Status](https://gemnasium.com/locomotivecms/coal.svg)](https://gemnasium.com/locomotivecms/coal) [![Build Status](https://travis-ci.org/locomotivecms/coal.svg?branch=master)](https://travis-ci.org/locomotivecms/coal) [![Coverage Status](https://coveralls.io/repos/locomotivecms/coal/badge.svg?branch=master)](https://coveralls.io/r/locomotivecms/coal?branch=master)
 
-The Ruby API Client for LocomotiveCMS V3.
+The Ruby API Client for LocomotiveCMS V3 (WIP).
 
-## Installation [WIP]
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Authentication](#authentication)
+  - [Resources](#resources)
+      - [MyAccount](#my-account)
+      - [Sites](#sites)
+      - [Content Types](#content-types)
+      - [Content Entries](#content-entries)
+      - [Snippets](#snippets)
+      - [Theme Assets](#theme-assets)
+      - [Content Assets](#content-assets)
+- [What is missing](#todo)
+- [Contributing](#contributing)
+- [How to write specs](#how-to-write-specs)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
 
     gem install locomotivecms_coal --pre
 
@@ -139,8 +158,25 @@ The Ruby API Client for LocomotiveCMS V3.
 
     site_client.theme_assets.destroy(asset._id)
 
+#### Content assets
 
-## TODO
+**Get the list of content assets**
+
+    assets = site_client.content_assets.all
+
+**Create a content asset**
+
+    asset = site_client.content_assets.create(source: Locomotive::Coal::UploadIO.new('<local path of my image>'))
+
+**Update a content asset**
+
+    site_client.content_assets.update(asset._id, source: Locomotive::Coal::UploadIO.new('<local path of my new image>'))
+
+**Destroy a content asset**
+
+    site_client.content_assets.destroy(asset._id)
+
+## What is missing?
 
 We only implemented a few resources (my_account, sites, content types and content entries) and for some of them, not all the actions have been implemented.
 
@@ -154,7 +190,7 @@ Check the issues section of the repository to see what is missing.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## HOW-TO WRITE SPECS
+## How to write specs
 
 **Engine configuration:**
 
