@@ -12,6 +12,7 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
   - [Resources](#resources)
       - [MyAccount](#my-account)
       - [Sites](#sites)
+      - [Pages](#pages)
       - [Content Types](#content-types)
       - [Content Entries](#content-entries)
       - [Snippets](#snippets)
@@ -65,6 +66,29 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
 **Destroy a site**
 
     my_site = client.sites.destroy(my_site._id)
+
+#### Pages
+
+*Note:* We first need to log in to the site. It can be done by calling the scope_by method of the client instance.
+
+    site = client.sites.by_subdomain('acme')
+    site_client = client.scope_by(site)
+
+**Get the list of pages**
+
+    pages = site_client.pages.all
+
+**Create a page**
+
+    page = site_client.pages.create(title: 'About us', slug: 'about-us', parent: 'index', template: 'Locomotive rocks!')
+
+**Update a page**
+
+    site_client.pages.update(page._id, template: 'Locomotive rocks!!!')
+
+**Destroy a page**
+
+    site_client.pages.destroy(page._id)
 
 #### Content Types
 
@@ -126,7 +150,7 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
 
 **Create a snippet**
 
-    snippet = site_client.snippets.create(name: 'Header', slug: 'header', template: template: 'Locomotive rocks!')
+    snippet = site_client.snippets.create(name: 'Header', slug: 'header', template: 'Locomotive rocks!')
 
     # create a snippet in different locales
 
