@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"6be06530def9720d4d9c14c9278d2f4b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f128dcb9-64fb-40b8-a0bb-d86ca8c78067
+      X-Runtime:
+      - '0.012847'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"7BAa-6gXVc3f4XPVaCuu"}'
+    http_version: 
+  recorded_at: Thu, 07 May 2015 14:28:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json
+    body:
+      encoding: UTF-8
+      string: auth_token=7BAa-6gXVc3f4XPVaCuu
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 7BAa-6gXVc3f4XPVaCuu
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1242'
+      Etag:
+      - W/"9743ede061b6ec1cdf772baad610baf5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a058bf8-e706-41aa-a4f0-b8b05f747ef3
+      X-Runtime:
+      - '0.020903'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"554b767464696416f0060000","created_at":"2015-05-07T14:28:04Z","updated_at":"2015-05-07T14:28:04Z","title":"Home
+        page","parent_id":null,"position":0,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"slug":"index","fullpath":"index","localized_fullpaths":{"en":""},"redirect":false,"redirect_url":null,"redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+        of the home page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null},{"_id":"554b767464696416f0070000","created_at":"2015-05-07T14:28:04Z","updated_at":"2015-05-07T14:28:04Z","title":"Page
+        not found","parent_id":null,"position":1,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"slug":"404","fullpath":"404","localized_fullpaths":{"en":"404"},"redirect":false,"redirect_url":null,"redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+        of the 404 page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}]'
+    http_version: 
+  recorded_at: Thu, 07 May 2015 14:28:18 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json
+    body:
+      encoding: UTF-8
+      string: auth_token=7BAa-6gXVc3f4XPVaCuu&page%5Bparent%5D=index&page%5Bslug%5D=about-us&page%5Btemplate%5D=Locomotive+rocks%21&page%5Btitle%5D=About+us
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 7BAa-6gXVc3f4XPVaCuu
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '661'
+      Etag:
+      - W/"31d77daada1869a598f86f882854eb6b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9bc6f4be-2455-4705-bad0-9a9dbb8d4c73
+      X-Runtime:
+      - '0.079593'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554b76826469641460040000","created_at":"2015-05-07T14:28:18Z","updated_at":"2015-05-07T14:28:18Z","title":"About
+        us","parent_id":{"$oid":"554b767464696416f0060000"},"position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":null,"redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"{%
+        extends ''parent'' %}","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
+    http_version: 
+  recorded_at: Thu, 07 May 2015 14:28:18 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/554b76826469641460040000.json
+    body:
+      encoding: UTF-8
+      string: auth_token=7BAa-6gXVc3f4XPVaCuu&page%5Btemplate%5D=Locomotive+rocks.+period
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 7BAa-6gXVc3f4XPVaCuu
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '663'
+      Etag:
+      - W/"c09dfe97c855fbd373aa489d002c864d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4ef2af25-ed77-42b7-bd37-4a32996e73af
+      X-Runtime:
+      - '0.038725'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554b76826469641460040000","created_at":"2015-05-07T14:28:18Z","updated_at":"2015-05-07T14:28:18Z","title":"About
+        us","parent_id":{"$oid":"554b767464696416f0060000"},"position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":null,"redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+        rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
+    http_version: 
+  recorded_at: Thu, 07 May 2015 14:28:18 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/554b76826469641460040000.json
+    body:
+      encoding: UTF-8
+      string: auth_token=7BAa-6gXVc3f4XPVaCuu
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 7BAa-6gXVc3f4XPVaCuu
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '663'
+      Etag:
+      - W/"c09dfe97c855fbd373aa489d002c864d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e2a720db-1592-4638-9baa-a4b714dc13f1
+      X-Runtime:
+      - '0.046890'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"_id":"554b76826469641460040000","created_at":"2015-05-07T14:28:18Z","updated_at":"2015-05-07T14:28:18Z","title":"About
+        us","parent_id":{"$oid":"554b767464696416f0060000"},"position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":null,"redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+        rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
+    http_version: 
+  recorded_at: Thu, 07 May 2015 14:28:18 GMT
+recorded_with: VCR 2.9.3
