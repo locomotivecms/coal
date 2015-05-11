@@ -27,10 +27,7 @@ module Locomotive::Coal
 
       alias :all :index
 
-      def update(id, attributes = {}, locale = nil)
-        data = put("#{resources_name}/#{id}", { _locale: locale, resource_name => attributes })
-        Resource.new(data)
-      end
+      alias :update :update_with_locale
 
       private
 

@@ -10,7 +10,12 @@ describe Locomotive::Coal::Resources::Pages, order: :defined do
   let(:pages)       { described_class.new(uri, credentials) }
 
   describe '#all' do
-    subject { pages.all }
+    subject { pages.all(:en) }
+    it { expect(subject).not_to eq nil }
+  end
+
+  describe '#fullpaths' do
+    subject { pages.fullpaths(:en) }
     it { expect(subject).not_to eq nil }
   end
 
@@ -20,13 +25,13 @@ describe Locomotive::Coal::Resources::Pages, order: :defined do
   end
 
   describe '#update' do
-    let(:page) { pages.all.detect { |s| s.fullpath == 'about-us' } || create_page }
-    subject { pages.update(page._id, template: 'Locomotive rocks. period') }
+    let(:page) { pages.all(:en).detect { |s| s.fullpath == 'about-us' } || create_page }
+    subject { pages.update(page._id, { template: 'Locomotive rocks. period' }, :en) }
     it { expect(subject.template).to eq 'Locomotive rocks. period' }
   end
 
   describe '#destroy' do
-    let(:page) { pages.all.detect { |s| s.fullpath == 'about-us' } || create_page }
+    let(:page) { pages.all(:en).detect { |s| s.fullpath == 'about-us' } || create_page }
     subject { pages.destroy(page._id) }
     it { expect(subject._id).not_to eq nil }
   end

@@ -231,4 +231,51 @@ http_interactions:
         rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
   recorded_at: Thu, 07 May 2015 14:28:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/fullpaths.json
+    body:
+      encoding: UTF-8
+      string: auth_token=7BAa-6gXVc3f4XPVaCuu
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 7BAa-6gXVc3f4XPVaCuu
+      X-Locomotive-Locale:
+      - en
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '107'
+      Etag:
+      - W/"424257c89737e2736dce6359507c20e1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3264e9e8-8bc5-4f2f-a667-17b6f7eb1a0b
+      X-Runtime:
+      - '0.946854'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"554b767464696416f0060000","fullpath":"index"},{"_id":"554b767464696416f0070000","fullpath":"404"}]'
+    http_version: 
+  recorded_at: Mon, 11 May 2015 19:36:55 GMT
 recorded_with: VCR 2.9.3

@@ -31,6 +31,11 @@ module Locomotive::Coal
         Resource.new(data)
       end
 
+      def update_with_locale(id, attributes = {}, locale = nil)
+        data = put("#{resources_name}/#{id}", { _locale: locale, resource_name => attributes })
+        Resource.new(data)
+      end
+
       def destroy(id)
         data = delete("#{resources_name}/#{id}")
         Resource.new(data)
