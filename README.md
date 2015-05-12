@@ -34,6 +34,12 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
 
     client = Locomotive::Coal::Client.new('http://www.myengine.dev', { email: <EMAIL>, api_key: <API KEY> })
 
+You can get the version of the remote running Engine by calling the following method:
+
+    client.engine_version
+
+*Note:* Coal only supports Engine version **~> 3.0.0**.
+
 ### Resources
 
 #### MyAccount
@@ -74,17 +80,23 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
     site = client.sites.by_subdomain('acme')
     site_client = client.scope_by(site)
 
-**Get the list of pages**
+**Get the list of pages in English**
 
-    pages = site_client.pages.all
+    pages = site_client.pages.all(:en)
+
+**Get only the id/fullpath attributes**
+
+    pages = site_client.pages.fullpaths(:en)
+
+It is required when we need the id of an existing page according to its fullpath.
 
 **Create a page**
 
     page = site_client.pages.create(title: 'About us', slug: 'about-us', parent: 'index', template: 'Locomotive rocks!')
 
-**Update a page**
+**Update a page in French**
 
-    site_client.pages.update(page._id, template: 'Locomotive rocks!!!')
+    site_client.pages.update(page._id, { template: 'Locomotive est trop fort!!!' }, :fr)
 
 **Destroy a page**
 
