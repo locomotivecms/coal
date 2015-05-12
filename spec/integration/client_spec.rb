@@ -20,6 +20,16 @@ describe Locomotive::Coal::Client do
     it { is_expected.not_to eq nil }
   end
 
+  describe '#engine_version' do
+    subject { client.engine_version }
+    it { is_expected.to match(/\A\d\..+/) }
+  end
+
+  describe '#version' do
+    subject { client.version }
+    it { is_expected.to match(/\A\d\..+/) }
+  end
+
   describe '#sites' do
     subject { client.sites.all.first }
     it { is_expected.not_to eq nil }
