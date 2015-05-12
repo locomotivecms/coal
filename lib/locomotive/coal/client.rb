@@ -56,9 +56,11 @@ module Locomotive::Coal
       @translations ||= Resources::Translations.new(uri, connection)
     end
 
-    def version
-      raise 'TODO'
+    def engine_version
+      @engine_version ||= Resources::EngineVersion.new(uri, connection).version
     end
+
+    alias version engine_version
 
     def scope_by(site)
       options[:handle] = site.handle
