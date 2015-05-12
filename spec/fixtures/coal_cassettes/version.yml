@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"0f853a81c9a270d46e518678936141a4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 58c7202e-070a-4c41-b134-b7bb2cb3135a
+      X-Runtime:
+      - '0.013219'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"iHshzhpQSyX55mXWnAuj"}'
+    http_version: 
+  recorded_at: Tue, 12 May 2015 13:15:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/version.json
+    body:
+      encoding: UTF-8
+      string: auth_token=iHshzhpQSyX55mXWnAuj&email=admin%40locomotivecms.com&token=iHshzhpQSyX55mXWnAuj
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - iHshzhpQSyX55mXWnAuj
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '18'
+      Etag:
+      - W/"02b2733eaed04ddde340a02b57d9bc85"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ccaf5529-eb60-40a5-a4db-7264c82f4010
+      X-Runtime:
+      - '0.009330'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"engine":"3.0.0"}'
+    http_version: 
+  recorded_at: Tue, 12 May 2015 13:15:27 GMT
+recorded_with: VCR 2.9.3
