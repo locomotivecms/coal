@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Etag:
+      - W/"0f853a81c9a270d46e518678936141a4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30a5705c-9631-45d9-80db-744ff55697d5
+      X-Runtime:
+      - '0.307611'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"token":"iHshzhpQSyX55mXWnAuj"}'
+    http_version: 
+  recorded_at: Thu, 14 May 2015 19:00:54 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/memberships.json
+    body:
+      encoding: UTF-8
+      string: auth_token=iHshzhpQSyX55mXWnAuj
+    headers:
+      Accept:
+      - application/json
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - iHshzhpQSyX55mXWnAuj
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '204'
+      Etag:
+      - W/"905a46811288da31b08f8337478de897"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f913502-ad84-4e31-801e-0d5a2b15ad2d
+      X-Runtime:
+      - '0.283393'
+      Connection:
+      - keep-alive
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"5551f67f626c753228080000","created_at":null,"updated_at":null,"role":"admin","account_id":"5551f67e626c753228000000","name":"Admin","role_name":"Administrator","email":"admin@locomotivecms.com"}]'
+    http_version: 
+  recorded_at: Thu, 14 May 2015 19:00:54 GMT
+recorded_with: VCR 2.9.3

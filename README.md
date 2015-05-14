@@ -211,6 +211,11 @@ It is required when we need the id of an existing page according to its fullpath
 **Destroy a content asset**
 
     site_client.content_assets.destroy(asset._id)
+    
+#### Memberships
+**Get the list of memberships for the current user**
+
+    memberships = site_client.memberships.all
 
 ## What is missing?
 
