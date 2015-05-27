@@ -53,10 +53,10 @@ module Locomotive::Coal::Resources
         _connection.send(action, endpoint) do |request|
           request.headers = _request_headers(parameters)
 
-          if %i(create update).include?(action)
-            request.params = parameters
-          else
+          if %i(post put).include?(action)
             request.body = parameters
+          else
+            request.params = parameters
           end
         end
       end

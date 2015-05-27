@@ -16,6 +16,10 @@ module Locomotive::Coal
       end
     end
 
+    def respond_to?(name, include_private = false)
+      self.attributes.key?(name.to_s) || super
+    end
+
   end
 
 end

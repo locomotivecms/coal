@@ -5,9 +5,8 @@ Gem::Specification.new do |spec|
   spec.version       = Locomotive::Coal::VERSION
   spec.authors       = ['Didier Lafforgue']
   spec.email         = ['did@locomotivecms.com']
-  spec.description   = %q{The LocomotiveCMS coal is the API ruby client for LocomotiveCMS}
-  spec.summary       = %q{The LocomotiveCMS coal is the API ruby client for LocomotiveCMS}
-  spec.homepage      = 'http://www.locomotivecms.com'
+  spec.description   = %q{The LocomotiveCMS Coal is the API ruby client for the LocomotiveCMS platform}
+  spec.summary       = %q{The LocomotiveCMS Coal is the API ruby client for the LocomotiveCMS platform}
   spec.homepage      = 'https://github.com/locomotivecms/coal'
   spec.license       = 'MIT'
 
