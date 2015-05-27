@@ -3,13 +3,8 @@ module Locomotive::Coal
 
     class Memberships < Base
 
-      def index
-        get(resources_name).map do |attributes|
-          Resource.new(attributes)
-        end
-      end
+      # for create, accept email address.
 
-      
       alias :all :index
 
     end
