@@ -30,6 +30,10 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
 
 ## Usage
 
+First, load the gem:
+
+    require 'locomotive/coal'
+
 ### Authentication
 
     client = Locomotive::Coal::Client.new('http://www.myengine.dev', { email: <EMAIL>, api_key: <API KEY> })
@@ -38,7 +42,11 @@ You can get the version of the remote running Engine by calling the following me
 
     client.engine_version
 
-*Note:* Coal only supports Engine version **~> 3.0.0**.
+*Note:* Coal supports Engine version **~> 3.0.x**. However, if you do need to request an Engine running a 2.5.x version, use following code instead:
+
+    client = Locomotive::Coal::ClientV2.new('http://www.myengine.dev', { email: <EMAIL>, api_key: <API KEY> })
+
+We do not garantee that all the API resources will work with the V2 Client but PRs are accepted of course.
 
 ### Resources
 
@@ -77,8 +85,12 @@ You can get the version of the remote running Engine by calling the following me
 
 *Note:* We first need to log in to the site. It can be done by calling the scope_by method of the client instance.
 
-    site = client.sites.by_subdomain('acme')
+    site = client.sites.by_handle('acme')
     site_client = client.scope_by(site)
+
+For the **V2 Client**, that would be this instead:
+
+    site = client.sites.by_subdomain('acme')
 
 **Get the list of pages in English**
 
