@@ -2,14 +2,14 @@ PATH
   remote: .
   specs:
     locomotivecms_coal (1.0.0.pre.alpha.3)
-      activesupport (~> 4.2.1)
+      activesupport (~> 4.2.2)
       faraday (~> 0.9.1)
       faraday_middleware (~> 0.9.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.1)
+    activesupport (4.2.2)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -41,13 +41,13 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
-    json (1.8.2)
+    json (1.8.3)
     json_spec (1.1.4)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
     method_source (0.8.2)
     mime-types (2.4.3)
-    minitest (5.6.1)
+    minitest (5.7.0)
     multi_json (1.11.0)
     multipart-post (2.0.0)
     netrc (0.10.3)
