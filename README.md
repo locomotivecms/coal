@@ -224,9 +224,26 @@ It is required when we need the id of an existing page according to its fullpath
 
     site_client.content_assets.destroy(asset._id)
 
+#### Memberships
+**Get the list of memberships**
+
+    memberships = site_client.memberships.all
+
+**Create a membership**
+
+    membership = site_client.memberships.create(role: 'author', account_email: 'nic@example.com')
+
+**Update a membership**
+
+    site_client.memberships.update(account_email: 'nic@example.com', role: 'admin')
+
+**Destroy a membership**
+
+    site_client.memberships.destroy(membership._id)
+
 ## What is missing?
 
-We only implemented a few resources (my_account, sites, content types and content entries) and for some of them, not all the actions have been implemented.
+We only implemented a few resources (my_account, sites, content types, memberships and content entries) and for some of them, not all the actions have been implemented.
 
 Check the issues section of the repository to see what is missing.
 
