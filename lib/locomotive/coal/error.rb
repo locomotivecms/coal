@@ -51,7 +51,7 @@ module Locomotive::Coal
     private
 
     def build_message
-      attributes = body['attributes'].map do |name, errors|
+      attributes = (body['attributes'] || body).map do |name, errors|
         if errors.is_a?(Hash)
           errors.map do |k, _errors|
             "#{name}.#{k}: #{_errors.join(' + ')}"
@@ -59,8 +59,9 @@ module Locomotive::Coal
         else
           "#{name} #{errors.join(' ')}"
         end
-      end
-      "#{body['error']}: #{attributes.join(', ')}"
+      end.join(', ')
+
+      body['error'] ? "#{body['error']}: #{attributes}" : attributes
     end
 
   end
