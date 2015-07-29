@@ -25,6 +25,15 @@ module Locomotive::Coal
           response.headers[:x_total_entries].to_i)
       end
 
+      def each(query = nil, options = nil, locale = nil, &block)
+        page = 1
+        while page do
+          resources = all(query, (options || {}).merge(page: page), locale)
+          resources.each(&block)
+          page = resources._next_page
+        end
+      end
+
       alias :all :index
 
       alias :update :update_with_locale

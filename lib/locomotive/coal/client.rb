@@ -25,6 +25,10 @@ module Locomotive::Coal
       @sites ||= Resources::Sites.new(uri, connection)
     end
 
+    def current_site
+      @current_site ||= Resources::CurrentSite.new(uri, connection)
+    end
+
     def pages
       @pages ||= Resources::Pages.new(uri, connection)
     end
@@ -62,13 +66,16 @@ module Locomotive::Coal
 
     alias version engine_version
 
-    def scope_by(site)
-      options[:handle] = site.handle
+    def scope_by(site_or_handle)
+      if site_or_handle.respond_to?(:handle)
+        @current_site, site_or_handle = site_or_handle, site_or_handle.handle
+      end
+      options[:handle] = site_or_handle
       self
     end
 
     def reset
-      @token = @my_account = @sites = @pages = @content_types = @theme_assets = @content_assets = @translations = nil
+      @token = @my_account = @sites = @current_site = @pages = @content_types = @theme_assets = @content_assets = @translations = nil
     end
 
     def ssl?

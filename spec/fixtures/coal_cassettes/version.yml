@@ -22,28 +22,24 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '32'
       Etag:
-      - W/"6b081cb1b0d50389aeec251b56dc5e74"
+      - W/"157eb61d395f237526d11950bbc5a1fa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a3e9c3f-b9f3-4a97-9c35-ad2ccaafe103
+      - 63cd92bf-fd95-426b-9a46-01dcdd11e1fe
       X-Runtime:
-      - '0.013795'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.017370'
+      Content-Length:
+      - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"6UA3Po7vVz4Ry34swEqa"}'
+      string: '{"token":"v6XDp282UyPDeM6DgA-S"}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:40 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:34 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=6UA3Po7vVz4Ry34swEqa&email=admin@locomotivecms.com&token=6UA3Po7vVz4Ry34swEqa
+    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=v6XDp282UyPDeM6DgA-S&email=admin@locomotivecms.com&token=v6XDp282UyPDeM6DgA-S
     body:
       encoding: US-ASCII
       string: ''
@@ -53,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - 6UA3Po7vVz4Ry34swEqa
+      - v6XDp282UyPDeM6DgA-S
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -65,23 +61,19 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '24'
       Etag:
-      - W/"020129470059546a79e1475c92274f5a"
+      - W/"4f482497f0c1e5f67e0c6bc908159a8b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 30b8e440-021d-4542-b546-4b77f3e06c49
+      - 153fa796-69d1-402e-a613-9d7f74abc1bd
       X-Runtime:
-      - '0.014074'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.014926'
+      Content-Length:
+      - '26'
     body:
       encoding: UTF-8
-      string: '{"engine":"3.0.0-alpha"}'
+      string: '{"engine":"3.0.0-alpha.3"}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:40 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:34 GMT
 recorded_with: VCR 2.9.3

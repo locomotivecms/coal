@@ -22,28 +22,24 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '32'
       Etag:
-      - W/"6b081cb1b0d50389aeec251b56dc5e74"
+      - W/"157eb61d395f237526d11950bbc5a1fa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 94bb5a9b-5604-4cfc-908f-fbfdfee77470
+      - bfd77ca7-e1f3-4406-95c6-2e2009144b9a
       X-Runtime:
-      - '0.013668'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.014879'
+      Content-Length:
+      - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"6UA3Po7vVz4Ry34swEqa"}'
+      string: '{"token":"v6XDp282UyPDeM6DgA-S"}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:39 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:36 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations.json?auth_token=6UA3Po7vVz4Ry34swEqa
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations.json?auth_token=v6XDp282UyPDeM6DgA-S
     body:
       encoding: US-ASCII
       string: ''
@@ -53,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - 6UA3Po7vVz4Ry34swEqa
+      - v6XDp282UyPDeM6DgA-S
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -65,38 +61,34 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '2'
       Etag:
       - W/"d751713988987e9331980363e24189ce"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 78e9da70-9b5c-4751-b018-173ecdd5c0cf
+      - 0d0b6c41-5e1d-4d7f-9b90-ec6800b8f425
       X-Runtime:
-      - '0.040717'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.021079'
+      Content-Length:
+      - '2'
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:39 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:37 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/translations.json
     body:
       encoding: UTF-8
-      string: auth_token=6UA3Po7vVz4Ry34swEqa&translation%5Bkey%5D=hello&translation%5Bvalues%5D%5Ben%5D=Hello+world&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde
+      string: auth_token=v6XDp282UyPDeM6DgA-S&translation%5Bkey%5D=hello&translation%5Bvalues%5D%5Ben%5D=Hello+world&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - 6UA3Po7vVz4Ry34swEqa
+      - v6XDp282UyPDeM6DgA-S
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -110,39 +102,35 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '174'
       Etag:
-      - W/"260467edfff1c4de444656bd0f32b19c"
+      - W/"25e34f6239cc82c9d0e7783a9b65c96c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a28c67de-4c6c-4c84-a118-3a5357d4424a
+      - 5b07b608-f994-40c4-bb6d-154089b4d6bb
       X-Runtime:
-      - '0.044373'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.056103'
+      Content-Length:
+      - '174'
     body:
       encoding: UTF-8
-      string: '{"_id":"555b42bb646964986c010000","created_at":"2015-05-19T14:03:39Z","updated_at":"2015-05-19T14:03:39Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"55b8f305446964641a00000d","created_at":"2015-07-29T15:36:37Z","updated_at":"2015-07-29T15:36:37Z","key":"hello","values":{"en":"Hello
         world","fr":"Bonjour le monde"}}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:39 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:37 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations/555b42bb646964986c010000.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations/55b8f305446964641a00000d.json
     body:
       encoding: UTF-8
-      string: auth_token=6UA3Po7vVz4Ry34swEqa&translation%5Bvalues%5D%5Ben%5D=Hello+world%21&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde%21
+      string: auth_token=v6XDp282UyPDeM6DgA-S&translation%5Bvalues%5D%5Ben%5D=Hello+world%21&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde%21
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - 6UA3Po7vVz4Ry34swEqa
+      - v6XDp282UyPDeM6DgA-S
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -156,29 +144,25 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '176'
       Etag:
-      - W/"166e9d8c1aab5cb36d5c1dec3c5f298a"
+      - W/"a17907521589fcde6a02c2a2aeef3c22"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e1d54393-e307-4bec-a856-1b8ad3b179f9
+      - a7da3d5f-fa8a-4388-9ec4-ded693a867a1
       X-Runtime:
-      - '0.027187'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.035701'
+      Content-Length:
+      - '176'
     body:
       encoding: UTF-8
-      string: '{"_id":"555b42bb646964986c010000","created_at":"2015-05-19T14:03:39Z","updated_at":"2015-05-19T14:03:39Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"55b8f305446964641a00000d","created_at":"2015-07-29T15:36:37Z","updated_at":"2015-07-29T15:36:37Z","key":"hello","values":{"en":"Hello
         world!","fr":"Bonjour le monde!"}}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:39 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:37 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations/555b42bb646964986c010000.json?auth_token=6UA3Po7vVz4Ry34swEqa
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations/55b8f305446964641a00000d.json?auth_token=v6XDp282UyPDeM6DgA-S
     body:
       encoding: US-ASCII
       string: ''
@@ -188,7 +172,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - 6UA3Po7vVz4Ry34swEqa
+      - v6XDp282UyPDeM6DgA-S
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -200,24 +184,20 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Content-Length:
-      - '176'
       Etag:
-      - W/"166e9d8c1aab5cb36d5c1dec3c5f298a"
+      - W/"a17907521589fcde6a02c2a2aeef3c22"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a047c5cd-d7da-49b3-ab5a-7549f3ac6534
+      - 71624530-2458-4115-83bd-c6ba1ad4c8c2
       X-Runtime:
-      - '0.022578'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
+      - '0.028890'
+      Content-Length:
+      - '176'
     body:
       encoding: UTF-8
-      string: '{"_id":"555b42bb646964986c010000","created_at":"2015-05-19T14:03:39Z","updated_at":"2015-05-19T14:03:39Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"55b8f305446964641a00000d","created_at":"2015-07-29T15:36:37Z","updated_at":"2015-07-29T15:36:37Z","key":"hello","values":{"en":"Hello
         world!","fr":"Bonjour le monde!"}}'
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:39 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:37 GMT
 recorded_with: VCR 2.9.3

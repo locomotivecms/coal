@@ -2,47 +2,6 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json
-    body:
-      encoding: UTF-8
-      string: api_key=d49cd50f6f0d2b163f48fc73cb249f0244c37074&email=admin%40locomotivecms.com
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '32'
-      Etag:
-      - W/"6b081cb1b0d50389aeec251b56dc5e74"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 177a5619-5ea8-4387-a270-d71b10c7229b
-      X-Runtime:
-      - '1.357339'
-      Connection:
-      - keep-alive
-      Server:
-      - thin
-    body:
-      encoding: UTF-8
-      string: '{"token":"6UA3Po7vVz4Ry34swEqa"}'
-    http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:37 GMT
-- request:
-    method: post
     uri: http://acme.example.com:3000/tokens.json
     body:
       encoding: UTF-8
@@ -66,16 +25,51 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 686a72a6-4b0f-49ba-838b-ed054d1a63bb
+      - d74f25de-4bde-49b3-9975-3d6512dbdc78
       X-Runtime:
-      - '0.047735'
-      Connection:
-      - close
-      Server:
-      - thin
+      - '0.026685'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: Hi, we are sorry but no site was found.
     http_version: 
-  recorded_at: Tue, 19 May 2015 14:03:38 GMT
+  recorded_at: Wed, 29 Jul 2015 15:36:36 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"157eb61d395f237526d11950bbc5a1fa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6a6c1530-5def-4539-8fe2-6d0dd63f8649
+      X-Runtime:
+      - '0.014444'
+      Content-Length:
+      - '32'
+    body:
+      encoding: UTF-8
+      string: '{"token":"v6XDp282UyPDeM6DgA-S"}'
+    http_version: 
+  recorded_at: Wed, 29 Jul 2015 15:36:36 GMT
 recorded_with: VCR 2.9.3

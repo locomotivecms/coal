@@ -55,6 +55,17 @@ describe Locomotive::Coal::Resources::ContentEntries, order: :defined do
 
   end
 
+  describe '#each' do
+
+    subject { [].tap { |list| entries.each { |e| list << e } } }
+
+    before { entries.create(title: 'Hello world'); entries.create(title: 'Lorem ipsum') }
+    after { ['hello-world', 'lorem-ipsum'].each { |slug| entries.destroy(slug) } }
+
+    it { expect(subject.size).to eq 2 }
+
+  end
+
   describe '#update' do
 
     let(:entry) { entries.create(title: 'Random title') }

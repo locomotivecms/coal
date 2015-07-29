@@ -18,6 +18,8 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
       - [Snippets](#snippets)
       - [Theme Assets](#theme-assets)
       - [Content Assets](#content-assets)
+      - [Translations](#translations)
+      - [Memberships](#memberships)
 - [What is missing](#todo)
 - [Contributing](#contributing)
 - [How to write specs](#how-to-write-specs)
@@ -87,6 +89,10 @@ We do not garantee that all the API resources will work with the V2 Client but P
 
     site = client.sites.by_handle('acme')
     site_client = client.scope_by(site)
+
+Or, in a shorter way:
+
+    site_client = client.scope_by('acme')
 
 For the **V2 Client**, that would be this instead:
 
@@ -172,6 +178,10 @@ It is required when we need the id of an existing page according to its fullpath
 
     snippets = site_client.snippets.all
 
+To get the snippets in the FR locale:
+
+    snippets_in_french = site_client.snippets.all('fr')
+
 **Create a snippet**
 
     snippet = site_client.snippets.create(name: 'Header', slug: 'header', template: 'Locomotive rocks!')
@@ -223,6 +233,24 @@ It is required when we need the id of an existing page according to its fullpath
 **Destroy a content asset**
 
     site_client.content_assets.destroy(asset._id)
+
+#### Translations
+
+**Get the list of translations**
+
+    translations = site_client.translations.all
+
+**Create a translation**
+
+    translation = site_client.translations.create(key: 'hello_world', values: { en: 'Hello world!', fr: 'Bonjour monde' })
+
+**Update a translation**
+
+    site_client.translations.update(translation._id, values: { en: 'Hello world!!!', fr: 'Bonjour monde !!!'} ))
+
+**Destroy a translation**
+
+    site_client.translations.destroy(translation._id)
 
 #### Memberships
 **Get the list of memberships**

@@ -3,7 +3,7 @@ module Locomotive::Coal
 
     class Pages < Base
 
-      def index(locale)
+      def index(locale = nil)
         get(resources_name, _locale: locale).map do |attributes|
           Resource.new(attributes)
         end
