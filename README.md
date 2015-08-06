@@ -77,7 +77,7 @@ We do not garantee that all the API resources will work with the V2 Client but P
 
 **Create a new site**
 
-    my_site = client.sites.create(name: 'Acme', subdomain: 'acme', locales: ['en'], timezone: 'UTC')
+    my_site = client.sites.create(name: 'Acme', handle: 'acme', locales: ['en'], timezone: 'UTC')
 
 **Destroy a site**
 
