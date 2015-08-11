@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"157eb61d395f237526d11950bbc5a1fa"
+      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 63cd92bf-fd95-426b-9a46-01dcdd11e1fe
+      - a60ada60-3b52-41c9-a701-9b59b1bf052e
       X-Runtime:
-      - '0.017370'
+      - '0.019293'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"v6XDp282UyPDeM6DgA-S"}'
+      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
     http_version: 
-  recorded_at: Wed, 29 Jul 2015 15:36:34 GMT
+  recorded_at: Tue, 11 Aug 2015 13:12:39 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=v6XDp282UyPDeM6DgA-S&email=admin@locomotivecms.com&token=v6XDp282UyPDeM6DgA-S
+    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=xM_3r1zn2aQAinPFqSvd&email=admin@locomotivecms.com&token=xM_3r1zn2aQAinPFqSvd
     body:
       encoding: US-ASCII
       string: ''
@@ -49,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - v6XDp282UyPDeM6DgA-S
+      - xM_3r1zn2aQAinPFqSvd
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -66,14 +66,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 153fa796-69d1-402e-a613-9d7f74abc1bd
+      - 1f06c014-2e17-47ad-ad44-04c73c561178
       X-Runtime:
-      - '0.014926'
+      - '0.013814'
       Content-Length:
       - '26'
     body:
       encoding: UTF-8
       string: '{"engine":"3.0.0-alpha.3"}'
     http_version: 
-  recorded_at: Wed, 29 Jul 2015 15:36:34 GMT
+  recorded_at: Tue, 11 Aug 2015 13:12:39 GMT
 recorded_with: VCR 2.9.3

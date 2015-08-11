@@ -54,7 +54,7 @@ module Locomotive::Coal::Resources
           request.headers = _request_headers(parameters)
 
           if %i(post put).include?(action)
-            request.body = parameters
+            request.body = _encode_parameters(parameters)
           else
             request.params = parameters
           end
@@ -93,6 +93,29 @@ module Locomotive::Coal::Resources
         end
 
         credentials[:token]
+      end
+
+      # https://github.com/ruby-grape/grape/issues/1028
+      def _encode_parameters(parameters)
+        return parameters unless parameters.is_a?(Hash)
+        parameters.tap do
+          parameters.each do |key, value|
+            if value.is_a?(Array)
+              parameters[key] = encode_array_to_hash(value) if value.first.is_a?(Hash)
+            elsif value.is_a?(Hash)
+              parameters[key] = _encode_parameters(value)
+            end
+          end
+        end
+      end
+
+      # [{ name: 'a' }, { name: 'b' }] => { 0 => { name: 'a' }, 1 => { name: 'b' } }
+      def encode_array_to_hash(value)
+        {}.tap do |hash|
+          value.each_with_index do |v, index|
+            hash[index] = v.to_hash
+          end
+        end
       end
 
     end

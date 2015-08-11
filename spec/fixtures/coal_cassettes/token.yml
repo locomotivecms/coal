@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d74f25de-4bde-49b3-9975-3d6512dbdc78
+      - 600086d1-ecb5-4798-91ef-0a2c0f2413cb
       X-Runtime:
-      - '0.026685'
+      - '0.040004'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: Hi, we are sorry but no site was found.
     http_version: 
-  recorded_at: Wed, 29 Jul 2015 15:36:36 GMT
+  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
@@ -58,18 +58,18 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"157eb61d395f237526d11950bbc5a1fa"
+      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a6c1530-5def-4539-8fe2-6d0dd63f8649
+      - fff2a1ce-b1f4-4294-82b6-4678fb2992f3
       X-Runtime:
-      - '0.014444'
+      - '0.015440'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"v6XDp282UyPDeM6DgA-S"}'
+      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
     http_version: 
-  recorded_at: Wed, 29 Jul 2015 15:36:36 GMT
+  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
 recorded_with: VCR 2.9.3
