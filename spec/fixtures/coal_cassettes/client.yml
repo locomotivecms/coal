@@ -357,4 +357,39 @@ http_interactions:
       string: "[]"
     http_version: 
   recorded_at: Tue, 11 Aug 2015 13:12:35 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 2b70fa6c-5d9c-42f3-b0f8-45ea224f63bb
+      X-Runtime:
+      - '0.015924'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: Hi, we are sorry but no site was found.
+    http_version: 
+  recorded_at: Wed, 12 Aug 2015 22:47:38 GMT
 recorded_with: VCR 2.9.3

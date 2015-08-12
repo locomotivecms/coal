@@ -93,10 +93,10 @@ module Locomotive::Coal
       [self.options[:path_prefix], 'api', 'v3'].join('/')
     end
 
-    def prepare_uri(uri)
-      uri = "http://#{uri.to_s}" unless uri.to_s =~ /^https?:\/\//
+    def prepare_uri(str)
+      str = "http://#{str.to_s}" unless str.to_s =~ /^https?:\/\//
 
-      URI(uri).tap do |uri|
+      URI(str).tap do |uri|
         uri.scheme = 'https' if ssl?
 
         if uri.path == '/' || uri.path.blank?
