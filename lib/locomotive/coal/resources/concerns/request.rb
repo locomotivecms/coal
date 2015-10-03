@@ -113,7 +113,7 @@ module Locomotive::Coal::Resources
       def encode_array_to_hash(value)
         {}.tap do |hash|
           value.each_with_index do |v, index|
-            hash[index] = v.to_hash
+            hash[index] = _encode_parameters(v)
           end
         end
       end
