@@ -2,6 +2,43 @@
 http_interactions:
 - request:
     method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: api_key=d49cd50f6f0d2b163f48fc73cb249f0244c37074&email=admin%40locomotivecms.com
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"120917583ae3f64355d682b690f7cb40"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 93c7092a-9fe1-4f90-a513-e008ea455ee2
+      X-Runtime:
+      - '0.018246'
+      Content-Length:
+      - '32'
+    body:
+      encoding: UTF-8
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
+    http_version: 
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
+- request:
+    method: post
     uri: http://acme.example.com:3000/tokens.json
     body:
       encoding: UTF-8
@@ -20,56 +57,26 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - text/html
+      - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 600086d1-ecb5-4798-91ef-0a2c0f2413cb
+      - 14ab882f-7a7b-418a-a176-12bd1c9353d0
       X-Runtime:
-      - '0.040004'
+      - '0.110531'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: Hi, we are sorry but no site was found.
+      string: |
+        {"error":"no site found"}
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json
-    body:
-      encoding: UTF-8
-      string: email=admin%40locomotivecms.com&password=locomotive
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - fff2a1ce-b1f4-4294-82b6-4678fb2992f3
-      X-Runtime:
-      - '0.015440'
-      Content-Length:
-      - '32'
-    body:
-      encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
-    http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:03 GMT
 recorded_with: VCR 2.9.3

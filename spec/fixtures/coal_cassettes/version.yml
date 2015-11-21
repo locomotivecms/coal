@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a60ada60-3b52-41c9-a701-9b59b1bf052e
+      - c9b0e179-e34b-4366-b5a4-5e1e29ca34be
       X-Runtime:
-      - '0.019293'
+      - '0.020447'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:39 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=xM_3r1zn2aQAinPFqSvd&email=admin@locomotivecms.com&token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=E2aoXzMxkFsLnCcmCcc_&email=admin@locomotivecms.com&token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -49,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -62,18 +62,18 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"4f482497f0c1e5f67e0c6bc908159a8b"
+      - W/"a29b8ca75f03b52361cf5f1f8ebf001a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1f06c014-2e17-47ad-ad44-04c73c561178
+      - d760b628-240d-4c11-a211-10dcd5102028
       X-Runtime:
-      - '0.013814'
+      - '0.018271'
       Content-Length:
-      - '26'
+      - '22'
     body:
       encoding: UTF-8
-      string: '{"engine":"3.0.0-alpha.3"}'
+      string: '{"engine":"3.0.0.rc3"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:39 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
 recorded_with: VCR 2.9.3

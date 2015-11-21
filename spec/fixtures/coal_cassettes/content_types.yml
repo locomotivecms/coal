@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1bffe1fc-2dd3-4f85-9659-f166ec53b7f9
+      - c552de19-adc2-4b44-9f7e-51c1f61e2474
       X-Runtime:
-      - '0.014358'
+      - '0.020439'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -49,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -66,16 +66,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 77a2641e-80d8-4e56-b80f-500a56822ebc
+      - bf8df4ea-7df6-4f56-baa3-c88fae8a084f
       X-Runtime:
-      - '0.036340'
+      - '0.025299'
       Content-Length:
       - '2'
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
@@ -99,33 +99,33 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 340a2ba4-390c-4caf-acd6-9e1fea993e14
+      - 9a7358e6-5b33-4e91-8f86-f9865f66425b
       X-Runtime:
-      - '0.017555'
+      - '0.016606'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&content_type%5Bfields%5D%5B0%5D%5Blabel%5D=Name&content_type%5Bfields%5D%5B0%5D%5Bname%5D=name&content_type%5Bfields%5D%5B0%5D%5Btype%5D=string&content_type%5Bname%5D=Projects&content_type%5Bslug%5D=projects
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&content_type%5Bfields%5D%5B0%5D%5Blabel%5D=Name&content_type%5Bfields%5D%5B0%5D%5Bname%5D=name&content_type%5Bfields%5D%5B0%5D%5Btype%5D=string&content_type%5Bname%5D=Projects&content_type%5Bslug%5D=projects
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -140,20 +140,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"2d6283576d9a4e0f7f8a0ca184a78276"
+      - W/"4c843ebeee95b661c5447835f4f00449"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 31ad0473-219d-4d52-aca9-04f1570e3625
+      - 69128a2f-593b-465e-914d-dd7b1e388c0d
       X-Runtime:
-      - '0.058560'
+      - '0.044901'
       Content-Length:
-      - '573'
+      - '642'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c687f6432a3b000029","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002a","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+      string: '{"_id":"5650f0a687f6436cbc00002f","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000030","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
@@ -177,23 +177,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2262084e-da4f-46cf-b63b-15a4a09af524
+      - 949226d1-f5aa-4cbe-98da-f27d1e18c9d4
       X-Runtime:
-      - '0.014138'
+      - '0.016450'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -203,7 +203,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -216,33 +216,33 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"90aa1f6c4ad0e0f48cb61535a93bf899"
+      - W/"651da593cbd5b3a1a67335aacc39d415"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 04b225b1-07d0-4ea6-b050-20c8ebcf6f10
+      - faf08c07-5d6b-44e5-8d10-a75b4ca1711f
       X-Runtime:
-      - '0.034500'
+      - '0.033648'
       Content-Length:
-      - '575'
+      - '644'
     body:
       encoding: UTF-8
-      string: '[{"_id":"55c9f4c687f6432a3b000029","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002a","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
+      string: '[{"_id":"5650f0a687f6436cbc00002f","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000030","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/55c9f4c687f6432a3b000029.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/5650f0a687f6436cbc00002f.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&content_type%5Bname%5D=Our+projects
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&content_type%5Bname%5D=Our+projects
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -257,21 +257,21 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"18bebb208371576547535e387b287f61"
+      - W/"3484b9773b179962dad776acacc41f12"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ffa9fcba-82bc-4a46-ab46-a10ed8546360
+      - 1d45086f-f5a6-4080-b2ba-73e08444646a
       X-Runtime:
-      - '0.039621'
+      - '0.051729'
       Content-Length:
-      - '577'
+      - '646'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c687f6432a3b000029","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Our
-        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002a","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+      string: '{"_id":"5650f0a687f6436cbc00002f","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Our
+        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000030","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
@@ -295,23 +295,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c77d6fb2-a35f-4314-8cc1-1bd3de1a503e
+      - 64685613-ff84-46a2-bf6e-bd4d2e4637b6
       X-Runtime:
-      - '0.014349'
+      - '0.017536'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -321,7 +321,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -334,24 +334,24 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"d4f87073e40a8ffbb6ac36bbb374bfa7"
+      - W/"7a16135252999bf12cd7e9185b06b57f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0980ecdd-5354-41bb-bf9f-97350974b65d
+      - 4842b43f-7521-4215-bd3a-90953335aea9
       X-Runtime:
-      - '0.051122'
+      - '0.030018'
       Content-Length:
-      - '579'
+      - '648'
     body:
       encoding: UTF-8
-      string: '[{"_id":"55c9f4c687f6432a3b000029","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Our
-        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002a","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
+      string: '[{"_id":"5650f0a687f6436cbc00002f","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Our
+        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000030","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/55c9f4c687f6432a3b000029.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types/5650f0a687f6436cbc00002f.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -361,7 +361,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -374,21 +374,21 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"18bebb208371576547535e387b287f61"
+      - W/"3484b9773b179962dad776acacc41f12"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a734a8d6-c27f-4e08-a3cd-38656c0a84a9
+      - 0bac9ce4-ded3-4c4b-bfe5-0c2df2616044
       X-Runtime:
-      - '0.025007'
+      - '0.034932'
       Content-Length:
-      - '577'
+      - '646'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c687f6432a3b000029","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Our
-        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002a","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+      string: '{"_id":"5650f0a687f6436cbc00002f","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Our
+        projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000030","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
@@ -412,23 +412,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 77c344fd-0c17-40b9-81a5-0ba178dc524e
+      - fd0cd01a-6b3e-408e-bc63-934588d2ef75
       X-Runtime:
-      - '0.015035'
+      - '0.016271'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -438,7 +438,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -455,29 +455,29 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4504a411-679c-41ad-a125-f29bbed5512b
+      - ddf03cdf-3c03-4b31-9c7a-344895d670fe
       X-Runtime:
-      - '0.029537'
+      - '0.026817'
       Content-Length:
       - '2'
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&content_type%5Bfields%5D%5B0%5D%5Blabel%5D=Name&content_type%5Bfields%5D%5B0%5D%5Bname%5D=name&content_type%5Bfields%5D%5B0%5D%5Btype%5D=string&content_type%5Bname%5D=Projects&content_type%5Bslug%5D=projects
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&content_type%5Bfields%5D%5B0%5D%5Blabel%5D=Name&content_type%5Bfields%5D%5B0%5D%5Bname%5D=name&content_type%5Bfields%5D%5B0%5D%5Btype%5D=string&content_type%5Bname%5D=Projects&content_type%5Bslug%5D=projects
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -492,23 +492,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"ab0529ef9a4a941f57f518f401b3c515"
+      - W/"5bd996a0c76180d2067dd58da62c38ee"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 689c959d-f2f2-4170-b128-ea0353ff514e
+      - 8435fbb9-e79a-49d6-847d-f98afa7367ec
       X-Runtime:
-      - '0.036037'
+      - '0.045048'
       Content-Length:
-      - '573'
+      - '642'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c687f6432a3b00002b","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002c","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
+      string: '{"_id":"5650f0a687f6436cbc000031","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000032","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/content_types.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -518,7 +518,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -531,18 +531,18 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"4afdd58543021797dc5aa29d7aa5d044"
+      - W/"4673dad796685df901103fedd2a98d78"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e9fc09b6-fb8e-4d9c-9505-a87f8da91a8d
+      - 9cc63853-441f-4895-8412-9e23f0ea913d
       X-Runtime:
-      - '0.021693'
+      - '0.025730'
       Content-Length:
-      - '575'
+      - '644'
     body:
       encoding: UTF-8
-      string: '[{"_id":"55c9f4c687f6432a3b00002b","created_at":"2015-08-11T13:12:38Z","updated_at":"2015-08-11T13:12:38Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"raw_item_template":null,"display_settings":null,"fields":[{"_id":"55c9f4c687f6432a3b00002c","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
+      string: '[{"_id":"5650f0a687f6436cbc000031","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Projects","slug":"projects","description":null,"label_field_name":"name","order_direction":"asc","public_submission_enabled":false,"public_submission_accounts":[],"public_submission_title_template":null,"entry_template":null,"display_settings":null,"fields":[{"_id":"5650f0a687f6436cbc000032","created_at":null,"updated_at":null,"name":"name","type":"string","label":"Name","hint":null,"required":true,"localized":false,"unique":false,"position":0}],"order_by":"created_at","group_by":null,"public_submission_account_emails":[]}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:38 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 recorded_with: VCR 2.9.3

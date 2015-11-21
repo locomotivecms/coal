@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f2b95c9b-9579-4bec-9ed2-481774937749
+      - e47d860b-f453-48f1-893c-d5c19084a28a
       X-Runtime:
-      - '0.015571'
+      - '0.017475'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -49,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       X-Locomotive-Locale:
       - en
       Accept-Encoding:
@@ -64,27 +64,27 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"b560f0cd7ca7a3d06fbb90062dc52705"
+      - W/"701b58eb67b1131aa8b3c8aeab5e817b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 08f2569d-8d75-4b04-b7d8-85a14ac907d3
+      - 5dc6e8a6-a6c3-4575-80d2-68fb8524c271
       X-Runtime:
-      - '0.073525'
+      - '0.030010'
       Content-Length:
-      - '1238'
+      - '1280'
     body:
       encoding: UTF-8
-      string: '[{"_id":"55c9f4a487f6432a1e000007","created_at":"2015-08-11T13:12:04Z","updated_at":"2015-08-11T13:12:04Z","title":"Home
-        page","parent_id":null,"position":0,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"slug":"index","fullpath":"index","localized_fullpaths":{"en":""},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
-        of the home page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null},{"_id":"55c9f4a487f6432a1e000008","created_at":"2015-08-11T13:12:04Z","updated_at":"2015-08-11T13:12:04Z","title":"Page
-        not found","parent_id":null,"position":1,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"slug":"404","fullpath":"404","localized_fullpaths":{"en":"404"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+      string: '[{"_id":"5650f08c87f6436c94000007","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:36Z","title":"Home
+        page","parent_id":null,"position":0,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"index","fullpath":"index","localized_fullpaths":{"en":""},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+        of the home page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null},{"_id":"5650f08c87f6436c94000008","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:36Z","title":"Page
+        not found","parent_id":null,"position":1,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"404","fullpath":"404","localized_fullpaths":{"en":"404"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
         of the 404 page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/fullpaths.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/fullpaths.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -94,7 +94,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       X-Locomotive-Locale:
       - en
       Accept-Encoding:
@@ -109,33 +109,33 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"b8082f61c1bbeff9afc417ce8be2c09c"
+      - W/"c2ddbd80985a8cba4f1221be3c2df60c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c9c185a1-4892-4892-b136-095bf36dea83
+      - 4aed4455-e50c-48d5-8a95-c6167687376b
       X-Runtime:
-      - '0.020004'
+      - '0.024727'
       Content-Length:
       - '107'
     body:
       encoding: UTF-8
-      string: '[{"_id":"55c9f4a487f6432a1e000007","fullpath":"index"},{"_id":"55c9f4a487f6432a1e000008","fullpath":"404"}]'
+      string: '[{"_id":"5650f08c87f6436c94000007","fullpath":"index"},{"_id":"5650f08c87f6436c94000008","fullpath":"404"}]'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/pages.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&page%5Bparent%5D=index&page%5Bslug%5D=about-us&page%5Btemplate%5D=Locomotive+rocks%21&page%5Btitle%5D=About+us
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&page%5Bparent%5D=index&page%5Bslug%5D=about-us&page%5Btemplate%5D=Locomotive+rocks%21&page%5Btitle%5D=About+us
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -150,35 +150,35 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"adc28d2bd4d1eb01dcb7cd5569456207"
+      - W/"0ad4f3e8c5c41e6442712c8568c8d5fe"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c99e4ac7-0bb3-4d1e-8253-78dfa3df297b
+      - 2c613d30-f1ec-4313-882e-0c3acaeef31e
       X-Runtime:
-      - '0.071608'
+      - '0.052798'
       Content-Length:
-      - '645'
+      - '666'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c287f6432a3b000001","created_at":"2015-08-11T13:12:34Z","updated_at":"2015-08-11T13:12:34Z","title":"About
-        us","parent_id":"55c9f4a487f6432a1e000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
+        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks!","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/55c9f4c287f6432a3b000001.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5650f0a587f6436cbc00002d.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&page%5Btemplate%5D=Locomotive+rocks.+period
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&page%5Btemplate%5D=Locomotive+rocks.+period
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       X-Locomotive-Locale:
       - en
       Content-Type:
@@ -195,25 +195,25 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"a1efe1ca85580a6e82964c2b608f4b58"
+      - W/"bf788f2ae366c8a7e70e7e88a2c06d83"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf417f0f-2a2f-45ed-b3a8-c27848b25ae8
+      - 39dc5254-6ff4-4a1e-b302-34dd9dffb99c
       X-Runtime:
-      - '0.056838'
+      - '0.038577'
       Content-Length:
-      - '652'
+      - '673'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c287f6432a3b000001","created_at":"2015-08-11T13:12:34Z","updated_at":"2015-08-11T13:12:34Z","title":"About
-        us","parent_id":"55c9f4a487f6432a1e000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
+        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/55c9f4c287f6432a3b000001.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5650f0a587f6436cbc00002d.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -223,7 +223,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -236,20 +236,20 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"a1efe1ca85580a6e82964c2b608f4b58"
+      - W/"bf788f2ae366c8a7e70e7e88a2c06d83"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e6d03da6-d1af-4c70-88c5-3264bf5a6907
+      - d785c8f4-22cb-479b-a541-00740552fb7d
       X-Runtime:
-      - '0.056284'
+      - '0.039751'
       Content-Length:
-      - '652'
+      - '673'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c287f6432a3b000001","created_at":"2015-08-11T13:12:34Z","updated_at":"2015-08-11T13:12:34Z","title":"About
-        us","parent_id":"55c9f4a487f6432a1e000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
+        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:34 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
 recorded_with: VCR 2.9.3

@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"3b6ceb0d2ba232a8d48dd0dc8f702ef4"
+      - W/"120917583ae3f64355d682b690f7cb40"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e1590e5f-7ca3-4ded-b644-9d075619a6c0
+      - 4eae4a97-dd60-436a-88f1-6edd44c7f699
       X-Runtime:
-      - '0.014182'
+      - '0.017439'
       Content-Length:
       - '32'
     body:
       encoding: UTF-8
-      string: '{"token":"xM_3r1zn2aQAinPFqSvd"}'
+      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -49,7 +49,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       X-Locomotive-Locale:
       - ''
       Accept-Encoding:
@@ -68,29 +68,29 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f5e58260-721b-45b4-a300-ab3fbbea9f22
+      - 3e37c92f-728f-4f73-95cd-ed3741b8cbf3
       X-Runtime:
-      - '0.033961'
+      - '0.025702'
       Content-Length:
       - '2'
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/snippets.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&snippet%5Bname%5D=Footer&snippet%5Bslug%5D=footer&snippet%5Btemplate%5D=Locomotive+rocks%21
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&snippet%5Bname%5D=Footer&snippet%5Bslug%5D=footer&snippet%5Btemplate%5D=Locomotive+rocks%21
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -105,34 +105,34 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"dfdaf0bbe755d1748684d4e440db8772"
+      - W/"6fd1f8f58519ef71254fe50d4d56924f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fe3f8e0f-4110-40c3-8e2f-7e1ee7a4f7d9
+      - 10a0da9c-44aa-49fc-8362-f77567158951
       X-Runtime:
-      - '0.034262'
+      - '0.037070'
       Content-Length:
       - '169'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c487f6432a3b000003","created_at":"2015-08-11T13:12:36Z","updated_at":"2015-08-11T13:12:36Z","name":"Footer","slug":"footer","template":"Locomotive
+      string: '{"_id":"5650f0a687f6436cbc000033","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Footer","slug":"footer","template":"Locomotive
         rocks!"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/55c9f4c487f6432a3b000003.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/5650f0a687f6436cbc000033.json
     body:
       encoding: UTF-8
-      string: auth_token=xM_3r1zn2aQAinPFqSvd&snippet%5Btemplate%5D=Locomotive+rocks.+period
+      string: auth_token=E2aoXzMxkFsLnCcmCcc_&snippet%5Btemplate%5D=Locomotive+rocks.+period
     headers:
       Accept:
       - application/json
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -147,24 +147,24 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"789d4099927ac621aaeb992f8df50cb5"
+      - W/"325fba36719f0a2bff11a2e9ee5e33f4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 622d377f-79e4-4fe3-9616-1981304f6090
+      - b9308197-8d1a-41b4-a922-073787811d07
       X-Runtime:
-      - '0.050726'
+      - '0.034344'
       Content-Length:
       - '176'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c487f6432a3b000003","created_at":"2015-08-11T13:12:36Z","updated_at":"2015-08-11T13:12:36Z","name":"Footer","slug":"footer","template":"Locomotive
+      string: '{"_id":"5650f0a687f6436cbc000033","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Footer","slug":"footer","template":"Locomotive
         rocks. period"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/55c9f4c487f6432a3b000003.json?auth_token=xM_3r1zn2aQAinPFqSvd
+    uri: http://localhost:3000/locomotive/sample/api/v3/snippets/5650f0a687f6436cbc000033.json?auth_token=E2aoXzMxkFsLnCcmCcc_
     body:
       encoding: US-ASCII
       string: ''
@@ -174,7 +174,7 @@ http_interactions:
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - xM_3r1zn2aQAinPFqSvd
+      - E2aoXzMxkFsLnCcmCcc_
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -187,19 +187,19 @@ http_interactions:
       Content-Type:
       - application/json
       Etag:
-      - W/"789d4099927ac621aaeb992f8df50cb5"
+      - W/"325fba36719f0a2bff11a2e9ee5e33f4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 68b7565a-36a0-4878-9d2e-43a2134a9f87
+      - 357b0f60-db70-4d47-a92c-3442d9d563da
       X-Runtime:
-      - '0.050372'
+      - '0.042417'
       Content-Length:
       - '176'
     body:
       encoding: UTF-8
-      string: '{"_id":"55c9f4c487f6432a3b000003","created_at":"2015-08-11T13:12:36Z","updated_at":"2015-08-11T13:12:36Z","name":"Footer","slug":"footer","template":"Locomotive
+      string: '{"_id":"5650f0a687f6436cbc000033","created_at":"2015-11-21T22:31:02Z","updated_at":"2015-11-21T22:31:02Z","name":"Footer","slug":"footer","template":"Locomotive
         rocks. period"}'
     http_version: 
-  recorded_at: Tue, 11 Aug 2015 13:12:36 GMT
+  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
 recorded_with: VCR 2.9.3
