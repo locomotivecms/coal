@@ -21,6 +21,14 @@ describe Locomotive::Coal::Error do
 
       end
 
+      context 'Request Entity Too Large (413)' do
+
+        let(:status) { 413 }
+
+        it { is_expected.to eq "File too big for the server" }
+
+      end
+
     end
 
   end

@@ -21,6 +21,7 @@ module Locomotive::Coal
       if klass = case status.to_i
                   when 401      then Locomotive::Coal::UnauthorizedError
                   when 404      then Locomotive::Coal::UnknownResourceError
+                  when 413      then Locomotive::Coal::FileTooBigError
                   when 422      then Locomotive::Coal::InvalidResourceError
                   when 429      then Locomotive::Coal::TooManyRequestsError
                   when 500      then Locomotive::Coal::ServerSideError
@@ -45,6 +46,17 @@ module Locomotive::Coal
   class UnauthorizedError < Error; end
   class ServerSideError < Error; end
   class TimeoutError < Error; end
+
+
+  class FileTooBigError < Error
+
+    private
+
+    def build_message
+      'File too big for the server'
+    end
+
+  end
 
   class InvalidResourceError < Error
 
