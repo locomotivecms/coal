@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.0.0.rc2)
+    locomotivecms_coal (1.0.0.rc3)
       activesupport (~> 4.2.3)
       faraday (~> 0.9.1)
       faraday_middleware (~> 0.10.0)
@@ -47,7 +47,7 @@ GEM
       rspec (>= 2.0, < 4.0)
     method_source (0.8.2)
     mime-types (2.6.2)
-    minitest (5.8.2)
+    minitest (5.8.3)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     netrc (0.10.3)
