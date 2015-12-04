@@ -41,6 +41,10 @@ module Locomotive::Coal
         Resource.new(data)
       end
 
+      def destroy_all
+        delete("#{resources_name}")
+      end
+
       private
 
       def resources_name
