@@ -97,7 +97,10 @@ module Locomotive::Coal
       str = "http://#{str.to_s}" unless str.to_s =~ /^https?:\/\//
 
       URI(str).tap do |uri|
-        uri.scheme = 'https' if ssl?
+        if ssl?
+          uri.scheme  = 'https'
+          uri.port    = 443 if uri.port = 80
+        end
 
         if uri.path == '/' || uri.path.blank?
           uri.merge!(uri_path)
