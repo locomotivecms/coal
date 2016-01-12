@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.0.0.rc4)
+    locomotivecms_coal (1.0.0)
       activesupport (~> 4.2.3)
       faraday (~> 0.9.1)
       faraday_middleware (~> 0.10.0)
@@ -102,7 +102,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.10.6)
+  bundler (~> 1.11.2)
   codeclimate-test-reporter (~> 0.4.7)
   coveralls (~> 0.7.11)
   json_spec (~> 1.1.4)
@@ -115,4 +115,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
