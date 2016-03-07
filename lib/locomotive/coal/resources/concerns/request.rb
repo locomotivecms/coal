@@ -81,7 +81,8 @@ module Locomotive::Coal::Resources
 
           faraday.use         FaradayMiddleware::ParseJson, content_type: /\bjson$/
 
-          faraday.adapter     Faraday.default_adapter  # make requests with Net::HTTP
+          # ENV['no_proxy'] ignored in Faraday.default_adapter (Net::HTTP)
+          faraday.adapter :httpclient
         end
       end
 
