@@ -161,4 +161,85 @@ http_interactions:
         Doe","role_name":"Administrator","email":"admin@locomotivecms.com"}],"timezone":"UTC","picture_url":null,"content_version":0,"template_version":1448145060,"picture_thumbnail_url":null,"preview_url":"http://localhost:3000/locomotive/lush-dawn-5649/preview","sign_in_url":"http://localhost:3000/locomotive/sign_in"}'
     http_version: 
   recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.7.1, ruby 2.2.3 (2015-08-18))
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 21 Jul 2016 08:30:28 GMT
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"ed6b5e5d77dd808432ec751c0deee185"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e0a01184-2a20-479b-8dbc-b116141ee8fe
+      X-Runtime:
+      - '0.186431'
+      Content-Length:
+      - '32'
+    body:
+      encoding: UTF-8
+      string: '{"token":"4W9TGVPm1TgacsoyhusB"}'
+    http_version: 
+  recorded_at: Thu, 21 Jul 2016 08:30:28 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/api/v3/sites.json?auth_token=4W9TGVPm1TgacsoyhusB
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.7.1, ruby 2.2.3 (2015-08-18))
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Thu, 21 Jul 2016 08:30:28 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - 4W9TGVPm1TgacsoyhusB
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"436570d60a44c4abddf750be2c1baaab"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6f0ec9fb-b5de-4e57-a0bb-b5764a65c173
+      X-Runtime:
+      - '0.431548'
+      Content-Length:
+      - '1692'
+    body:
+      encoding: UTF-8
+      string: '[{"_id":"578fac3b00ea466ec7e90a2d","created_at":"2016-07-20T16:52:11Z","updated_at":"2016-07-20T16:52:12Z","name":"LocomotiveCMS","handle":"www","seo_title":null,"meta_keywords":null,"meta_description":null,"robots_txt":null,"cache_enabled":false,"private_access":false,"locales":["en"],"domains":["www.example.com"],"memberships":[{"_id":"578fac3c00ea466ec7e90a30","created_at":null,"updated_at":null,"role":"admin","account_id":"578fac3a00ea466ec7e90a2b","name":"Admin","role_name":"Administrator","email":"admin@locomotivecms.com"}],"timezone":"UTC","picture_url":null,"content_version":1469033532,"template_version":1469033532,"picture_thumbnail_url":null,"preview_url":"http://localhost:3000/locomotive/www/preview","sign_in_url":"http://localhost:3000/locomotive/sign_in","metafields":"{}","metafields_schema":"[]","metafields_ui":"{}"},{"_id":"578fac3c00ea466ec7e90a31","created_at":"2016-07-20T16:52:12Z","updated_at":"2016-07-20T16:52:12Z","name":"Sample
+        site","handle":"sample","seo_title":null,"meta_keywords":null,"meta_description":null,"robots_txt":null,"cache_enabled":false,"private_access":false,"locales":["en"],"domains":["sample.example.com"],"memberships":[{"_id":"578fac3c00ea466ec7e90a34","created_at":null,"updated_at":null,"role":"admin","account_id":"578fac3a00ea466ec7e90a2b","name":"Admin","role_name":"Administrator","email":"admin@locomotivecms.com"}],"timezone":"UTC","picture_url":null,"content_version":1469033532,"template_version":1469033532,"picture_thumbnail_url":null,"preview_url":"http://localhost:3000/locomotive/sample/preview","sign_in_url":"http://localhost:3000/locomotive/sign_in","metafields":"{}","metafields_schema":"[]","metafields_ui":"{}"}]'
+    http_version: 
+  recorded_at: Thu, 21 Jul 2016 08:30:28 GMT
+recorded_with: VCR 3.0.1

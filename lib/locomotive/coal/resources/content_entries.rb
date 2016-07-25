@@ -11,7 +11,7 @@ module Locomotive::Coal
         super(uri, credentials)
       end
 
-      def index(query = nil, options = nil, locale = nil)
+      def index(query = nil, options = {}, locale = nil)
         parameters = { where: (query || {}).to_json }.merge(options || {})
         parameters[:_locale] = locale if locale
 

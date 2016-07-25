@@ -33,6 +33,13 @@ describe Locomotive::Coal::Resources::ContentEntries, order: :defined do
       expect(subject._total_entries).to be >= 2
     end
 
+    it 'returns a list of entries without params' do
+      subject { entries.all }
+      expect(subject.size).to be >= 2
+      expect(subject._total_pages).to eq 1
+      expect(subject._total_entries).to be >= 2
+    end
+
     describe 'pagination' do
 
       let(:options) { { page: 2, per_page: 1 } }
