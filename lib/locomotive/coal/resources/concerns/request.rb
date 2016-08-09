@@ -51,7 +51,7 @@ module Locomotive::Coal::Resources
         parameters = parameters.merge(auth_token: credentials[:token]) if _token
 
         _connection.send(action, endpoint) do |request|
-          request.headers = _request_headers(parameters)
+          request.headers.merge!(_request_headers(parameters))
 
           if %i(post put).include?(action)
             request.body = _encode_parameters(parameters)
@@ -77,7 +77,7 @@ module Locomotive::Coal::Resources
         @_connection ||= Faraday.new(url: "#{uri.scheme}://#{uri.host}:#{uri.port}") do |faraday|
           faraday.request     :multipart
           faraday.request     :url_encoded             # form-encode POST params
-          faraday.basic_auth  uri.userinfo.values if uri.userinfo
+          faraday.basic_auth  *uri.userinfo.split(':') if uri.userinfo
 
           faraday.use         FaradayMiddleware::ParseJson, content_type: /\bjson$/
 
