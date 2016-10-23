@@ -1,3 +1,5 @@
+require 'json'
+
 module Locomotive::Coal
   module Resources
 
@@ -6,7 +8,7 @@ module Locomotive::Coal
       include Concerns::Request
 
       def get
-        post('tokens', credentials)['token']
+        JSON.parse(post('tokens', credentials))['token']
       end
 
     end
