@@ -1,3 +1,5 @@
+require 'json'
+
 module Locomotive::Coal::Resources
   module Concerns
 
