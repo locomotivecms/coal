@@ -30,6 +30,10 @@ module Locomotive::Coal::Resources
           raise Locomotive::Coal::BadRequestError.new(e)
         end
 
+        if response.env.body.class == String
+          response.env.body = JSON.parse(response.env.body)
+        end
+
         if response.success?
           raw ? response : response.body
         else
