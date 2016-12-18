@@ -32,12 +32,8 @@ module Locomotive::Coal::Resources
           raise Locomotive::Coal::BadRequestError.new(e)
         end
 
-        if response.env.body.class == String
-          response.env.body = JSON.parse(response.env.body)
-        end
-
         if response.success?
-          raw ? response : response.body
+          raw ? response : _parse_response_body(response.body)
         else
           raise Locomotive::Coal::Error.from_response(response)
         end
@@ -51,6 +47,13 @@ module Locomotive::Coal::Resources
       end
 
       private
+
+      def _parse_response_body response_body
+        if response_body.is_a? String
+          response_body = JSON.parse(response_body)
+        end
+        response_body
+      end
 
       def _do_request(action, endpoint, parameters)
         # compatibility with v2.5.x
