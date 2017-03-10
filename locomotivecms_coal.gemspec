@@ -15,13 +15,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler',    '~> 1.11.2'
-  spec.add_development_dependency 'rake',       '~> 10.4.2'
+  spec.add_development_dependency 'bundler',    '~> 1.14.6'
+  spec.add_development_dependency 'rake',       '~> 12.0.0'
 
-  spec.add_dependency 'httpclient',             '~> 2.7.1'
-  spec.add_dependency 'faraday',                '~> 0.9.1'
-  spec.add_dependency 'faraday_middleware',     '~> 0.10.0'
-  spec.add_dependency 'activesupport',          '~> 4.2.6'
+  spec.add_dependency 'httpclient',             '~> 2.8.3'
+  spec.add_dependency 'faraday',                '~> 0.11.0'
+  spec.add_dependency 'faraday_middleware',     '~> 0.11.0.1'
+  spec.add_dependency 'activesupport',          '~> 4.2.8'
 
   spec.required_ruby_version = '>= 2.0'
 end

@@ -17,9 +17,9 @@ group :test do
   gem 'vcr'
 
   gem 'codeclimate-test-reporter',  '~> 0.4.7',  require: false
-  gem 'coveralls',                  '~> 0.7.11', require: false
+  gem 'coveralls',                  '~> 0.8.19', require: false
 end
 
 platform :ruby do
-  ruby '2.2.3'
+  ruby '2.3.3'
 end
