@@ -7,7 +7,7 @@ describe Locomotive::Coal::Resource do
 
   describe 'unknown attribute' do
     subject { resource.name }
-    it { expect { subject }.to raise_error }
+    it { expect { subject }.to raise_error(NoMethodError, /undefined method `name'/) }
   end
 
   describe 'existing attribute' do
