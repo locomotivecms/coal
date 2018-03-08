@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal) [![Dependency Status](https://gemnasium.com/locomotivecms/coal.svg)](https://gemnasium.com/locomotivecms/coal) [![Build Status](https://travis-ci.org/locomotivecms/coal.svg?branch=master)](https://travis-ci.org/locomotivecms/coal) [![Coverage Status](https://coveralls.io/repos/locomotivecms/coal/badge.svg?branch=master)](https://coveralls.io/r/locomotivecms/coal?branch=master)
 
-The Ruby API Client for LocomotiveCMS V3 (WIP).
+The Ruby API Client for LocomotiveCMS V3.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ The Ruby API Client for LocomotiveCMS V3 (WIP).
 
 ## Installation
 
-    gem install locomotivecms_coal --pre
+    gem install locomotivecms_coal
 
 ## Usage
 
@@ -303,4 +303,4 @@ Check the issues section of the repository to see what is missing.
 
 ## License
 
-Copyright (c) 2015 NoCoffee. MIT Licensed, see LICENSE for details.
+Copyright (c) 2018 NoCoffee. MIT Licensed, see LICENSE for details.

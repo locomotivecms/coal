@@ -6,7 +6,7 @@ group :development do
 end
 
 group :test do
-  gem 'rest-client',        '~> 2.0.1'
+  gem 'rest-client',        '~> 2.0.2'
 
   gem 'rspec',              '~> 3.5.0'
   gem 'json_spec',          '~> 1.1.4'
@@ -21,5 +21,5 @@ group :test do
 end
 
 platform :ruby do
-  ruby '2.3.3'
+  ruby '2.5.0'
 end
