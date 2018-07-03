@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday',                '~> 0.14.0'
   spec.add_dependency 'faraday_middleware',     '~> 0.12.2'
   spec.add_dependency 'activesupport',          '~> 5.1.5'
+  spec.add_dependency 'mime-types',             '~> 3.1.0'
 
   spec.required_ruby_version = '>= 2.0'
 end
