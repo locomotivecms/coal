@@ -69,7 +69,7 @@ module Locomotive::Coal
             "#{name}.#{k}: #{_errors.join(' + ')}"
           end
         else
-          "#{name} #{errors.join(' ')}"
+          "#{name} #{errors.join(', ')}"
         end
       end.join(', ')
 
