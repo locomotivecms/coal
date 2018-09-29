@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.5.1)
+    locomotivecms_coal (1.6.0.beta1)
       activesupport (~> 5.1.5)
       faraday (~> 0.14.0)
       faraday_middleware (~> 0.12.2)
@@ -43,7 +43,7 @@ GEM
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     httpclient (2.8.3)
-    i18n (1.0.1)
+    i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
     json_spec (1.1.5)
