@@ -56,6 +56,10 @@ module Locomotive::Coal
       @snippets ||= Resources::Snippets.new(uri, connection)
     end
 
+    def sections
+      @sections ||= Resources::Sections.new(uri, connection)
+    end
+
     def translations
       @translations ||= Resources::Translations.new(uri, connection)
     end

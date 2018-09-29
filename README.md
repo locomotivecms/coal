@@ -16,6 +16,7 @@ The Ruby API Client for LocomotiveCMS V3.
       - [Content Types](#content-types)
       - [Content Entries](#content-entries)
       - [Snippets](#snippets)
+      - [Sections](#sections)
       - [Theme Assets](#theme-assets)
       - [Content Assets](#content-assets)
       - [Translations](#translations)
@@ -197,6 +198,24 @@ To get the snippets in the FR locale:
 **Destroy a snippet**
 
     site_client.snippets.destroy('header')
+
+#### Sections
+
+**Get the list of sections**
+
+    sections = site_client.sections.all
+
+**Create a section**
+
+    snippet = site_client.sections.create(name: 'Header', slug: 'header', template: 'Locomotive rocks!', settings: [{ id: 'title', type: 'string' }])
+
+**Update a section**
+
+    site_client.sections.update('header', template: 'Locomotive rocks!!!')
+
+**Destroy a section**
+
+    site_client.sections.destroy('header')
 
 #### Theme assets
 
