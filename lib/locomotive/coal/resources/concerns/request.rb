@@ -20,10 +20,28 @@ module Locomotive::Coal::Resources
       end
 
       def do_request(action, endpoint, parameters = {}, raw = false)
+        max_count = 5
         response = begin
+          # Just uncomment following line if you want to trace protocol between wagon & engine live
+          # puts "#{parameters}"
           _do_request(action, "#{uri.path}/#{endpoint}.json", parameters)
         rescue ::Timeout::Error, ::Errno::ETIMEDOUT, Faraday::Error::TimeoutError => e
-          raise Locomotive::Coal::TimeoutError.new(e)
+          if max_count > 0
+            puts "\n Warning => timeout detected, attempts left: #{max_count}\n\n"
+            max_count -= 1
+            retry
+          else
+            raise Locomotive::Coal::TimeoutError.new(e)
+          end
+        rescue HTTPClient::KeepAliveDisconnected => e
+          if max_count > 0
+            puts "\n Warning => HTTPClient::KeepAliveDisconnected exception detected, attempts left: #{max_count}\n\n"
+            max_count -= 1
+            retry
+          else
+            puts "\n Error => HTTPClient::KeepAliveDisconnected exception detected, attempts left zero... raising exception\n\n"
+            raise HTTPClient::KeepAliveDisconnected.new(e)
+          end
         rescue Locomotive::Coal::Error
           raise
         rescue Exception => e
