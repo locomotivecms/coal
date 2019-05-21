@@ -149,7 +149,7 @@ It is required when we need the id of an existing page according to its fullpath
 
 *Note:* You can also use the following syntax
 
-    content_type = site_client.contents.projects
+    content_type = site_client.contents.by_slug('projects')
     articles = site_client.content_entries(content_type).all
 
 **Create a content entry**
