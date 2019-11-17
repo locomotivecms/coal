@@ -11,6 +11,7 @@ The Ruby API Client for LocomotiveCMS V3.
   - [Authentication](#authentication)
   - [Resources](#resources)
       - [MyAccount](#my-account)
+      - [Accounts](#accounts)
       - [Sites](#sites)
       - [Pages](#pages)
       - [Content Types](#content-types)
@@ -68,6 +69,19 @@ We do not garantee that all the API resources will work with the V2 Client but P
 **Update my account**
 
     client.my_account.update(name: 'Jane Doe')
+
+#### Accounts
+
+**Only available for super administrators in the LocomotiveCMS engine**
+
+**Create**
+
+    new_customer = client.accounts.create(name: 'John', email: 'johnn@doe.net', password: 'easyone', password_confirmation: 'easyone')
+    puts new_customer.name + " / " + my_account.email
+
+**Update an account**
+
+    client.accounts.update(new_customer._id, name: 'Jane')
 
 #### Sites
 
@@ -282,7 +296,7 @@ To get the snippets in the FR locale:
 
 **Update a membership**
 
-    site_client.memberships.update(account_email: 'nic@example.com', role: 'admin')
+    site_client.memberships.update(membership._id, role: 'designer')
 
 **Destroy a membership**
 
@@ -316,10 +330,11 @@ Check the issues section of the repository to see what is missing.
 - edit your /etc/hosts file (*NIX systems) and add 2 lines
       127.0.0.0     www.example.com acme.example.com
 
+
 ## Credits
 
 [Christian](https://github.com/cblavier), [Greg](https://github.com/gregKawet) and [Ben](https://github.com/stiiig) from the Cogip/Insert International LTD who brainstormed with me (a very long time) to find this awesome name.
 
 ## License
 
-Copyright (c) 2018 NoCoffee. MIT Licensed, see LICENSE for details.
+Copyright (c) 2019 NoCoffee. MIT Licensed, see LICENSE for details.

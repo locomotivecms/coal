@@ -2,19 +2,72 @@
 http_interactions:
 - request:
     method: post
+    uri: http://acme.example.local:3000/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:25 GMT
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Runtime:
+      - '0.018269'
+      X-Request-Id:
+      - '084896b4-63cc-4ceb-bc66-5c9923a9c346'
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      Set-Cookie:
+      - steam-locale=en; path=/; max-age=31556952
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: Content of the 404 page
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: post
     uri: http://localhost:3000/locomotive/api/v3/tokens.json
     body:
       encoding: UTF-8
       string: api_key=d49cd50f6f0d2b163f48fc73cb249f0244c37074&email=admin%40locomotivecms.com
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -22,61 +75,29 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"120917583ae3f64355d682b690f7cb40"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 93c7092a-9fe1-4f90-a513-e008ea455ee2
-      X-Runtime:
-      - '0.018246'
       Content-Length:
       - '32'
-    body:
-      encoding: UTF-8
-      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
-    http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:02 GMT
-- request:
-    method: post
-    uri: http://acme.example.com:3000/tokens.json
-    body:
-      encoding: UTF-8
-      string: email=admin%40locomotivecms.com&password=locomotive
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
       Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 14ab882f-7a7b-418a-a176-12bd1c9353d0
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
       X-Runtime:
-      - '0.110531'
-      Transfer-Encoding:
-      - chunked
+      - '0.006916'
+      X-Request-Id:
+      - 1a38e024-0f9e-4efc-8344-9d4440248367
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: |
-        {"error":"no site found"}
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:03 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+recorded_with: VCR 4.0.0

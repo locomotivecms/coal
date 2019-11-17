@@ -7,14 +7,16 @@ http_interactions:
       encoding: UTF-8
       string: email=admin%40locomotivecms.com&password=locomotive
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -22,40 +24,52 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"120917583ae3f64355d682b690f7cb40"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e47d860b-f453-48f1-893c-d5c19084a28a
-      X-Runtime:
-      - '0.017475'
       Content-Length:
       - '32'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
+      X-Runtime:
+      - '0.008515'
+      X-Request-Id:
+      - abceaaf0-2c63-4d63-8cb2-755376ade183
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json?auth_token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages.json?auth_token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       X-Locomotive-Locale:
       - en
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
@@ -63,44 +77,58 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"701b58eb67b1131aa8b3c8aeab5e817b"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 5dc6e8a6-a6c3-4575-80d2-68fb8524c271
+      Etag:
+      - W/"1b00f374830ea6182c6d0304124d3b56"
       X-Runtime:
-      - '0.030010'
-      Content-Length:
-      - '1280'
+      - '0.021310'
+      X-Request-Id:
+      - be014f45-8790-4975-b98b-cb4a963b00a1
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '[{"_id":"5650f08c87f6436c94000007","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:36Z","title":"Home
-        page","parent_id":null,"position":0,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"index","fullpath":"index","localized_fullpaths":{"en":""},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
-        of the home page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null},{"_id":"5650f08c87f6436c94000008","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:36Z","title":"Page
-        not found","parent_id":null,"position":1,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"404","fullpath":"404","localized_fullpaths":{"en":"404"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+      string: '[{"_id":"5dd1779ca95330a94bf72543","created_at":"2019-11-17T16:38:52Z","updated_at":"2019-11-17T16:38:52Z","title":"Home
+        page","parent_id":null,"position":0,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"index","fullpath":"index","sections_dropzone_content":"[]","sections_content":"{}","localized_fullpaths":{"en":"/"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
+        of the home page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null},{"_id":"5dd1779ca95330a94bf72544","created_at":"2019-11-17T16:38:52Z","updated_at":"2019-11-17T16:38:52Z","title":"Page
+        not found","parent_id":null,"position":1,"handle":null,"depth":0,"response_type":"text/html","listed":true,"published":true,"translated_in":["en"],"cache_enabled":true,"slug":"404","fullpath":"404","sections_dropzone_content":"[]","sections_content":"{}","localized_fullpaths":{"en":"/404"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Content
         of the 404 page","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}]'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/fullpaths.json?auth_token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/fullpaths.json?auth_token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       X-Locomotive-Locale:
       - en
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
@@ -108,40 +136,52 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"c2ddbd80985a8cba4f1221be3c2df60c"
+      Content-Length:
+      - '135'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4aed4455-e50c-48d5-8a95-c6167687376b
+      Etag:
+      - W/"09a5c21a0428a453af63546ad46ca082"
       X-Runtime:
-      - '0.024727'
-      Content-Length:
-      - '107'
+      - '0.015544'
+      X-Request-Id:
+      - 27d8ef26-0883-44ee-bf6a-5162ad9c10ac
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '[{"_id":"5650f08c87f6436c94000007","fullpath":"index"},{"_id":"5650f08c87f6436c94000008","fullpath":"404"}]'
+      string: '[{"_id":"5dd1779ca95330a94bf72543","fullpath":"index","handle":null},{"_id":"5dd1779ca95330a94bf72544","fullpath":"404","handle":null}]'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/pages.json
     body:
       encoding: UTF-8
-      string: auth_token=E2aoXzMxkFsLnCcmCcc_&page%5Bparent%5D=index&page%5Bslug%5D=about-us&page%5Btemplate%5D=Locomotive+rocks%21&page%5Btitle%5D=About+us
+      string: auth_token=bzwAyFQzcchf_hgDQhz3&page%5Bparent%5D=index&page%5Bslug%5D=about-us&page%5Btemplate%5D=Locomotive+rocks%21&page%5Btitle%5D=About+us
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -149,44 +189,56 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"0ad4f3e8c5c41e6442712c8568c8d5fe"
+      Content-Length:
+      - '724'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 2c613d30-f1ec-4313-882e-0c3acaeef31e
+      Etag:
+      - W/"734da27ece892ec53e1f757b78723b82"
       X-Runtime:
-      - '0.052798'
-      Content-Length:
-      - '666'
+      - '0.035574'
+      X-Request-Id:
+      - 8b94d2b9-6028-41f5-b27a-108955dd7820
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
-        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5dd177c2a95330aa17f8f8dd","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","title":"About
+        us","parent_id":"5dd1779ca95330a94bf72543","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","sections_dropzone_content":"[]","sections_content":"{}","localized_fullpaths":{"en":"/about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks!","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5650f0a587f6436cbc00002d.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5dd177c2a95330aa17f8f8dd.json
     body:
       encoding: UTF-8
-      string: auth_token=E2aoXzMxkFsLnCcmCcc_&page%5Btemplate%5D=Locomotive+rocks.+period
+      string: auth_token=bzwAyFQzcchf_hgDQhz3&page%5Btemplate%5D=Locomotive+rocks.+period
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       X-Locomotive-Locale:
       - en
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
@@ -194,40 +246,54 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"bf788f2ae366c8a7e70e7e88a2c06d83"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 39dc5254-6ff4-4a1e-b302-34dd9dffb99c
+      Etag:
+      - W/"668b21155cea7d89ea8c9be9b96f0829"
       X-Runtime:
-      - '0.038577'
-      Content-Length:
-      - '673'
+      - '0.027743'
+      X-Request-Id:
+      - 2a7b6a61-77f7-4ca4-98d8-c3f501153f29
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
-        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5dd177c2a95330aa17f8f8dd","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","title":"About
+        us","parent_id":"5dd1779ca95330a94bf72543","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","sections_dropzone_content":"[]","sections_content":"{}","localized_fullpaths":{"en":"/about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5650f0a587f6436cbc00002d.json?auth_token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/pages/5dd177c2a95330aa17f8f8dd.json?auth_token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
+      - bzwAyFQzcchf_hgDQhz3
   response:
     status:
       code: 200
@@ -235,21 +301,33 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"bf788f2ae366c8a7e70e7e88a2c06d83"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d785c8f4-22cb-479b-a541-00740552fb7d
+      Etag:
+      - W/"668b21155cea7d89ea8c9be9b96f0829"
       X-Runtime:
-      - '0.039751'
-      Content-Length:
-      - '673'
+      - '0.050051'
+      X-Request-Id:
+      - 0c09b481-d654-4a52-97db-ea28825fbed8
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a587f6436cbc00002d","created_at":"2015-11-21T22:31:01Z","updated_at":"2015-11-21T22:31:01Z","title":"About
-        us","parent_id":"5650f08c87f6436c94000007","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","localized_fullpaths":{"en":"about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
+      string: '{"_id":"5dd177c2a95330aa17f8f8dd","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","title":"About
+        us","parent_id":"5dd1779ca95330a94bf72543","position":0,"handle":null,"depth":1,"response_type":"text/html","listed":true,"published":false,"translated_in":["en"],"cache_enabled":true,"slug":"about-us","fullpath":"about-us","sections_dropzone_content":"[]","sections_content":"{}","localized_fullpaths":{"en":"/about-us"},"redirect":false,"redirect_url":"","redirect_type":301,"templatized":false,"templatized_from_parent":false,"content_type":null,"is_layout":false,"allow_layout":true,"template":"Locomotive
         rocks. period","editable_elements":[],"seo_title":null,"meta_keywords":null,"meta_description":null}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:01 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+recorded_with: VCR 4.0.0

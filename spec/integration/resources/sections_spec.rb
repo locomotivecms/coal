@@ -37,7 +37,7 @@ describe Locomotive::Coal::Resources::Sections, order: :defined do
       settings: [
         {
           id:   'title',
-          type: 'string'
+          type: 'text'
         }
       ]
     })

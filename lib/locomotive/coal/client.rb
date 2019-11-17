@@ -21,8 +21,16 @@ module Locomotive::Coal
       @my_account ||= Resources::MyAccount.new(uri, connection)
     end
 
+    def accounts
+      @accounts ||= Resources::Accounts.new(uri, connection)
+    end
+
     def sites
       @sites ||= Resources::Sites.new(uri, connection)
+    end
+
+    def memberships
+      @memberships ||= Resources::Memberships.new(uri, connection)
     end
 
     def current_site

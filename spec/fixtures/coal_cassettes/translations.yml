@@ -7,14 +7,16 @@ http_interactions:
       encoding: UTF-8
       string: email=admin%40locomotivecms.com&password=locomotive
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -22,38 +24,50 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"120917583ae3f64355d682b690f7cb40"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0d8afb02-0aed-4ed7-bb23-6c4020d43c7d
-      X-Runtime:
-      - '0.015846'
       Content-Length:
       - '32'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
+      X-Runtime:
+      - '0.046028'
+      X-Request-Id:
+      - b43b120f-7852-4a87-9255-14c10c40a187
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:57 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations.json?auth_token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations.json?auth_token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
+      - bzwAyFQzcchf_hgDQhz3
   response:
     status:
       code: 200
@@ -61,40 +75,52 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"d751713988987e9331980363e24189ce"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a6ddd5a8-c121-4956-b909-79eb0f8077dd
-      X-Runtime:
-      - '0.039425'
       Content-Length:
       - '2'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      X-Runtime:
+      - '0.020489'
+      X-Request-Id:
+      - 71718111-0b80-49a5-992a-720d90628b05
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:58 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/sample/api/v3/translations.json
     body:
       encoding: UTF-8
-      string: auth_token=E2aoXzMxkFsLnCcmCcc_&translation%5Bkey%5D=hello&translation%5Bvalues%5D%5Ben%5D=Hello+world&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde
+      string: auth_token=bzwAyFQzcchf_hgDQhz3&translation%5Bkey%5D=hello&translation%5Bvalues%5D%5Ben%5D=Hello+world&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -102,41 +128,53 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"e12c448b863d0d73edecffe2625f35c2"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a8d07bd2-dc1b-4281-8910-db7bbb5391b4
-      X-Runtime:
-      - '0.038517'
       Content-Length:
       - '174'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5bfd76a49f28515ffbd139c7830379b5"
+      X-Runtime:
+      - '0.025324'
+      X-Request-Id:
+      - 03d43a3f-161d-47ab-a40c-d12bae3a944a
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a287f6436cbc000002","created_at":"2015-11-21T22:30:58Z","updated_at":"2015-11-21T22:30:58Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"5dd177bca95330aa17f8f8dc","created_at":"2019-11-17T16:39:24Z","updated_at":"2019-11-17T16:39:24Z","key":"hello","values":{"en":"Hello
         world","fr":"Bonjour le monde"}}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:58 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
 - request:
     method: put
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations/5650f0a287f6436cbc000002.json
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations/5dd177bca95330aa17f8f8dc.json
     body:
       encoding: UTF-8
-      string: auth_token=E2aoXzMxkFsLnCcmCcc_&translation%5Bvalues%5D%5Ben%5D=Hello+world%21&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde%21
+      string: auth_token=bzwAyFQzcchf_hgDQhz3&translation%5Bvalues%5D%5Ben%5D=Hello+world%21&translation%5Bvalues%5D%5Bfr%5D=Bonjour+le+monde%21
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
+      - bzwAyFQzcchf_hgDQhz3
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
@@ -144,39 +182,53 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"6d40d07a511948d32eb20b44dd228610"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 65e5ecda-6d24-42dd-bc34-06207c895e23
+      Etag:
+      - W/"a9dd42b07c0ce97f7ab2c0db135a913b"
       X-Runtime:
-      - '0.032844'
-      Content-Length:
-      - '176'
+      - '0.022567'
+      X-Request-Id:
+      - 01b1fcbd-6883-4426-8bfd-01a1061e6bcf
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a287f6436cbc000002","created_at":"2015-11-21T22:30:58Z","updated_at":"2015-11-21T22:30:58Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"5dd177bca95330aa17f8f8dc","created_at":"2019-11-17T16:39:24Z","updated_at":"2019-11-17T16:39:24Z","key":"hello","values":{"en":"Hello
         world!","fr":"Bonjour le monde!"}}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:58 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/locomotive/sample/api/v3/translations/5650f0a287f6436cbc000002.json?auth_token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/translations/5dd177bca95330aa17f8f8dc.json?auth_token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:25 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
+      - bzwAyFQzcchf_hgDQhz3
   response:
     status:
       code: 200
@@ -184,20 +236,32 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"6d40d07a511948d32eb20b44dd228610"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 586cf345-c1ec-4ae6-8f02-249eea3a1e43
+      Etag:
+      - W/"a9dd42b07c0ce97f7ab2c0db135a913b"
       X-Runtime:
-      - '0.041395'
-      Content-Length:
-      - '176'
+      - '0.021255'
+      X-Request-Id:
+      - be0d0c2b-b57c-4577-bd7e-2ebcdca4bbbd
+      Date:
+      - Sun, 17 Nov 2019 16:39:25 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a287f6436cbc000002","created_at":"2015-11-21T22:30:58Z","updated_at":"2015-11-21T22:30:58Z","key":"hello","values":{"en":"Hello
+      string: '{"_id":"5dd177bca95330aa17f8f8dc","created_at":"2019-11-17T16:39:24Z","updated_at":"2019-11-17T16:39:24Z","key":"hello","values":{"en":"Hello
         world!","fr":"Bonjour le monde!"}}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:58 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Nov 2019 16:39:25 GMT
+recorded_with: VCR 4.0.0

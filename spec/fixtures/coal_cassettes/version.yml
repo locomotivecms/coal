@@ -7,14 +7,16 @@ http_interactions:
       encoding: UTF-8
       string: email=admin%40locomotivecms.com&password=locomotive
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -22,38 +24,50 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"120917583ae3f64355d682b690f7cb40"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c9b0e179-e34b-4366-b5a4-5e1e29ca34be
-      X-Runtime:
-      - '0.020447'
       Content-Length:
       - '32'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
+      X-Runtime:
+      - '0.004813'
+      X-Request-Id:
+      - 4dbdd6ff-8e32-494e-a364-3c8f05ed4619
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
 - request:
     method: get
-    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=E2aoXzMxkFsLnCcmCcc_&email=admin@locomotivecms.com&token=E2aoXzMxkFsLnCcmCcc_
+    uri: http://localhost:3000/locomotive/sample/api/v3/version.json?auth_token=bzwAyFQzcchf_hgDQhz3&email=admin@locomotivecms.com&token=bzwAyFQzcchf_hgDQhz3
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
       X-Locomotive-Account-Email:
       - admin@locomotivecms.com
       X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
+      - bzwAyFQzcchf_hgDQhz3
   response:
     status:
       code: 200
@@ -61,19 +75,29 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"a29b8ca75f03b52361cf5f1f8ebf001a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d760b628-240d-4c11-a211-10dcd5102028
-      X-Runtime:
-      - '0.018271'
       Content-Length:
       - '22'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"f981a5a7069dbbda33875006acb1b026"
+      X-Runtime:
+      - '0.006873'
+      X-Request-Id:
+      - 5a103059-2a24-401f-94ca-49c2e1c657a9
+      Date:
+      - Sun, 17 Nov 2019 16:39:24 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"engine":"3.0.0.rc3"}'
+      string: '{"engine":"4.0.0.rc0"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:31:00 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Nov 2019 16:39:24 GMT
+recorded_with: VCR 4.0.0

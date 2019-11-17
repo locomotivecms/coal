@@ -2,19 +2,21 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/locomotive/api/v3/my_account.json
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
     body:
       encoding: UTF-8
-      string: account%5Bemail%5D=jack%40doe.net&account%5Bname%5D=Jack+Doe&account%5Bpassword%5D=easyone&account%5Bpassword_confirmation%5D=easyone
+      string: email=admin%40locomotivecms.com&password=locomotive
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 201
@@ -22,22 +24,191 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Etag:
-      - W/"dce6a314e0a0733cd3d313f6a20efa40"
+      Content-Length:
+      - '32'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 70848878-d96e-4830-b461-8f9036921cbe
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
       X-Runtime:
-      - '0.486625'
-      Content-Length:
-      - '254'
+      - '0.004127'
+      X-Request-Id:
+      - edee538a-e182-4fc2-87d7-2e4bc60c00d6
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
-      string: '{"_id":"5650f0a087f6436cbc000000","created_at":"2015-11-21T22:30:56Z","updated_at":"2015-11-21T22:30:56Z","name":"Jack
-        Doe","email":"jack@doe.net","locale":"en","api_key":"92f2e03b57b3f31f485ecf4d99bc94ea20eee862","super_admin":false,"local_admin":false}'
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:56 GMT
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/locomotive/api/v3/my_account.json
+    body:
+      encoding: UTF-8
+      string: account%5Bname%5D=John+Doe&auth_token=bzwAyFQzcchf_hgDQhz3
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"7f5b02da1aa964d6d9d0be396d5d6fb9"
+      X-Runtime:
+      - '0.016235'
+      X-Request-Id:
+      - 7b9c8cd3-5e5e-4bc6-baec-567c194bcec9
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd1779ba95330a94bf7253c","created_at":"2019-11-17T16:38:51Z","updated_at":"2019-11-17T16:39:30Z","name":"John
+        Doe","email":"admin@locomotivecms.com","locale":"en","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":true,"local_admin":true}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/api/v3/my_account.json?auth_token=bzwAyFQzcchf_hgDQhz3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"7f5b02da1aa964d6d9d0be396d5d6fb9"
+      X-Runtime:
+      - '0.007792'
+      X-Request-Id:
+      - 2037c4b1-cd3c-4f90-a52b-d7d8ed64ffca
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd1779ba95330a94bf7253c","created_at":"2019-11-17T16:38:51Z","updated_at":"2019-11-17T16:39:30Z","name":"John
+        Doe","email":"admin@locomotivecms.com","locale":"en","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":true,"local_admin":true}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/my_account.json
+    body:
+      encoding: UTF-8
+      string: account%5Bemail%5D=jack%40doe.net&account%5Bname%5D=Jack+Doe&account%5Bpassword%5D=easyone&account%5Bpassword_confirmation%5D=easyone
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '254'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a6622ed0db1411c79380131ed794f25f"
+      X-Runtime:
+      - '0.013885'
+      X-Request-Id:
+      - 4672e3bc-c78d-4dda-936b-717500fc9daf
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd177c2a95330aa17f8f8df","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","name":"Jack
+        Doe","email":"jack@doe.net","locale":"en","api_key":"b99855e630e7510ee902e0871f213328cfcbc552","super_admin":false,"local_admin":false}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
 - request:
     method: post
     uri: http://localhost:3000/locomotive/api/v3/my_account.json
@@ -45,14 +216,16 @@ http_interactions:
       encoding: UTF-8
       string: account%5Bname%5D=Wrong+account
     headers:
+      User-Agent:
+      - Faraday v0.15.4
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
       Content-Type:
       - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 422
@@ -60,137 +233,28 @@ http_interactions:
     headers:
       Content-Type:
       - application/json
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 3fab80c5-9da7-4de9-8b9f-5e0ffa3bb1c1
-      X-Runtime:
-      - '0.600956'
       Content-Length:
       - '92'
+      Connection:
+      - keep-alive
+      Status:
+      - 422 Unprocessable Entity
+      Cache-Control:
+      - no-cache
+      X-Runtime:
+      - '0.006917'
+      X-Request-Id:
+      - 323b1477-94b4-4e06-9da3-48e09f37bbc3
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
     body:
       encoding: UTF-8
       string: '{"error":"Resource invalid","attributes":{"email":["is missing"],"password":["is
         missing"]}}'
     http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:57 GMT
-- request:
-    method: post
-    uri: http://localhost:3000/locomotive/api/v3/tokens.json
-    body:
-      encoding: UTF-8
-      string: email=admin%40locomotivecms.com&password=locomotive
-    headers:
-      Accept:
-      - application/json
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Content-Type:
-      - application/json
-      Etag:
-      - W/"120917583ae3f64355d682b690f7cb40"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 1101bb4a-c567-4209-95ad-d151951e68d6
-      X-Runtime:
-      - '0.018846'
-      Content-Length:
-      - '32'
-    body:
-      encoding: UTF-8
-      string: '{"token":"E2aoXzMxkFsLnCcmCcc_"}'
-    http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:57 GMT
-- request:
-    method: put
-    uri: http://localhost:3000/locomotive/api/v3/my_account.json
-    body:
-      encoding: UTF-8
-      string: account%5Bname%5D=John+Doe&auth_token=E2aoXzMxkFsLnCcmCcc_
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Etag:
-      - W/"aa5b3af2d3ff7e0d53fd68d1d077876d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - dc423123-88c7-4cc7-a7f5-e021ab2abe79
-      X-Runtime:
-      - '0.040982'
-      Content-Length:
-      - '264'
-    body:
-      encoding: UTF-8
-      string: '{"_id":"5650f08c87f6436c94000000","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:57Z","name":"John
-        Doe","email":"admin@locomotivecms.com","locale":"en","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"local_admin":true}'
-    http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:57 GMT
-- request:
-    method: get
-    uri: http://localhost:3000/locomotive/api/v3/my_account.json?auth_token=E2aoXzMxkFsLnCcmCcc_
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      X-Locomotive-Account-Email:
-      - admin@locomotivecms.com
-      X-Locomotive-Account-Token:
-      - E2aoXzMxkFsLnCcmCcc_
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Etag:
-      - W/"aa5b3af2d3ff7e0d53fd68d1d077876d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 92138415-2bf7-452a-b04c-d947488d0b71
-      X-Runtime:
-      - '0.019667'
-      Content-Length:
-      - '264'
-    body:
-      encoding: UTF-8
-      string: '{"_id":"5650f08c87f6436c94000000","created_at":"2015-11-21T22:30:36Z","updated_at":"2015-11-21T22:30:57Z","name":"John
-        Doe","email":"admin@locomotivecms.com","locale":"en","api_key":"d49cd50f6f0d2b163f48fc73cb249f0244c37074","super_admin":false,"local_admin":true}'
-    http_version: 
-  recorded_at: Sat, 21 Nov 2015 22:30:57 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+recorded_with: VCR 4.0.0
