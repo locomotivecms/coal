@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.6.0.rc2)
+    locomotivecms_coal (1.6.0)
       activesupport (>= 5.1.5, <= 6.0)
       faraday (~> 0.15.4)
       faraday_middleware (~> 0.13.1)
@@ -65,7 +65,7 @@ GEM
       byebug (>= 9.0, < 9.1)
       pry (~> 0.10)
     public_suffix (3.0.2)
-    rake (12.3.0)
+    rake (13.0.1)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -115,7 +115,7 @@ DEPENDENCIES
   json_spec (~> 1.1.4)
   locomotivecms_coal!
   pry-byebug (~> 3.4.2)
-  rake (~> 12.3.0)
+  rake (~> 13.0.1)
   rest-client (~> 2.0.2)
   rspec (~> 3.5.0)
   vcr
