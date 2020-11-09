@@ -11,7 +11,7 @@ group :test do
   gem 'rspec',              '~> 3.5.0'
   gem 'json_spec',          '~> 1.1.4'
 
-  gem 'pry-byebug',         '~> 3.4.2'
+  gem 'pry-byebug',         '~> 3.9.0'
 
   gem 'webmock'
   gem 'vcr'
