@@ -1,8 +1,8 @@
 # Coal
 
-[![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal) [![Dependency Status](https://gemnasium.com/locomotivecms/coal.svg)](https://gemnasium.com/locomotivecms/coal) [![Build Status](https://travis-ci.org/locomotivecms/coal.svg?branch=master)](https://travis-ci.org/locomotivecms/coal) [![Coverage Status](https://coveralls.io/repos/locomotivecms/coal/badge.svg?branch=master)](https://coveralls.io/r/locomotivecms/coal?branch=master)
+[![Code Climate](https://codeclimate.com/github/locomotivecms/coal/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/coal) [![Build Status](https://travis-ci.org/locomotivecms/coal.svg?branch=master)](https://travis-ci.org/locomotivecms/coal) [![Coverage Status](https://coveralls.io/repos/github/locomotivecms/coal/badge.svg?branch=master)](https://coveralls.io/github/locomotivecms/coal?branch=master)
 
-The Ruby API Client for LocomotiveCMS V3.
+The Ruby API Client for LocomotiveCMS V4.
 
 ## Table of Contents
 
@@ -337,4 +337,4 @@ Check the issues section of the repository to see what is missing.
 
 ## License
 
-Copyright (c) 2019 NoCoffee. MIT Licensed, see LICENSE for details.
+Copyright (c) 2020 NoCoffee. MIT Licensed, see LICENSE for details.
