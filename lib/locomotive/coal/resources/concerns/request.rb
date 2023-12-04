@@ -25,7 +25,7 @@ module Locomotive::Coal::Resources
           # Just uncomment following line if you want to trace protocol between wagon & engine live
           # puts "#{parameters}"
           _do_request(action, "#{uri.path}/#{endpoint}.json", parameters)
-        rescue ::Timeout::Error, ::Errno::ETIMEDOUT, Faraday::Error::TimeoutError => e
+        rescue ::Timeout::Error, ::Errno::ETIMEDOUT, Faraday::TimeoutError => e
           if max_count > 0
             puts "\n Warning => timeout detected, attempts left: #{max_count}\n\n"
             max_count -= 1
