@@ -6,15 +6,15 @@ group :development do
 end
 
 group :test do
-  gem 'rest-client',        '~> 2.0.2'
+  gem 'rest-client',        '~> 2.1'
 
-  gem 'rspec',              '~> 3.5.0'
-  gem 'json_spec',          '~> 1.1.4'
+  gem 'rspec',              '~> 3.12'
+  gem 'json_spec',          '~> 1.1'
 
-  gem 'pry-byebug',         '~> 3.9.0'
+  gem 'pry-byebug',         '~> 3.10'
 
   gem 'webmock'
   gem 'vcr'
 
-  gem 'coveralls',                  '~> 0.8.19', require: false
+  gem 'coveralls',          '~> 0.8.19', require: false
 end
