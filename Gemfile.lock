@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    locomotivecms_coal (1.7.0)
+    locomotivecms_coal (1.8.0.alpha1)
       activesupport (>= 7.1)
       faraday (~> 1.0)
       faraday_middleware (~> 1.2)
